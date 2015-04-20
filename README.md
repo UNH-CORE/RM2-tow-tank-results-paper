@@ -10,4 +10,7 @@ should be in TIFF format, and should not be included as part of the submitted
 PDF. References also need to be contained in `paper.tex` rather than as a
 separate *.bib or *.bbl file. 
 
+## Figure sizing
 
+* Maximum: 7.5 in (19.05 cm) W x 8.75 in (22.23 cm) H 
+* Minimum: 2.63 in (6.68 cm) W
