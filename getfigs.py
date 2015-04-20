@@ -13,7 +13,9 @@ figdir = os.path.join(os.path.expanduser("~"), "Research",
 
 figlist = ["cp_curves.eps",
            "cd_curves.eps",
-           "re_dep_cp.eps"]
+           "re_dep_cp.eps",
+	   "meancontquiv.eps",
+	   "k_contours.eps"]
 
 for fig in figlist:
     shutil.copy2(os.path.join(figdir, fig), os.path.join("figures", fig))
