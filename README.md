@@ -1,6 +1,6 @@
 # RM2 tow tank results paper
 
-This repository is for the first daper describing the results from the 1:6
+This repository is for the first paper describing the results from the 1:6
 scale RM2 tow tank experiment at UNH.
 
 The current plan is to write only about the experimental results, describing
