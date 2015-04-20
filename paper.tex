@@ -362,40 +362,50 @@ descriptions of the experimental setup and procedure to be performed in a towing
 tank at the University of New Hampshire (UNH).
 
 \section*{Materials and Methods}
-\subsection*{Etiam eget sapien nibh.}
+\subsection*{Turbine Model}
 
 % For figure citations, please use "Fig." instead of "Figure".
-Nulla mi mi, Fig.~\ref{fig1} venenatis sed ipsum varius, volutpat euismod diam.
-Proin rutrum vel massa non gravida. Quisque tempor sem et dignissim rutrum.
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi at justo vitae
-nulla elementum commodo eu id massa. In vitae diam ac augue semper tincidunt eu
-ut eros. Fusce fringilla erat porttitor lectus cursus, \nameref{S1_Video} vel
-sagittis arcu lobortis. Aliquam in enim semper, aliquam massa id, cursus neque.
-Praesent faucibus semper libero.
+A 1:6 scale model of the RM2 rotor was designed and built. Turbine geometric
+parameters were scaled from the RM2 ``rev 0'' design report \cite{Barone2011},
+with the exception of the shaft diameter, which was scaled from the SAFL RM2
+shaft \cite{Hill2014}. The hubs were designed to be similar to the SAFL model,
+which may aid in comparison of the results, though this was not a top priority.
+Geometric parameters are shown in Table~\ref{tab:turb-geom} and a drawing of the
+turbine design is shown in Figure~\ref{fig:turbine-drawing}. The turbine model
+components---blades, struts, shaft, and center hub sections---were fabricated
+from 6061-T6 aluminum, which was hardcoat anodized per MIL-8625-A, type III,
+class 2 specifications. CAD models of the turbine are available from
+\cite{Bachant2015-RM2-CAD}.
+
+\begin{table}[ht]
+\centering
+\begin{tabular}{l|l|l}
+   & Full-scale & Model (1:6) \\
+\hline 
+Diameter (m)   & 6.450 & 1.075 \\ 
+Height (m)     & 4.840 & 0.8067 \\ 
+Blade root chord (m) & 0.4000 & 0.06667 \\ 
+Blade tip chord (m)  & 0.2400 & 0.04000 \\ 
+Blade profile & NACA 0021 & NACA 0021 \\ 
+Blade mount & 1/2 chord & 1/2 chord \\ 
+Blade pitch (deg.) & 0.0 & 0.0 \\ 
+Strut profile & NACA 0021 & NACA 0021 \\ 
+Strut chord (m) & 0.3600 & 0.06000 \\ 
+Shaft diameter (m) & 0.2540 \cite{Beam2011} or 0.4160 \cite{Hill2014} & 0.06350\\ 
+\end{tabular}
+\caption{RM2 turbine geometric parameters.}
+\label{tab:turb-geom}
+\end{table}
 
 \begin{figure}[h]
-\caption{{\bf Figure Title first bold sentence Nulla mi mi, venenatis sed ipsum 
-varius, volutpat euismod diam.}
-Figure Caption Proin rutrum vel massa non gravida. Quisque tempor sem et dignissim 
-rutrum. A: Lorem ipsum dolor sit amet. B: Consectetur adipiscing elit.}
-\label{fig1}
+\caption{{\bf Turbine Model Drawing.}
+Drawing of the turbine with and without strut covers.}
+\label{fig:turbine-drawing}
 \end{figure}
 
-\begin{enumerate}
-\item{react}
-\item{diffuse free particles}
-\item{increment time by dt and go to 1}
-\end{enumerate}
 
-% Results and Discussion can be combined.
 \section*{Results and Discussion}
-Nulla mi mi, venenatis sed ipsum varius, Table~\ref{table1} volutpat euismod
-diam. Proin rutrum vel massa non gravida. Quisque tempor sem et dignissim
-rutrum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi at justo
-vitae nulla elementum commodo eu id massa. In vitae diam ac augue semper
-tincidunt eu ut eros. Fusce fringilla erat porttitor lectus cursus, vel sagittis
-arcu lobortis. Aliquam in enim semper, aliquam massa id, cursus neque. Praesent
-faucibus semper libero.
+
 
 
 \begin{table}[!ht]
