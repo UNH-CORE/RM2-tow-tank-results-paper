@@ -11,8 +11,9 @@ import shutil
 figdir = os.path.join(os.path.expanduser("~"), "Research",
         "Experiments", "RM2 tow tank", "Figures")
 
-figlist = ["perf_curves.tiff",
-           "perf_re_dep.tiff"]
+figlist = ["cp_curves.eps",
+           "cd_curves.eps",
+           "re_dep_cp.eps"]
 
 for fig in figlist:
     shutil.copy2(os.path.join(figdir, fig), os.path.join("figures", fig))
