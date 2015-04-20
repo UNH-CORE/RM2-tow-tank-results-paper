@@ -256,23 +256,111 @@ ultrices, ultrices elit pulvinar, volutpat risus.
 \linenumbers
 
 \section*{Introduction}
-Lorem ipsum dolor sit~\cite{bib1} amet, consectetur adipiscing elit. Curabitur
-eget porta erat. Morbi consectetur est vel gravida pretium. Suspendisse ut dui
-eu ante cursus gravida non sed sem. Nullam Eq.~(\ref{eq:schemeP}) sapien tellus,
-commodo id velit id, eleifend volutpat quam. Phasellus mauris velit, dapibus
-finibus elementum vel, pulvinar non tellus. Nunc pellentesque pretium diam, quis
-maximus dolor faucibus id.~\cite{bib2} Nunc convallis sodales ante, ut
-ullamcorper est egestas vitae. Nam sit amet enim ultrices, ultrices elit
-pulvinar, volutpat risus.
+Sandia National Laboratory (SNL) developed the cross-flow turbine, Reference
+Model 2 (RM2), to provide an open-source point design for MHK research and
+development, including its use as a test object for scaled model testing to
+generate power performance data that can be used to validate open-source design
+tools. More details on the reference modeling effort are provided in Neary et
+al. \cite{Neary2014}.
 
-\begin{equation}\label{eq:schemeP} 
-D_{coll} = \frac{D_f+\frac{[S]^2}{K_D S_T} D_S} {1+\frac{[S]^2}{K_D S_T}}, 
-D_{sm} = \frac{D_f+ \frac{[S]}{K_D} D_S}{1+\frac{[S]}{K_D}},
+Dimensional analysis provides scaling laws that are used to upscale model test
+data into performance and design information for a full-scale prototype turbine.
+For hydrokinetic turbines, hydrodynamic similitude is achieved when the Reynolds
+number, Froude number and tip-speed-ratio of the model and the full scale device
+match. The Reynolds number is defined as
+\begin{equation}
+Re_L = \frac{UL}{\nu},
+\label{eq-Re}
 \end{equation}
+where $U$ and $L$ are characteristic length scales, and $\nu$ is the fluid
+kinematic viscosity. The Froude number is defined as
+\begin{equation}
+Fr = \frac{U}{\sqrt{gL}},
+\label{eq-Fr}
+\end{equation}
+where $g$ is the gravitational acceleration, and the tip speed ratio is defined
+as
+\begin{equation}
+\lambda=\frac{\omega R}{U_\infty},
+\end{equation}
+where $\omega$ and $R$ are the rotor angular velocity and radius.
+For hydrokinetic turbine testing, $Re$, not $Fr$, is the dominant scaling
+parameter. However, the Froude number (based on blade tip submergence) should
+remain small (significantly below one). It is rare to achieve perfect similitude
+for $Re$, but a threshold value should be exceeded, such that scale model
+results can be extrapolated.
 
-% You may title this section "Methods" or "Models". 
-% "Models" is not a valid title for PLoS ONE authors. However, PLoS ONE
-% authors may use "Analysis" 
+As a cross-flow turbine, the RM2 blades will experience large variations in
+angles of attack as they rotate about their axis (``cross-flow turbine'' means
+the axis of rotation is perpendicular to flow direction---either vertically or
+horizontally). These variations become larger as the tip speed ratio decreases
+\cite{Para2002}. Typically, the maximum angles of attack are sufficiently large
+that the blades operate under dynamic stall, which is a complex unsteady process
+and deviates significantly from static foil behavior, during part of the
+rotation. Furthermore, the higher the solidity of a cross-flow turbine, the
+lower the optimal tip-speed ratio at which it operates. Marine Hydrokinetic
+(MHK) cross-flow turbines typically have higher solidity than cross-flow wind
+turbines (VAWT), and hence operate at lower tip-speed ratios. Since MHK turbines
+operate in a higher density fluid, unsteady dynamic effects related to the
+blades' pitching motion and flow curvature also become more important when
+compared to wind turbines.
+
+The performance of cross-flow MHK turbines thus depends on both Reynolds number
+and solidity (note that these issues are related, since an average blade chord
+Reynolds number, $Re_{c,\mathrm{avg}} \approx \lambda U_\infty c/ \nu$, can be
+expressed in terms of tip speed ratio, the optimal value for which is a function
+of solidity). If numerical models are validated with physical model data that
+was obtained at insufficiently high Reynolds numbers, it cannot be determined
+whether problems with model predictions are caused by Reynolds number effects,
+issues related to higher solidity, or both. It is uncertain whether numerical
+models validated with physical model data obtained at low Reynolds number should
+be considered validated at all, since the scale at which the model will be
+applied is orders of magnitude larger. One way to overcome this uncertainty is
+to show that the scaled physical model test has become Reynolds number
+independent, and therefore validation efforts should be relevant at full-scale.
+
+For example, the effect of Reynolds number on average power output was shown to
+be significant on the 2 m Sandia Research Darrieus turbine in wind tunnel
+testing \cite{Blackwell1976}: Maximum power coefficient, $C_{P,\mathrm{max}}$,
+increased with Reynolds number, $Re_c$, along with a shift of the location of
+$C_{P,\mathrm{max}}$ toward lower tip speed ratios due to delayed blade stall.
+The effects of Reynolds number were quite dramatic over a relatively small range
+of $Re_c \approx 1.1 \times 10^5$--$2.9 \times 10^5$. More recently, Bachant and
+Wosnik \cite{Bachant2014} showed that turbine performance and near-wake
+characteristics become Reynolds number independent at $Re_c \approx 2 \times
+10^5$.
+
+The need for experimental data that is relevant to full-scale behavior stems
+from the need to validate numerical models---most importantly mid-fidelity
+models---desirable for MHK developers to predict the performance of their
+cross-flow turbine designs, since physical modeling at appropriate scales can be
+prohibitively expensive in the early stages of engineering. Furthermore,
+Navier--Stokes-based computational fluid dynamics (CFD) simulations require
+modeling in 3 dimensions, which generally necessitates high performance
+computing---a resource that is not commonly available, and more expensive.
+
+To date, attempts to validate SNL's mid-fidelity CACTUS vortex line model
+\cite{Murray2011} have relied on measurements from the Saint Anthony Falls
+Laboratory (SAFL) \cite{Hill2014} and the University of New Hampshire (UNH)
+\cite{Neary2013, Michelen2014}. For the SAFL experiments (RM2), the chord
+Reynolds number, $Re_c \sim 10^4$, was below the threshold needed to properly
+simulate lift and stall characteristics. For the UNH experiment
+\cite{Bachant2013}, the chord Reynolds number was sufficiently high at $Re_c
+\approx 2.7 \times 10^5$, but the chord/radius ratio and solidity (13.4\%)
+created instability in the free-wake evolution in the model, which caused
+significant overestimation of power coefficient.
+
+The present task is to acquire a new dataset for the lower solidity RM2 turbine,
+but at higher Reynolds numbers than those achieved in the experiments at SAFL.
+It is also suspected that the strut drag model in CACTUS could be the source of
+some discrepancy. The strut drag will be deliberately modified in the physical
+model to provide data to help answer that question. This dataset will be
+publicly available for both validation of CACTUS and other numerical models.
+This report details the experimental test plan for acquiring, processing, and
+archiving this data, which includes development of a scaled physical model, and
+descriptions of the experimental setup and procedure to be performed in a towing
+tank at the University of New Hampshire (UNH).
+
 \section*{Materials and Methods}
 \subsection*{Etiam eget sapien nibh.}
 
@@ -482,33 +570,11 @@ rhoncus vitae.
 
 \nolinenumbers
 
-%\section*{References}
-% Either type in your references using
-% \begin{thebibliography}{}
-% \bibitem{}
-% Text
-% \end{thebibliography}
-%
-% OR
-%
 % Compile your BiBTeX database using our plos2015.bst
 % style file and paste the contents of your .bbl file
 % here.
 % 
-\begin{thebibliography}{10}
-\bibitem{bib1}
-Devaraju P, Gulati R, Antony PT, Mithun CB, Negi VS. Susceptibility to SLE in
-South Indian Tamils may be influenced by genetic selection pressure on TLR2 and
-TLR9 genes. Mol Immunol. 2014 Nov 22. pii: S0161-5890(14)00313-7. doi:
-10.1016/j.molimm.2014.11.005
-
-\bibitem{bib2}
-Huynen MMTE, Martens P, Hilderlink HBM. The health impacts of globalisation: a
-conceptual framework. Global Health. 2005;1: 14. Available:
-http://www.globalizationandhealth.com/content/1/1/14.
-
-\end{thebibliography}
-
+\bibliography{library}
 
 
 \end{document}
