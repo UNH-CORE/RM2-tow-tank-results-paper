@@ -482,13 +482,14 @@ recalculate using $\lambda=3.1$.}
 
 \subsection*{Performance}
 
-Maecenas convallis mauris sit amet sem ultrices gravida. Etiam eget sapien nibh.
-Sed ac ipsum eget enim egestas ullamcorper nec euismod ligula. Curabitur
-fringilla pulvinar lectus consectetur pellentesque. Quisque augue sem, tincidunt
-sit amet feugiat eget, ullamcorper sed velit. Sed non aliquet felis. Lorem ipsum
-dolor sit amet, consectetur adipiscing elit. Mauris commodo justo ac dui pretium
-imperdiet. Sed suscipit iaculis mi at feugiat.
-
+Mean rotor power and drag coefficients for multiple Reynolds numbers are plotted
+versus tip speed ratio in Fig.~\ref{fig:cp-curves} and Fig.~\ref{fig:cd-curves},
+respectively. $C_P$ is shown to increase in general with $Re$, along with a
+reduction in the optimal tip speed ratio, due to stall delay. These effect
+diminish with increasing $Re$, which is expected as the blade boundary layers
+transition from laminar to turbulent \cite{Lissaman1983,
+Bachant2015-RVAT-Re-dep}. The rotor drag coefficient curves show similar
+effects, but vary much less dramatically from each other.
 
 \begin{figure}[h]
 %\includegraphics[width=\textwidth]{figures/cp_curves}
@@ -498,7 +499,6 @@ Reynolds numbers.}
 \label{fig:cp-curves}
 \end{figure}
 
-
 \begin{figure}[h]
 %\includegraphics[width=\textwidth]{figures/cd_curves}
 \caption{{\bf Drag Coefficient Curves.}
@@ -507,6 +507,15 @@ Reynolds numbers.}
 \label{fig:cd-curves}
 \end{figure}
 
+
+The behavior of the power coefficient at $\lambda=3.1$ is plotted in
+Fig.~\ref{fig:cp-re-dep}, where once again the increase in $C_P$ with $Re$ is
+highlighted. We see that the power coefficient of the turbine increases
+dramatically below $Re_D = 1 \times 10^6$ or $Re_c \approx 2 \times 10^5$,
+beyond which there appears to be a small, linear, positive trend. The tendency
+of $C_P$ to continue increasing slightly could be an effect of lower virtual
+camber when compared to the strong $Re$-indepdendence of the higher $c/R$
+UNH-RVAT \cite{Bachant2015-RVAT-Re-dep}.
 
 \begin{figure}[h]
 %\includegraphics[width=\textwidth]{figures/re_dep_cp}
