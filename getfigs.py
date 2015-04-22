@@ -13,7 +13,7 @@ figdir = os.path.join(os.path.expanduser("~"), "Research",
 
 figlist = ["cp_curves.eps",
            "cd_curves.eps",
-           "re_dep_cp.eps",
+           "perf_re_dep.eps",
 	   "meancontquiv.eps",
 	   "k_contours.eps",
 	   "K_trans_bar_graph.eps",
