@@ -362,8 +362,9 @@ Shaft diameter (m) & 0.2540 \cite{Beam2011} or 0.4160 \cite{Hill2014} & 0.06350\
 \end{table}
 
 \begin{figure}[h]
-\caption{{\bf Turbine Model Drawing.}
-Drawing of the turbine with and without strut covers.}
+\includegraphics[width=0.65\textwidth]{figures/turbine}
+\caption{{\bf Turbine Model.}
+Drawing of the turbine.}
 \label{fig:turbine-drawing}
 \end{figure}
 
@@ -397,8 +398,8 @@ Figure~\ref{fig:exp-setup}.
 
 \begin{figure}[h]
 \centering
-%\includegraphics[clip,trim=0.01in 0 0 0,
-%width=0.95\textwidth]{Figures/tank_cross_section}
+\includegraphics[clip,trim=0.01in 0 0 0,
+width=\textwidth]{figures/tank_cross_section}
 \caption{Illustration of the experimental setup.}
 \label{fig:exp-setup}
 \end{figure}
@@ -454,6 +455,17 @@ chord Reynolds numbers corresponding to tow speeds.} \label{tab:re}
 \todo[inline]{Check which chord length was used to calculate $Re_c$, and
 recalculate using $\lambda=3.1$.}
 
+Wake measurements were all performed at 1 m downstream, which corresponds to
+$x/D = 0.93$. The cross-stream and vertical coordinates are shown in
+Fig.~\ref{fig:coordinates}.
+
+\begin{figure}[h]
+\includegraphics[width=\textwidth]{figures/turbine_coordinate_system}
+\caption{{\bf Coordinate system.} Wake measurement coordinate system and 
+cross-stream/vertical coordinates. All dimensions are in meters.} 
+\label{fig:coordinates}
+\end{figure}
+
 \section*{Results and Discussion}
 
 \subsection*{Performance}
@@ -495,7 +507,7 @@ UNH-RVAT \cite{Bachant2015-RVAT-Re-dep}.
 
 \begin{figure}[h]
 \includegraphics[width=\textwidth]{figures/perf_re_dep}
-\caption{{\bf Reynolds Number dependence effects on performance.}
+\caption{{\bf Reynolds Number effects on performance.}
 Power and drag coefficient at $\lambda=3.1$ plotted versus Reynolds number.}
 \label{fig:cp-re-dep}
 \end{figure}
