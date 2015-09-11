@@ -465,7 +465,7 @@ experimental data and code repository \cite{Bachant2015-RM2-data}.
 \begin{table}[ht]
 \centering
 \begin{tabular}{c|c|c|c|c}
-Tow speed (m/s) & $Re_D$ & $Re_{c_\mathrm{tip}}$ & $Re_{c_\mathrm{root}}$ & $Re_{c_\mathrm{ave}}$\\ 
+Tow speed (m/s) & $Re_D$ & $Re_{c_\mathrm{tip}}$ & $Re_{c_\mathrm{root}}$ & $Re_{c_\mathrm{mid}}$\\ 
 \hline 
 0.4 & $4.3 \times 10^5$ & $5.0 \times 10^4$ & $8.3 \times 10^4$ & $6.6 \times 10^4$ \\ 
 0.6 & $6.5 \times 10^5$ & $7.4 \times 10^4$ & $1.2 \times 10^5$ & $9.9 \times 10^4$ \\ 
@@ -474,9 +474,9 @@ Tow speed (m/s) & $Re_D$ & $Re_{c_\mathrm{tip}}$ & $Re_{c_\mathrm{root}}$ & $Re_
 1.2 & $1.3 \times 10^6$ & $1.5 \times 10^5$ & $2.5 \times 10^5$ & $2.0 \times 10^5$ \\ 
 \end{tabular} 
 
-\caption{{\bf Test Reynolds numbers.} Turbine diameter and approximate blade
-    chord Reynolds numbers $Re_c=\lambda U_\infty c / \nu$ corresponding to various
-    tow speeds at $\lambda=3.1$.}
+\caption{{\bf Test Reynolds numbers.} Turbine diameter and approximate average
+    blade chord Reynolds numbers $Re_c=\lambda U_\infty c / \nu$ at tip, root, and
+    mid-span, corresponding to various tow speeds at $\lambda=3.1$.}
 
 \label{tab:re}
 \end{table}
@@ -562,10 +562,13 @@ camber when compared to the strong $Re$-indepdendence of the higher $c/R$
 UNH-RVAT \cite{Bachant2015-RVAT-Re-dep}.
 
 \begin{figure}[h]
-\includegraphics[width=\textwidth]{figures/perf_re_dep}
-\caption{{\bf Reynolds Number effects on performance.}
-Power and drag coefficient at $\lambda=3.1$ plotted versus Reynolds number.}
-\label{fig:cp-re-dep}
+    \includegraphics[width=\textwidth]{figures/perf_re_dep}
+
+    \caption{{\bf Reynolds Number effects on performance.} Power and drag
+        coefficient at $\lambda=3.1$ plotted versus turbine diameter and approximate
+        average blade root chord Reynolds number.}
+
+    \label{fig:cp-re-dep}
 \end{figure}
 
 
