@@ -216,44 +216,33 @@ USA
 
 \linenumbers
 
-\section*{Introduction} Sandia National Laboratory (SNL) developed the
-cross-flow turbine, Reference Model 2 (RM2), to provide an open-source point
-design for marine hydrokinetic (MHK) energy research and development, including
-its use as a test object for scaled model testing to generate power performance
-data that can be used to validate open-source design tools. More details on the
-reference modeling effort are provided in Neary et al. \cite{Neary2014}.
+\section*{Introduction} 
 
-Dimensional analysis provides scaling laws that are used to upscale model test
-data into performance and design information for a full-scale prototype turbine.
-For hydrokinetic turbines, hydrodynamic similitude is achieved when the Reynolds
-number, Froude number and tip-speed-ratio of the model and the full scale device
-match. The Reynolds number is defined as
+Sandia National Laboratories, in collaboration with the US Department of Energy
+developed the Reference Model devices to provide modeling targets for advancing
+marine hydrokinetic (MHK) energy technology \cite{Neary2014}. The Reference
+Model 2 (RM2), a cross-flow turbine intended for river environments, was
+initially designed by Barone et al. \cite{Barone2011} using the CACTUS vortex
+line code \cite{Murray2011}. A scaled physical model of the RM2 was then
+designed and built by the Saint Anthony Falls Laboratory (SAFL) to validate the
+CACTUS predictions. Experimental performance measurements were significantly
+lower than the numerical results \cite{Hill2014}, which was assumed to be caused
+by the physical model's low Reynolds number
 \begin{equation}
 Re_L = \frac{UL}{\nu},
 \label{eq:Re}
 \end{equation}
 where $U$ and $L$ are characteristic length scales, and $\nu$ is the fluid
-kinematic viscosity. The Froude number is defined as
-\begin{equation}
-Fr = \frac{U}{\sqrt{gL}},
-\label{eq:Fr}
-\end{equation}
-where $g$ is the gravitational acceleration, and the tip speed ratio is defined
-as
+kinematic viscosity.
+
+As a cross-flow turbine, the RM2 blades experience large variations in angles of
+attack as they rotate about their axis (``cross-flow turbine'' means the axis of
+rotation is perpendicular to flow direction---either vertically or
+horizontally). These variations become larger as the tip speed ratio
 \begin{equation}
 \lambda=\frac{\omega R}{U_\infty},
 \end{equation}
-where $\omega$ and $R$ are the rotor angular velocity and radius.
-For hydrokinetic turbine testing, $Re$, not $Fr$, is the dominant scaling
-parameter. However, the Froude number (based on blade tip submergence) should
-remain small (significantly below one). It is rare to achieve perfect similitude
-for $Re$, but a threshold value should be exceeded, such that scale model
-results can be extrapolated.
-
-As a cross-flow turbine, the RM2 blades will experience large variations in
-angles of attack as they rotate about their axis (``cross-flow turbine'' means
-the axis of rotation is perpendicular to flow direction---either vertically or
-horizontally). These variations become larger as the tip speed ratio decreases
+where $\omega$ and $R$ are the rotor angular velocity and radius, decreases
 \cite{Para2002}. Typically, the maximum angles of attack are sufficiently large
 that the blades operate under dynamic stall, which is a complex unsteady process
 and deviates significantly from static foil behavior, during part of the
