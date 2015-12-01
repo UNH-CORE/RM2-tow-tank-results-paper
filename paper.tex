@@ -245,8 +245,8 @@ result of the physical model's low Reynolds number
 \begin{equation}
 Re_L = \frac{UL}{\nu},
 \label{eq:Re}
-\end{equation}
-where $U$ and $L$ are characteristic length scales, and $\nu$ is the fluid
+\end{equation}\textbf{\textit{[why not go straight with defining ReD and ReC here, so it's also clear which U and L are used for each of these?]}}
+where $U$ is ?free-stream? velocity, $L$ is characteristic length scales (?blade-chord length?), and $\nu$ is the fluid
 kinematic viscosity.
 
 As a cross-flow turbine, the RM2 blades experience large variations in angles of
@@ -255,7 +255,7 @@ rotation is perpendicular to flow direction---either vertically or
 horizontally). These variations become larger as the tip speed ratio
 \begin{equation}
 \lambda=\frac{\omega R}{U_\infty},
-\end{equation}
+\end{equation}\textbf{\textit{[define Uinf. it looks like a list of notation at the end of the paper could help a alot]}}
 where $\omega$ and $R$ are the rotor angular velocity and radius, decreases
 \cite{Para2002}. Typically, the maximum angles of attack are sufficiently large
 that the blades operate under dynamic stall, which is a complex unsteady process
@@ -297,10 +297,7 @@ The need for experimental data that is relevant to full-scale behavior stems
 from the need to validate numerical models---most importantly mid-fidelity
 models---desirable for MHK developers to predict the performance of their
 cross-flow turbine designs, since physical modeling at appropriate scales can be
-prohibitively expensive in the early stages of engineering. Furthermore,
-Navier--Stokes-based computational fluid dynamics (CFD) simulations require
-modeling in 3 dimensions, which generally necessitates high performance
-computing---a resource that is not commonly available, and more expensive.
+prohibitively expensive in the early stages of engineering.
 
 To date, attempts to validate SNL's mid-fidelity CACTUS vortex line model
 \cite{Murray2011} have relied on measurements from the Saint Anthony Falls
@@ -329,7 +326,7 @@ publicly available for both validation of CACTUS and other numerical models
 % For figure citations, please use "Fig." instead of "Figure".
 
 A 1:6 scale model of the RM2 rotor was designed and built. Turbine geometric
-parameters were scaled from the RM2 ``rev 0'' design report \cite{Barone2011},
+parameters were scaled from the RM2 design report \cite{Barone2011},
 with the exception of the shaft diameter, which was scaled from the SAFL RM2
 model \cite{Hill2014}. The hubs were designed to be similar to the SAFL model,
 which may aid in comparison of the results, though this was not a top priority.
@@ -372,19 +369,18 @@ A drawing of the turbine model.}
 
 Experiments were performed in the UNH tow/wave tank, a 36 m long facility with a
 3.66 m wide by 2.44 m deep cross-section, capable of tow speeds up to 3 m/s,
-pictured in Figure~\ref{fig:tow-tank}. The turbine was mounted in a frame built
+pictured in Figure~\ref{fig:tow-tank}\textbf{\textit{[missing fig?]}}. The turbine was mounted in a frame built
 from NACA 0020 struts, attached to the tow carriage by four linear bearings,
-which transfer all streamwise force to a pair of S-beam load cells. The turbine
+which transfer all streamwise force to a pair of S-beam load cells \textbf{\textit{[need reference for each sensor - load cells, ADV, etc.]}}. The turbine
 shaft RPM was controlled by a servo motor system, which allowed prescription of
 the turbine tip speed ratio. The load torque was measured by an inline rotary
-torque transducer and a load cell mounted at a fixed distance from the servo
-motor, providing a redundant measurement. Turbine shaft angle was measured using
+torque transducer. A load cell mounted, mounted at a fixed distance from the servo
+motor, provides a redundant measurement. Turbine shaft angle was measured using
 the servo drive's emulated encoder output, set to $10^5$ counts per turbine
 shaft revolution. Carriage speed, and therefore inflow velocity was measured
 using a linear encoder with 10 $\mu$m resolution. All of these
-performance-related quantities were sampled as 2 kHz, while the tow tank's
-motion controller provided redundant measurements of the carriage speed and
-turbine angular velocity sampled at 1 kHz. Turbine wake measurements at 1 meter
+performance-related quantities were sampled at 2 kHz, while the tow tank's
+motion controller provided redundant measurements of the carriage speed \textbf{\textit{[need to say how well the agreement between these two measurements are and which one is used throughout the paper; else, remove one of these]}} turbine angular velocity sampled at 1 kHz. Turbine wake measurements at 1 meter
 downstream were measured with a Nortek Vectrino+ acoustic Doppler velocimeter,
 sampling at 200 Hz. A photo and drawing of the experimental setup are shown in
 Fig.~\ref{fig:exp-setup-photo} and Fig.~\ref{fig:exp-setup}, respectively.
@@ -408,7 +404,7 @@ Fig.~\ref{fig:exp-setup-photo} and Fig.~\ref{fig:exp-setup}, respectively.
     width=\textwidth]{figures/tank_cross_section}
     
     \caption{{\bf Experimental setup.} Illustration of the experimental setup.}
-    
+    \textbf{\textit{[would be good to indicate the water surface with text of drawing ( e.g. a triangle and three lines]}}
     \label{fig:exp-setup}
 \end{figure}
 
@@ -424,8 +420,8 @@ also possible.
 
 \paragraph{Tare drag and torque compensation.} Tare torque and drag runs were
 performed to measure the shaft bearing friction torque and turbine mounting
-frame drag, respectively. Tare drag runs were performed for each tow speed in
-the experiment, for which the mean value was used in data processing. Tare
+frame drag, respectively \textbf{\textit{[explain the purpose of these measurements; how the final drag and torque data were compensated using the tare measurements]}}. Tare drag runs were performed for each tow speed in
+the experiment, for which the mean value was used in data processing\textbf{\textit{[describe how this was done - without blades but shaft?]}}. Tare
 torque runs were performed by rotating the turbine shaft (without blades) in air
 at constant angular velocity for a specified duration, over the range of angular
 velocities used throughout the experiment. Tare torque was fit with a linear
@@ -433,7 +429,7 @@ regression versus shaft angular velocity, and added to the measured turbine
 torque in post-processing.
 
 
-\subsection*{Test parameters}
+\subsection*{Test parameters} 
 
 Data collection runs were separated into individual tows, for which all
 independent variables---tow speed, tip speed ratio, velocity probe
@@ -442,7 +438,7 @@ position---were held constant. These runs were grouped into logical test matrix
 matrix section names and descriptions are given below, which outline the
 experimental data and code repository \cite{Bachant2015-RM2-data}.
 
-
+\textbf{\textit{[The list below is too detailed for a journal paper - suggest to remove the list and leave only the citation]}}
 \begin{itemize}
     
     \item \texttt{Perf-\{speed\}}: Performance curve at \texttt{\{speed\}} m/s
@@ -519,7 +515,7 @@ cross-stream/vertical coordinates. All dimensions are in meters.}
 
 \subsection*{Data Processing}
 
-For each tow, a relevant quasi-steady duration was selected, and then truncated
+For each tow, a relevant quasi-steady duration was selected \textbf{\textit{[need a discussion on how this is done and justified]}}, and then truncated
 to include a whole number of blade passages. Over this duration relevant
 statistics are calculated.
 
@@ -553,17 +549,19 @@ reanalysis of the measurements presented here.
 Mean rotor power and drag coefficients for multiple Reynolds numbers are plotted
 versus tip speed ratio in Fig.~\ref{fig:cp-curves} and Fig.~\ref{fig:cd-curves},
 respectively. $C_P$ is shown to increase in general with $Re$, along with a
-reduction in the optimal tip speed ratio, due to stall delay. These effect
+reduction in the optimal tip speed ratio, due to stall delay \textbf{\textit{[need to explain what stall delay is]}}. These effect
 diminish with increasing $Re$, which is expected as the blade boundary layers
-transition from laminar to turbulent \cite{Lissaman1983,
+transition from laminar to turbulent \textbf{\textit{[I wonder if this is relevant, since all cases are already in well in the turbulent regime]}} \cite{Lissaman1983,
 Bachant2015-RVAT-Re-dep}. The rotor drag coefficient curves show similar
-effects, but vary much less dramatically from each other.
+effects, but vary much less dramatically from each other.\textbf{\textit{[Overall I think we need more discussion for Figs 5 & 6.  For fig 5, maybe a discussion on stall delay and why Re independence is not achieve is sufficient.  Fig 6, need to find something to say, e.g. (1)why the trends look like that, is this expected? (2)Why they don't differ much between each other.    (3) mention that CD increases with ReD. ]}}
 
 \begin{figure}[h]
 \includegraphics[width=\textwidth]{figures/cp_curves}
 \caption{{\bf Power Coefficient Curves.}
 Mean rotor power coefficient plotted versus mean tip speed ratio for multiple
 Reynolds numbers.}
+
+\textbf{\textit{[This figure shows that we haven't achieved Re independence (close though). I am sure many others will notice this.  Need to state why we couldn't go over Re = 1.3E6. I presume due to technical limitation.]}}
 \label{fig:cp-curves}
 \end{figure}
 
@@ -579,10 +577,10 @@ Reynolds numbers.}
 The behavior of the power coefficient at $\lambda=3.1$ is plotted in
 Fig.~\ref{fig:cp-re-dep}, where once again the increase in $C_P$ with $Re$ is
 highlighted. We see that the power coefficient of the turbine increases
-dramatically below $Re_D = 1 \times 10^6$ or $Re_c \approx 2 \times 10^5$,
-beyond which there appears to be a small, linear, positive trend. The tendency
+dramatically below $Re_D = 1 \times 10^6$ or $Re_c \approx 2 \times 10^5$ \textbf{\textit{[define Rec]}},
+beyond which there appears to be a small, linear, positive trend \textbf{\textit{[dCP/dRe seems to increase again for the two points: second and third highest Cp - any suggestion for the cause of this?  On a second thought, I think it's more appropriate to plot Re Vs. max Cp here ( don't fix TSR to 3.1, but pick a value which gives max Cp]}} . The tendency
 of $C_P$ to continue increasing slightly could be an effect of lower virtual
-camber when compared to the strong $Re$-indepdendence of the higher $c/R$
+camber \textbf{\textit{[I think we need to elaborate more on this. On its own, this sentence sounds very speculative]}} when compared to the strong $Re$-independence of the higher $c/R$
 UNH-RVAT \cite{Bachant2015-RVAT-Re-dep}.
 
 \begin{figure}[h]
@@ -604,13 +602,13 @@ velocity deficit is markedly more symmetric than that of the UNH-RVAT, with
 lower acceleration around the turbine thanks to lower rotor drag coefficient and
 blockage ratio \cite{Bachant2015-JoT}. We also see that the effects of blade tip
 vortex shedding are relatively weaker, which is likely an effect of the RM2's
-lower solidity and tapered blades.
+lower solidity and tapered blades.\textbf{\textit{[the last 2 sentences: it's difficult to understand this without knowing the UNH-RVAT. Suggest to add a discussion on the similarity & differences between RVAT and RM2 dimensions, testing, and add the mean velocity plot for RVAT side-by-side with the one for RM2.  Need more details on how you see the effects of vortex shedding are weaker.]}}
 
 \begin{figure}[h]
 \includegraphics[width=\textwidth]{figures/meancontquiv}
 \caption{{\bf Mean Velocity.}
 Mean velocity field at 1 m downstream ($x/D=0.93$), $U_\infty=1.0$ m/s, and
-$\lambda=3.1$.}
+$\lambda=3.1$.}\textbf{\textit{[is this looking downstream or upstream? may want to indicate the rotation direction of the downstream rotor side ( right or left)]}}
 \label{fig:meancontquiv}
 \end{figure}
 
@@ -632,7 +630,7 @@ $\lambda=3.1$.}
 
 
 Weighted averages for the transport terms in the mean kinetic energy
-equation---analyzed identically to \cite{Bachant2015-JoT}---are shown in
+equation---analyzed identically to \cite{Bachant2015-JoT}\textbf{\textit{[Although this has been written in the cited reference, I feel we need to discuss this so that at least readers understand the reason of doing this analysis]}}---are shown in
 Fig.~\ref{fig:Ktransport}. Due to the weaker blade vortex shedding, we see
 transport due to vertical advection at this point in the wake is approximately 3
 times lower than the higher solidity UNH-RVAT. Note that direct comparison is
@@ -660,7 +658,7 @@ downstream evolution and turbine interaction will be necessary.
 
 We see that strut drag losses increase with tip speed ratio to the power 2--3,
 which makes streamlined struts much more important for low solidity turbines,
-given the inverse correlation between solidity and $\lambda_0$.
+given the inverse correlation between solidity and $\lambda_0$.\textbf{\textit{[need more to write here]}}
 
 
 \begin{figure}[ht!]
