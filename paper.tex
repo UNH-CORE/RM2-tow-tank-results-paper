@@ -122,13 +122,13 @@
 \usepackage{rotating}
 
 % Remove comment for double spacing
-%\usepackage{setspace} 
+%\usepackage{setspace}
 %\doublespacing
 
 % Text layout
 \raggedright
 \setlength{\parindent}{0.5cm}
-\textwidth 5.25in 
+\textwidth 5.25in
 \textheight 8.75in
 
 % Bold the 'Figure #' in the caption and separate it from the title/caption with
@@ -181,10 +181,10 @@ singlelinecheck=off]{caption}
 \begin{flushleft}
 
 {\Large \textbf\newline{Measurements on a 1:6 scale DOE Reference Model 2
-cross-flow hydrokinetic turbine at transitional Reynolds numbers: Power production, 
+cross-flow hydrokinetic turbine at transitional Reynolds numbers: Power production,
 near-wake dynamics, and blade support strut losses}}
 \newline
-% Insert author names, affiliations and corresponding author email (do not include 
+% Insert author names, affiliations and corresponding author email (do not include
 % titles, positions, or degrees).
 \\
 Peter Bachant\textsuperscript{1,*},
@@ -193,7 +193,7 @@ Budi Gunawan\textsuperscript{2},
 Vincent Neary\textsuperscript{2}
 \\
 \bigskip
-\bf{1} Center for Ocean Renewable Energy, University of New Hampshire, Durham, NH, 
+\bf{1} Center for Ocean Renewable Energy, University of New Hampshire, Durham, NH,
 USA
 \\
 \bf{2} Water Power Technologies, Sandia National Laboratories, Albuquerque, NM, USA
@@ -230,7 +230,7 @@ models' predictive capabilities for low solidity rotors.
 
 \linenumbers
 
-\section*{Introduction} 
+\section*{Introduction}
 
 Sandia National Laboratories, in collaboration with the US Department of Energy
 developed the Reference Model devices to provide modeling targets for advancing
@@ -240,7 +240,7 @@ initially designed by Barone et al. \cite{Barone2011} using the CACTUS vortex
 line code \cite{Murray2011}. A scaled physical model of the RM2 was then
 designed and built by the Saint Anthony Falls Laboratory (SAFL) to validate the
 CACTUS predictions. Experimental performance measurements were significantly
-lower than the numerical results \cite{Hill2014}, which was assumed to be a 
+lower than the numerical results \cite{Hill2014}, which was assumed to be a
 result of the physical model's low Reynolds number
 \begin{equation}
 Re_D = \frac{U_\infty D}{\nu},
@@ -342,17 +342,17 @@ class 2 specifications. CAD models of the turbine are available from
 \centering
 \begin{tabular}{l|l|l}
    & Full-scale & Model (1:6) \\
-\hline 
-Diameter (m)   & 6.450 & 1.075 \\ 
-Height (m)     & 4.840 & 0.8067 \\ 
-Blade root chord (m) & 0.4000 & 0.06667 \\ 
-Blade tip chord (m)  & 0.2400 & 0.04000 \\ 
-Blade profile & NACA 0021 & NACA 0021 \\ 
-Blade mount & 1/2 chord & 1/2 chord \\ 
-Blade pitch (deg.) & 0.0 & 0.0 \\ 
-Strut profile & NACA 0021 & NACA 0021 \\ 
-Strut chord (m) & 0.3600 & 0.06000 \\ 
-Shaft diameter (m) & 0.2540 \cite{Beam2011} or 0.4160 \cite{Hill2014} & 0.06350\\ 
+\hline
+Diameter (m)   & 6.450 & 1.075 \\
+Height (m)     & 4.840 & 0.8067 \\
+Blade root chord (m) & 0.4000 & 0.06667 \\
+Blade tip chord (m)  & 0.2400 & 0.04000 \\
+Blade profile & NACA 0021 & NACA 0021 \\
+Blade mount & 1/2 chord & 1/2 chord \\
+Blade pitch (deg.) & 0.0 & 0.0 \\
+Strut profile & NACA 0021 & NACA 0021 \\
+Strut chord (m) & 0.3600 & 0.06000 \\
+Shaft diameter (m) & 0.2540 \cite{Beam2011} or 0.4160 \cite{Hill2014} & 0.06350\\
 \end{tabular}
 \caption{\textbf{RM2 turbine geometric parameters.}}
 \label{tab:turb-geom}
@@ -370,7 +370,7 @@ A drawing of the turbine model.}
 
 Experiments were performed in the UNH tow/wave tank, a 36 m long facility with a
 3.66 m wide by 2.44 m deep cross-section, capable of tow speeds up to 3 m/s,
-pictured in Figure~\ref{fig:tow-tank}\textbf{\textit{[missing fig?]}}. The turbine was mounted in a frame built
+pictured in Fig.~\ref{fig:exp-setup}. The turbine was mounted in a frame built
 from NACA 0020 struts, attached to the tow carriage by four linear bearings,
 which transfer all streamwise force to a pair of S-beam load cells \textbf{\textit{[need reference for each sensor - load cells, ADV, etc.]}}. The turbine
 shaft RPM was controlled by a servo motor system, which allowed prescription of
@@ -400,10 +400,10 @@ Fig.~\ref{fig:exp-setup-photo} and Fig.~\ref{fig:exp-setup}, respectively.
 
 \begin{figure}[h]
     \centering
-    
+
     \includegraphics[clip,trim=0.01in 0 0 0,
     width=\textwidth]{figures/tank_cross_section}
-    
+
     \caption{{\bf Experimental setup.} Illustration of the experimental setup.}
     \textbf{\textit{[would be good to indicate the water surface with text of drawing ( e.g. a triangle and three lines]}}
     \label{fig:exp-setup}
@@ -430,7 +430,7 @@ regression versus shaft angular velocity, and added to the measured turbine
 torque in post-processing.
 
 
-\subsection*{Test parameters} 
+\subsection*{Test parameters}
 
 Data collection runs were separated into individual tows, for which all
 independent variables---tow speed, tip speed ratio, velocity probe
@@ -441,41 +441,41 @@ experimental data and code repository \cite{Bachant2015-RM2-data}.
 
 \textbf{\textit{[The list below is too detailed for a journal paper - suggest to remove the list and leave only the citation]}}
 \begin{itemize}
-    
+
     \item \texttt{Perf-\{speed\}}: Performance curve at \texttt{\{speed\}} m/s
     tow speed, performed for (0.4, 0.6, 0.8, 1.0, 1.2) m/s.
-    
+
     \item \texttt{Perf-\{speed\}-b}: Second performance curve at
     \texttt{\{speed\}} m/s, performed for the same tow speeds as above for
     reduced statistical uncertainty.
-    
+
     \item \texttt{Perf-1.0-covers}: Performance curve at 1.0 m/s tow speed with
     cylindrical strut covers.
-    
+
     \item \texttt{Perf-1.0-no-blades-covers}: Performance curve at 1.0 m/s with
     no blades and cylindrical strut covers.
-    
+
     \item \texttt{Perf-1.0-no-blades}: Performance curve at 1.0 m/s with no
     blades (NACA 0021 struts only).
-    
+
     \item \texttt{Perf-tsr\_0}: Performance at $\lambda=3.1$ for multiple tow
     speeds.
-    
+
     \item \texttt{Perf-tsr\_0-b}: Additional set of runs duplicating the
     \texttt{Perf-tsr\_0} parameters.
-    
+
     \item \texttt{Strut-torque-covers}: Measuring parasitic torque from
     cylindrical struts without towing.
-    
+
     \item \texttt{Strut-torque}: Measuring parasitic torque from
     NACA 0021 struts without towing.
-    
+
     \item \texttt{Tare-drag}: Drag on the turbine frame measured with the turbine
     removed.
-    
+
     \item \texttt{Tare-torque}: Measurements of friction torque in shaft
     bearings for a range of RPMs used in the experiments.
-    
+
     \item \texttt{Wake-\{speed\}-\{z/H\}}: Cross-stream wake profile at 1 m
     downstream ($x/D=0.93$), $\lambda=3.1$, \texttt{\{speed\}} m/s tow speed,
     and \texttt{\{z/H\}} vertical location.
@@ -486,14 +486,14 @@ experimental data and code repository \cite{Bachant2015-RM2-data}.
 \begin{table}[ht]
 \centering
 \begin{tabular}{c|c|c|c|c}
-Tow speed (m/s) & $Re_D$ & $Re_{c_\mathrm{tip}}$ & $Re_{c_\mathrm{root}}$ & $Re_{c_\mathrm{mid}}$\\ 
-\hline 
-0.4 & $4.3 \times 10^5$ & $5.0 \times 10^4$ & $8.3 \times 10^4$ & $6.6 \times 10^4$ \\ 
-0.6 & $6.5 \times 10^5$ & $7.4 \times 10^4$ & $1.2 \times 10^5$ & $9.9 \times 10^4$ \\ 
-0.8 & $8.6 \times 10^5$ & $9.9 \times 10^4$ & $1.7 \times 10^5$ & $1.3 \times 10^5$ \\ 
-1.0 & $1.1 \times 10^6$ & $1.2 \times 10^5$ & $2.1 \times 10^5$ & $1.7 \times 10^5$ \\ 
-1.2 & $1.3 \times 10^6$ & $1.5 \times 10^5$ & $2.5 \times 10^5$ & $2.0 \times 10^5$ \\ 
-\end{tabular} 
+Tow speed (m/s) & $Re_D$ & $Re_{c_\mathrm{tip}}$ & $Re_{c_\mathrm{root}}$ & $Re_{c_\mathrm{mid}}$\\
+\hline
+0.4 & $4.3 \times 10^5$ & $5.0 \times 10^4$ & $8.3 \times 10^4$ & $6.6 \times 10^4$ \\
+0.6 & $6.5 \times 10^5$ & $7.4 \times 10^4$ & $1.2 \times 10^5$ & $9.9 \times 10^4$ \\
+0.8 & $8.6 \times 10^5$ & $9.9 \times 10^4$ & $1.7 \times 10^5$ & $1.3 \times 10^5$ \\
+1.0 & $1.1 \times 10^6$ & $1.2 \times 10^5$ & $2.1 \times 10^5$ & $1.7 \times 10^5$ \\
+1.2 & $1.3 \times 10^6$ & $1.5 \times 10^5$ & $2.5 \times 10^5$ & $2.0 \times 10^5$ \\
+\end{tabular}
 
 \caption{{\bf Test Reynolds numbers.} Turbine diameter and approximate average
     blade chord Reynolds numbers $Re_c=\lambda U_\infty c / \nu$ at blade tip, root,
@@ -509,8 +509,8 @@ Fig.~\ref{fig:coordinates}.
 
 \begin{figure}[h]
 \includegraphics[width=\textwidth]{figures/turbine_coordinate_system}
-\caption{{\bf Coordinate system.} Wake measurement coordinate system and 
-cross-stream/vertical coordinates. All dimensions are in meters.} 
+\caption{{\bf Coordinate system.} Wake measurement coordinate system and
+cross-stream/vertical coordinates. All dimensions are in meters.}
 \label{fig:coordinates}
 \end{figure}
 
@@ -536,7 +536,7 @@ and
 C_D = \frac{F_\mathrm{drag}}{\frac{1}{2} \rho A U_\infty^2},
 \end{equation}
 where $\rho$ is the fluid density (1000 kg/m\textsuperscript{3}) and $A$ is
-the turbine frontal area $DH$. 
+the turbine frontal area $DH$.
 
 All data processing and plotting code, along with the reduced dataset are
 available from \cite{Bachant2015-RM2-data}. Note that this code will
@@ -665,7 +665,7 @@ given the inverse correlation between solidity and $\lambda_0$.\textbf{\textit{[
 \begin{figure}[ht!]
 \includegraphics[width=\textwidth]{figures/no_blades_all}
 \caption{{\bf Strut drag losses.}
-Measurements of the strut drag losses for (a) NACA 0021 and (b) cylindrical 
+Measurements of the strut drag losses for (a) NACA 0021 and (b) cylindrical
 struts, both stationary and towed.}
 \label{fig:no-blades}
 \end{figure}
@@ -732,10 +732,9 @@ Administration under contract DE-AC04-94AL85000.
 % Compile your BiBTeX database using our plos2015.bst
 % style file and paste the contents of your .bbl file
 % here.
-% 
+%
 \bibliographystyle{plos2015}
 \bibliography{library}
 
 
 \end{document}
-
