@@ -243,11 +243,12 @@ CACTUS predictions. Experimental performance measurements were significantly
 lower than the numerical results \cite{Hill2014}, which was assumed to be a 
 result of the physical model's low Reynolds number
 \begin{equation}
-Re_L = \frac{UL}{\nu},
+Re_D = \frac{U_\infty D}{\nu},
 \label{eq:Re}
-\end{equation}\textbf{\textit{[why not go straight with defining ReD and ReC here, so it's also clear which U and L are used for each of these?]}}
-where $U$ is ?free-stream? velocity, $L$ is characteristic length scales (?blade-chord length?), and $\nu$ is the fluid
-kinematic viscosity.
+\end{equation}
+where $U_\infty$ is the free stream velocity, $D$ is the rotor diameter (note
+that in some cases the blade chord length $c$ is used as this length scale), and
+$\nu$ is the fluid kinematic viscosity.
 
 As a cross-flow turbine, the RM2 blades experience large variations in angles of
 attack as they rotate about their axis (``cross-flow turbine'' means the axis of
