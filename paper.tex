@@ -519,9 +519,10 @@ cross-stream/vertical coordinates. All dimensions are in meters.}
 
 \subsection*{Data Processing}
 
-For each tow, a relevant quasi-steady duration was selected \textbf{\textit{[need a discussion on how this is done and justified]}}, and then truncated
-to include a whole number of blade passages. Over this duration relevant
-statistics are calculated.
+For each tow speed, a relevant quasi-steady duration was selected by manually
+inspecting a plot of the $C_P$ time series, and then truncated to include a
+whole number of blade passages. Over this duration relevant statistics are
+calculated.
 
 To calculate turbine RPM from shaft angle, the encoder signal is differentiated
 using a second order central difference scheme, after which a relatively
