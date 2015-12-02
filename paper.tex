@@ -547,6 +547,7 @@ available from \cite{Bachant2015-RM2-data}. Note that this code will
 automatically download raw data as necessary so users can perform a full
 reanalysis of the measurements presented here.
 
+
 \section*{Results and Discussion}
 
 \subsection*{Performance}
@@ -558,9 +559,14 @@ reduction in the optimal tip speed ratio, due to the tendency of foils to stall
 at higher angles of attack at higher $Re$, and the higher angle of attack ranges
 seen by the blades at lower $\lambda$. These effects diminish with increasing
 $Re$, which is expected as the blade boundary layers transition to turbulence
-closer to the leading edge \cite{Lissaman1983, Bachant2015-RVAT-Re-dep}. The
-rotor drag coefficient curves show similar effects, but vary much less
-dramatically from each other.
+closer to the leading edge \cite{Lissaman1983, Bachant2015-RVAT-Re-dep}. 
+
+Strict Reynolds number independence was not observed, i.e., the $C_P$ curves do
+not collapse exactly onto each other. Note that the data collection was limited
+at higher $Re$ and $\lambda$ due to the unsteady turbine force resonating with
+the tow carriage drive belt. In contrast to the power coefficient data, the
+rotor drag coefficient curves nearly collapse onto each other for $Re_D \ge 0.6
+\times 10^6$.
 
 \begin{figure}[h]
 \includegraphics[width=\textwidth]{figures/cp_curves}
@@ -577,7 +583,6 @@ Mean rotor drag coefficient plotted versus mean tip speed ratio for multiple
 Reynolds numbers.}
 \label{fig:cd-curves}
 \end{figure}
-
 
 The behavior of the power coefficient at $\lambda=3.1$ is plotted in
 Fig.~\ref{fig:cp-re-dep}, where once again the increase in $C_P$ with $Re$ is
