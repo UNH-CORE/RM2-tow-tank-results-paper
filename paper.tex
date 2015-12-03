@@ -359,10 +359,11 @@ Shaft diameter (m) & 0.2540 \cite{Beam2011} or 0.4160 \cite{Hill2014} & 0.06350\
 \end{table}
 
 \begin{figure}[h]
-\includegraphics[width=0.65\textwidth]{figures/turbine}
-\caption{{\bf Turbine Model.}
-A drawing of the turbine model.}
-\label{fig:turbine-drawing}
+    \includegraphics[width=0.65\textwidth]{figures/turbine.eps}
+
+    \caption{{\bf Turbine Model.} A drawing of the turbine model.}
+
+    \label{fig:turbine-drawing}
 \end{figure}
 
 
@@ -511,11 +512,14 @@ $x/D = 0.93$. The cross-stream and vertical coordinates are shown in
 Fig.~\ref{fig:coordinates}.
 
 \begin{figure}[h]
-\includegraphics[width=\textwidth]{figures/turbine_coordinate_system}
-\caption{{\bf Coordinate system.} Wake measurement coordinate system and
-cross-stream/vertical coordinates. All dimensions are in meters.}
-\label{fig:coordinates}
+    \includegraphics[width=\textwidth]{figures/turbine_coordinate_system.eps}
+
+    \caption{{\bf Coordinate system.} Wake measurement coordinate system and
+    cross-stream/vertical coordinates. All dimensions are in meters.}
+
+    \label{fig:coordinates}
 \end{figure}
+
 
 \subsection*{Data Processing}
 
@@ -533,11 +537,11 @@ $U_\infty$ from carriage position measurements. Power and drag coefficients are
 calculated as instantaneous quantities from the carriage speed as
 
 \begin{equation}
-C_P = \frac{T \omega}{\frac{1}{2} \rho A U_\infty^3}
+    C_P = \frac{T \omega}{\frac{1}{2} \rho A U_\infty^3}
 \end{equation}
 and
 \begin{equation}
-C_D = \frac{F_\mathrm{drag}}{\frac{1}{2} \rho A U_\infty^2},
+    C_D = \frac{F_\mathrm{drag}}{\frac{1}{2} \rho A U_\infty^2},
 \end{equation}
 where $\rho$ is the fluid density (1000 kg/m\textsuperscript{3}) and $A$ is
 the turbine frontal area $DH$.
@@ -559,7 +563,7 @@ reduction in the optimal tip speed ratio, due to the tendency of foils to stall
 at higher angles of attack at higher $Re$, and the higher angle of attack ranges
 seen by the blades at lower $\lambda$. These effects diminish with increasing
 $Re$, which is expected as the blade boundary layers transition to turbulence
-closer to the leading edge \cite{Lissaman1983, Bachant2015-RVAT-Re-dep}. 
+closer to the leading edge \cite{Lissaman1983, Bachant2015-RVAT-Re-dep}.
 
 Strict Reynolds number independence was not observed, i.e., the $C_P$ curves do
 not collapse exactly onto each other. Note that the data collection was limited
@@ -569,19 +573,21 @@ rotor drag coefficient curves nearly collapse onto each other for $Re_D \ge 0.6
 \times 10^6$.
 
 \begin{figure}[h]
-\includegraphics[width=\textwidth]{figures/cp_curves}
-\caption{{\bf Power Coefficient Curves.}
-Mean rotor power coefficient plotted versus mean tip speed ratio for multiple
-Reynolds numbers.}
-\label{fig:cp-curves}
+    \includegraphics[width=\textwidth]{figures/cp_curves.eps}
+
+    \caption{{\bf Power Coefficient Curves.} Mean rotor power coefficient
+    plotted versus mean tip speed ratio for multiple Reynolds numbers.}
+
+    \label{fig:cp-curves}
 \end{figure}
 
 \begin{figure}[h]
-\includegraphics[width=\textwidth]{figures/cd_curves}
-\caption{{\bf Drag Coefficient Curves.}
-Mean rotor drag coefficient plotted versus mean tip speed ratio for multiple
-Reynolds numbers.}
-\label{fig:cd-curves}
+    \includegraphics[width=\textwidth]{figures/cd_curves.eps}
+
+    \caption{{\bf Drag Coefficient Curves.} Mean rotor drag coefficient plotted
+    versus mean tip speed ratio for multiple Reynolds numbers.}
+
+    \label{fig:cd-curves}
 \end{figure}
 
 The behavior of the power coefficient at $\lambda=3.1$ is plotted in
@@ -594,7 +600,7 @@ an effect of lower virtual camber when compared to the strong $Re$-independence
 of the higher $c/R$ UNH-RVAT \cite{Bachant2015-RVAT-Re-dep}.
 
 \begin{figure}[h]
-    \includegraphics[width=\textwidth]{figures/perf_re_dep}
+    \includegraphics[width=\textwidth]{figures/perf_re_dep.eps}
 
     \caption{{\bf Reynolds Number effects on performance.} Power and drag
         coefficient at $\lambda=3.1$ plotted versus turbine diameter and approximate
@@ -615,7 +621,7 @@ vortex shedding are relatively weaker, which is likely an effect of the RM2's
 lower solidity and tapered blades.
 
 \begin{figure}[h]
-    \includegraphics[width=\textwidth]{figures/meancontquiv}
+    \includegraphics[width=\textwidth]{figures/meancontquiv.eps}
 
     \caption{{\bf Mean Velocity.} Mean velocity field (looking upstream) at 1 m
     downstream ($x/D=0.93$), $U_\infty=1.0$ m/s, and $\lambda=3.1$. Refer to
@@ -634,7 +640,7 @@ which indicates that the RM2 blades are operating further from
 stall---consistent with the higher tip speed ratio operation.
 
 \begin{figure}[h]
-    \includegraphics[width=\textwidth]{figures/k_contours}
+    \includegraphics[width=\textwidth]{figures/k_contours.eps}
 
     \caption{{\bf Turbulence Kinetic Energy.} Turbulence kinetic energy (looking
     upstream) at 1 m downstream ($x/D=0.93$), $U_\infty=1.0$ m/s, and
@@ -659,11 +665,11 @@ kinetic energy from the free stream, though a detailed anaylsis of the
 downstream evolution and turbine interaction will be necessary.
 
 \begin{figure}[ht!]
-\includegraphics[width=0.9\textwidth]{figures/K_trans_bar_graph}
+    \includegraphics[width=0.9\textwidth]{figures/K_trans_bar_graph.eps}
 
-\caption{{\bf Mean Kinetic Energy Transport.} Weighted average estimates for
-    terms contributing to streamwise recovery of mean kinetic energy, multiplied by
-    two due to implied symmetry.}
+    \caption{{\bf Mean Kinetic Energy Transport.} Weighted average estimates for
+    terms contributing to streamwise recovery of mean kinetic energy, multiplied
+    by two due to implied symmetry.}
 
 \label{fig:Ktransport}
 \end{figure}
@@ -677,20 +683,22 @@ given the inverse correlation between solidity and $\lambda_0$.
 
 
 \begin{figure}[ht!]
-\includegraphics[width=\textwidth]{figures/no_blades_all}
-\caption{{\bf Strut drag losses.}
-Measurements of the strut drag losses for (a) NACA 0021 and (b) cylindrical
-struts, both stationary and towed.}
-\label{fig:no-blades}
+    \includegraphics[width=\textwidth]{figures/no_blades_all.eps}
+
+    \caption{{\bf Strut drag losses.} Measurements of the strut drag losses for
+    (a) NACA 0021 and (b) cylindrical struts, both stationary and towed.}
+
+    \label{fig:no-blades}
 \end{figure}
 
 
 \begin{figure}[ht!]
-\includegraphics[width=\textwidth]{figures/perf_covers}
-\caption{{\bf High drag strut performance.}
-Turbine performance and rotor drag coefficient curves with both NACA 0021
-and cylindrical struts.}
-\label{fig:perf-covers}
+    \includegraphics[width=\textwidth]{figures/perf_covers.eps}
+
+    \caption{{\bf High drag strut performance.} Turbine performance and rotor
+    drag coefficient curves with both NACA 0021 and cylindrical struts.}
+
+    \label{fig:perf-covers}
 \end{figure}
 
 
