@@ -1,0 +1,3 @@
+[submodule "RM2-tow-tank"]
+	path = RM2-tow-tank
+	url = git@github.com:UNH-CORE/RM2-tow-tank.git
