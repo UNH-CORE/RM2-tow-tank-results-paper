@@ -1,7 +1,5 @@
 #!/usr/bin/env python
-"""
-This script copies my personal BibTeX file to the current directory.
-"""
+"""This script copies my personal BibTeX file to the current directory."""
 
 import os
 import shutil
@@ -15,7 +13,7 @@ else:
 bibpath = os.path.join(os.path.expanduser("~"), "Google Drive",
                        "Library", "Library.bib")
 biburl = "https://raw.githubusercontent.com/petebachant/Library/master/Library.bib"
-                       
+
 try:
     shutil.copy2(bibpath, "library.bib")
 except FileNotFoundError:
