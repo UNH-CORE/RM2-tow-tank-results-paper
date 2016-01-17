@@ -420,6 +420,26 @@ Fig.~\ref{fig:exp-setup}, respectively.
     \label{fig:exp-setup}
 \end{figure}
 
+\begin{table}[ht]
+    \centering
+    \begin{tabular}{c|c|c|c}
+        Measured quantity & Device type & Mfg. \& model & Nominal accuracy \\
+        \hline 
+        Carriage position & Linear encoder & Renishaw LM15 & 10 $\mu$m/pulse \cite{RenishawLM15}\\
+        Turbine angle & Servo encoder output & Kollmorgen AKD & 10$^5$ pulse/rev \cite{KollmorgenAKD}\\
+        Turbine torque & Rotary transducer & Interface T8-200 & $\pm$0.5 Nm \cite{InterfaceT8}\\ 
+        Turbine torque (2) & Load cell (\& arm) & Sentran ZB3-200 & $\pm$0.2 Nm \cite{SentranZB}\\
+        Drag force, left & Load cell & Sentran ZB3-500 & $\pm$0.6 N \cite{SentranZB}\\
+        Drag force, right & Load cell & Sentran ZB3-500 & $\pm$0.6 N \cite{SentranZB}\\
+        Fluid velocity & ADV & Nortek Vectrino+ & $\pm$0.5\% $\pm$1 mm/s \cite{NortekVectrino}\\
+    \end{tabular}
+    \caption{Details of the sensors used in the experiment. Note that ``(2)''
+        denotes a secondary redundant measurement. ``Turbine torque (2)'' nominal
+        accuracy was estimated by combining load cell accuracy and arm machining
+        tolerances ($\pm 1 \times 10^{-4}$ m) as root-sum-square.}
+    \label{tab:sensors}
+\end{table}
+
 \paragraph{Synchronization.} The three data acquisition instrumentation
 subsystems---motion controller, NI DAQ (performance measurements), and Vectrino+
 (wake velocity measurements)---started sampling at precisely the same time each
@@ -489,12 +509,12 @@ Fig.~\ref{fig:coordinates}.
 
 \subsection*{Uncertainty Analysis}
 
-Uncertainty was considered from a combination of systematic
-and random errors. The random error was inferred from the sample standard
-deviation and the systematic from the sensor calibrations or datasheets.
-Combining both sources of error, along with their propagation into quantities
-derived from multiple measurements, followed the procedures outlined in
-Coleman and Steele (2009) \cite{ColemanSteele}, described below.
+Uncertainty was considered from a combination of systematic and random errors.
+The random error was inferred from the sample standard deviation and the
+systematic error from the sensor calibrations or datasheets. Combining both
+sources of error, along with their propagation into quantities derived from
+multiple measurements, followed the procedures outlined in Coleman and Steele
+(2009) \cite{ColemanSteele}, described below.
 
 An expanded uncertainty interval with 95\% confidence was computed for
 $\lambda$, $C_P$, and $C_D$
