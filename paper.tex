@@ -255,25 +255,11 @@ $U_\infty$ is the free stream velocity, $D$ is the rotor diameter, and $\nu$ is
 the fluid kinematic viscosity---of the 1:15 scale tests, which were performed at
 $Re_D \sim 10^5$ \cite{Hill2014}.
 
-The performance of cross-flow MHK turbines thus depends on both Reynolds number
-and solidity (note that these issues are related, since an average blade chord
-Reynolds number, $Re_{c,\mathrm{avg}} \approx \lambda U_\infty c/ \nu$, can be
-expressed in terms of tip speed ratio $\lambda$, the optimal value of which is a
-function of solidity). If numerical models are validated with physical model
-data that was obtained at insufficiently high Reynolds numbers, it cannot be
-determined whether problems with model predictions are caused by Reynolds number
-effects, issues related to higher solidity, or both. It is uncertain whether
-numerical models validated with physical model data obtained at low Reynolds
-number should be considered validated at all, since the scale at which the model
-will be applied is orders of magnitude larger. One way to overcome this
-uncertainty is to show that the scaled physical model test has become Reynolds
-number independent, and therefore validation efforts should be relevant at
-full-scale.
-
-For example, the effect of Reynolds number on average power output was shown to
-be significant on the 2 m Sandia Research Darrieus turbine in wind tunnel
-testing \cite{Blackwell1976}: Maximum power coefficient, $C_{P_{\max}}$,
-increased with Reynolds number, $Re_c$, along with a shift of the location of
+The effect of Reynolds number on average power output was shown to be
+significant on the 2 m Sandia Research Darrieus turbine in wind tunnel testing
+\cite{Blackwell1976}: Maximum power coefficient, $C_{P_{\max}}$, increased with
+Reynolds number, $Re_c$ (based on blade chord rather than diameter, though these
+are approximately proportional), along with a shift of the location of
 $C_{P_{\max}}$ toward lower tip speed ratios due to delayed blade stall. The
 effects of Reynolds number were quite dramatic over a relatively small range of
 $Re_c \approx 1.1 \times 10^5$--$2.9 \times 10^5$. More recently, Bachant and
@@ -281,22 +267,17 @@ Wosnik \cite{Bachant2014, Bachant2015-RVAT-Re-dep} showed that performance and
 near-wake characteristics of a high solidity cross-flow turbine become Reynolds
 number independent at $Re_c \approx 2 \times 10^5$.
 
-The need for experimental data that is relevant to full-scale behavior stems
-from the need to validate numerical models---most importantly mid-fidelity
-models---desirable for MHK developers to predict the performance of their
-cross-flow turbine designs, since physical modeling at appropriate scales can be
-prohibitively expensive in the early stages of engineering.
-
-To date, attempts to validate SNL's mid-fidelity CACTUS vortex line model
-\cite{Murray2011} have relied on measurements from the Saint Anthony Falls
-Laboratory (SAFL) \cite{Hill2014} and the University of New Hampshire (UNH)
-\cite{Neary2013, Michelen2014}. For the SAFL experiments (RM2), the chord
-Reynolds number, $Re_c \sim 10^4$, was below the threshold needed to properly
-simulate lift and stall characteristics. For the UNH experiment
-\cite{Bachant2013}, the chord Reynolds number was sufficiently high at $Re_c
-\approx 2.7 \times 10^5$, but the chord/radius ratio and solidity (13.4\%)
-created instability in the free-wake evolution in the model, which caused
-significant overestimation of power coefficient.
+As part of the engineering process it is generally less expensive to assess
+designs via numerical rather than physical models. However, it is
+important---especially when dealing with fluid dynamics where the ``exact''
+physics cannot be resolved with even the most advanced computers---that
+numerical models be validated against experimental data. It is uncertain whether
+numerical models validated with physical model data obtained at low Reynolds
+number should be considered validated at all, since the scale at which the model
+will be applied for real world design problems is orders of magnitude larger.
+One way to overcome this uncertainty is to show that the scaled physical model
+test has become Reynolds number independent, and therefore validation efforts
+should be relevant at full-scale, which was the strategy employed here.
 
 The present task was to acquire a new dataset for the lower solidity RM2
 turbine, but at higher Reynolds numbers than those achieved in the experiments
