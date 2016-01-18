@@ -224,60 +224,49 @@ models' predictive capabilities for low solidity rotors.
 \section*{Introduction}
 
 The Reference Model Project (RMP), sponsored by the US Department of Energy,
-launched six marine hydrokinetic (MHK) technology point designs as reference
+produced six marine hydrokinetic (MHK) technology point designs as reference
 models (RM) to serve as non-proprietary test articles for open research
 development, and to benchmark performance and costs for technology developers
 \cite{Neary2014, Neary2014a}. Open-source RMP products, along with supporting
 documentation, are available at the RMP website
 \url{http://energy.sandia.gov/rmp} to facilitate their use in future R\&D
 studies by industry, academia, and national laboratories. These products
-include: Design specifications and computer-aided design (CAD) files for each RM
-device to allow exact replication for physical and numerical modeling studies;
-Resource site information used to design each RM device; and references to
-physical modeling data sets that can be used to validate numerical modeling
+include: Technical specifications and computer-aided design (CAD) files for each
+RM device to allow exact replication for physical and numerical modeling
+studies; Resource site information used to design each RM device; and references
+to physical modeling data sets that can be used to validate numerical modeling
 design and analysis tools.
 
 Reference Model 2 (RM2) is a dual-rotor, vertical-axis cross-flow river turbine
 that was designed to operate in a reach of the lower Mississippi River near
-Baton Rouge, Louisiana \cite{Barone2011, Neary2011}.
-
-
-Sandia National Laboratories, in collaboration with the US Department of Energy
-developed the Reference Model devices to provide modeling targets for advancing
-marine hydrokinetic (MHK) energy technology \cite{Neary2014}. The Reference
-Model 2 (RM2), a vertical-axis cross-flow turbine intended for river
-environments, was initially designed by Barone et al. \cite{Barone2011} using
-the CACTUS vortex line code \cite{Murray2011}. A scaled physical model of the
-RM2 was then designed and built by the Saint Anthony Falls Laboratory (SAFL) to
-validate the CACTUS predictions. Experimental performance measurements were
-significantly lower than the numerical results \cite{Hill2014}, which was
-assumed to be a result of the physical model's low Reynolds number
-\begin{equation}
-    Re_D = \frac{U_\infty D}{\nu},
-\label{eq:Re}
-\end{equation}
-where $U_\infty$ is the free stream velocity, $D$ is the rotor diameter (note
-that in some cases the blade chord length $c$ is used as this length scale), and
-$\nu$ is the fluid kinematic viscosity.
+Baton Rouge, Louisiana \cite{Barone2011, Neary2011}. The rotor has three blades,
+a relatively low solidity $Nc/(\pi D)$ or chord-to-radius ratio $c/R$, and a
+preliminary analysis with Sandia's CACTUS vortex line numerical model
+\cite{Murray2011} predicted a full-scale performance coefficient of 47\% at 1
+m/s flow speed and a tip speed ratio $\lambda \equiv \frac{\omega R}{U_\infty} =
+3.15$ \cite{Barone2011}, where $\omega$ and $R$ are the rotor's angular velocity
+and radius, respectively. An initial experimental measurement campaign with a
+1:15 scale RM2 rotor conducted at the Saint Anthony Falls Laboratory (SAFL) at
+the University of Minnesota resulted in maximum power coefficient of
+approximately 5\% at a tip speed ratio $\lambda = 2.2$. This discrepancy between
+numerical and physical model performance prompted the experimental measurements
+presented here, namely due to the low Reynolds number---$Re_D = U_\infty D /
+\nu$, where $U_\infty$ is the free stream velocity, $D$ is the rotor diameter,
+and $\nu$ is the fluid kinematic viscosity---of the 1:15 scale tests, which were
+performed at $Re_D \sim 10^5$ \cite{Hill2014}.
 
 As a consequence of the inherently unsteady nature of the cross-flow rotor, the
 RM2 blades experience large variations in angles of attack as they rotate about
 their axis (``cross-flow'' means the axis of rotation is perpendicular to flow
 direction). These variations become larger at lower tip speed ratio
-\begin{equation}
-    \lambda=\frac{\omega R}{U_\infty},
-\end{equation}
-where $\omega$ and $R$ are the rotor angular velocity and radius
 \cite{Para2002}. Typically, the maximum angles of attack are sufficiently large
 that the blades operate under dynamic stall, which is a complex unsteady process
 and deviates significantly from static foil behavior, during part of the
 rotation. Furthermore, the higher the solidity of a cross-flow turbine, the
 lower the optimal tip-speed ratio at which it operates. Marine Hydrokinetic
-(MHK) cross-flow turbines typically have higher solidity than cross-flow wind
-turbines (VAWT), and hence operate at lower tip-speed ratios. Since MHK turbines
-operate in a higher density fluid, unsteady dynamic effects related to the
-blades' pitching motion and flow curvature also become more important when
-compared to wind turbines.
+(MHK) cross-flow turbines typically have higher solidity than their similar wind
+turbine counterparts (often called vertical-axis wind turbines, or VAWTs), and
+hence operate at lower tip-speed ratios.
 
 The performance of cross-flow MHK turbines thus depends on both Reynolds number
 and solidity (note that these issues are related, since an average blade chord
