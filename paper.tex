@@ -279,13 +279,19 @@ One way to overcome this uncertainty is to show that the scaled physical model
 test has become Reynolds number independent, and therefore validation efforts
 should be relevant at full-scale, which was the strategy employed here.
 
-The present task was to acquire a new dataset for the lower solidity RM2
-turbine, but at higher Reynolds numbers than those achieved in the experiments
-at SAFL. It was suspected that the strut drag model in CACTUS could be the
-source of some discrepancy. Thus, the strut drag was deliberately and
-significantly increased in the physical model to provide data to help answer
-that question. This dataset is publicly available for both validation of CACTUS
-and other numerical models \cite{Bachant2015-RM2-data}.
+The present task was to acquire a new experimental dataset for the lower
+solidity RM2 turbine at sufficient Reynolds numbers to be relevant to full-scale
+modeling. It was hypothesized that the parasitic losses from rotor blade support
+struts could play an important role in overall turbine performance. Thus, the
+parasitic torque from strut drag was measured without blades, then deliberately
+and significantly increased in the physical model to provide data to help answer
+that question. The velocity field in the near-wake of the turbine was then
+measured to compare with measurements from a higher solidity rotor in the same
+experimental setup \cite{Bachant2015-JoT}, and provide validation data for
+numerical models that predict wake flows, which determine turbine--turbine
+interaction and optimal spacing for turbine arrays. This dataset, along with the
+code for processing and visualization, is publicly available
+\cite{Bachant2015-RM2-data}.
 
 
 \section*{Materials and Methods}
