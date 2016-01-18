@@ -546,12 +546,12 @@ efforts can easily incorporate finite domains, meaning blockage corrections
 could create an additional variable to obfuscate validation efforts.
 
 To calculate turbine RPM from shaft angle, the encoder signal is differentiated
-using a second order central difference scheme, after which a relatively
-small-windowed moving average smoothing filter is applied to match the noise
-level present in the redundant turbine RPM measurement from the motion
-controller. A similar approach is used for calculating tow carriage speed
-$U_\infty$ from carriage position measurements. Power and drag coefficients are
-calculated as instantaneous quantities from the carriage speed as
+using a second order central difference scheme, after which an 8 sample wide
+moving average smoothing filter is applied to match the noise level present in
+the redundant turbine RPM measurement from the motion controller. A similar
+approach is used for calculating tow carriage speed $U_\infty$ from carriage
+position measurements. Power and drag coefficients are calculated as
+instantaneous quantities from the carriage speed as
 
 \begin{equation}
     C_P = \frac{T \omega}{\frac{1}{2} \rho A U_\infty^3}
