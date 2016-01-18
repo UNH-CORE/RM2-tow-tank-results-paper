@@ -573,21 +573,18 @@ reanalysis of the measurements presented here.
 
 \subsection*{Performance}
 
-Mean rotor power and drag coefficients for multiple Reynolds numbers are plotted
-versus tip speed ratio in Fig.~\ref{fig:cp-curves} and Fig.~\ref{fig:cd-curves},
-respectively. $C_P$ is shown to increase in general with $Re$, along with a
-reduction in the optimal tip speed ratio, due to the tendency of foils to stall
-at higher angles of attack at higher $Re$, and the higher angle of attack ranges
-seen by the blades at lower $\lambda$. These effects diminish with increasing
-$Re$, which is expected as the blade boundary layers transition to turbulence
-closer to the leading edge \cite{Lissaman1983, Bachant2015-RVAT-Re-dep}.
-
-Strict Reynolds number independence was not observed, i.e., the $C_P$ curves do
-not collapse exactly onto each other. Note that the data collection was limited
-at higher $Re$ and $\lambda$ due to the unsteady turbine force resonating with
-the tow carriage drive belt. In contrast to the power coefficient data, the
-rotor drag coefficient curves nearly collapse onto each other for $Re_D \ge 0.6
-\times 10^6$.
+Mean rotor power coefficients for multiple Reynolds numbers are plotted versus
+tip speed ratio in Fig.~\ref{fig:cp-curves}. $C_P$ is shown to increase in
+general with $Re$, along with a reduction in the optimal tip speed ratio, due to
+the tendency of foils to stall at higher angles of attack at higher $Re$, and
+the higher angle of attack ranges seen by the blades at lower $\lambda$. These
+effects diminish with increasing $Re$, which is expected as the blade boundary
+layers transition to turbulence closer to the leading edge \cite{Lissaman1983,
+    Bachant2015-RVAT-Re-dep}, which helps flow remain attached longer as it moves
+against the adverse pressure gradient on the suction side of the foil. Note how
+at lower tip speed ratios and Reynolds numbers, $C_P$ becomes significantly
+negative, which is possible thanks to the speed control of the experimental
+setup's servo motor applying negative torque to the rotor.
 
 \begin{figure}[h]
     \includegraphics[width=\textwidth]{figures/cp_curves.eps}
@@ -598,6 +595,14 @@ rotor drag coefficient curves nearly collapse onto each other for $Re_D \ge 0.6
     \label{fig:cp-curves}
 \end{figure}
 
+Mean rotor drag coefficients are plotted versus tip speed ratio in
+Fig.~\ref{fig:cd-curves}. These $C_D$ curves show fewer differences compared to
+the power coefficient curves, which is most noticeable at low $\lambda$ and low
+$Re$. The relative similarity could be attributed to the effects of stall, where
+the lift-to-drag ratio on the blades may drop, decreasing rotor torque, though
+the total resultant force due to high blade drag retains a similar component in
+the streamwise direction.
+
 \begin{figure}[h]
     \includegraphics[width=\textwidth]{figures/cd_curves.eps}
 
@@ -607,14 +612,22 @@ rotor drag coefficient curves nearly collapse onto each other for $Re_D \ge 0.6
     \label{fig:cd-curves}
 \end{figure}
 
-The behavior of the power coefficient at $\lambda=3.1$ is plotted in
-Fig.~\ref{fig:cp-re-dep}, where once again the increase in $C_P$ with $Re$ is
-highlighted. We see that the power coefficient of the turbine increases
-dramatically below $Re_D = 1 \times 10^6$ or $Re_c \equiv \lambda U_\infty c /
-\nu \approx 2 \times 10^5$, beyond which there appears to be a small, linear,
-positive trend. The tendency of $C_P$ to continue increasing slightly could be
-an effect of lower virtual camber when compared to the strong $Re$-independence
-of the higher $c/R$ UNH-RVAT \cite{Bachant2015-RVAT-Re-dep}.
+Strict Reynolds number independence was not observed, i.e., the $C_P$ curves do
+not collapse exactly onto each other. Note that the data collection was limited
+at higher $Re$ and $\lambda$ due to the unsteady turbine force resonating with
+the tow carriage drive belt. However, in contrast to the power coefficient data,
+the rotor drag coefficient curves nearly collapse onto each other for $Re_D \ge
+0.6 \times 10^6$.
+
+The behavior of the power and drag coefficients at $\lambda=3.1$ are plotted in
+Fig.~\ref{fig:perf-re-dep}, where we can see a Reynolds number independent value
+of $C_D$ was observed. We see that the power coefficient of the turbine
+increases dramatically below $Re_D = 1 \times 10^6$ or $Re_c \equiv \lambda
+U_\infty c / \nu \approx 2 \times 10^5$, beyond which there appears to be a
+small, linear, positive trend. The tendency of $C_P$ to continue increasing
+slightly could be an effect of lower ``virtual camber''---or flow curvature
+\cite{Migliore1980}---when compared to the strong $Re$-independence of the
+higher $c/R$ UNH-RVAT \cite{Bachant2015-RVAT-Re-dep}.
 
 \begin{figure}[h]
     \includegraphics[width=\textwidth]{figures/perf_re_dep.eps}
@@ -623,7 +636,7 @@ of the higher $c/R$ UNH-RVAT \cite{Bachant2015-RVAT-Re-dep}.
     coefficient at $\lambda=3.1$ plotted versus turbine diameter and approximate
     average blade root chord Reynolds number.}
 
-    \label{fig:cp-re-dep}
+    \label{fig:perf-re-dep}
 \end{figure}
 
 
