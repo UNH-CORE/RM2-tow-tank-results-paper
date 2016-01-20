@@ -533,11 +533,11 @@ blockage effects were not corrected for. Furthermore, most numerical modeling
 efforts can easily incorporate finite domains, meaning blockage corrections
 could create an additional variable to obfuscate validation efforts.
 
-To calculate turbine RPM from shaft angle, the encoder signal is differentiated
+To calculate turbine RPM from shaft angle, the encoder signal was differentiated
 using a second order central difference scheme, after which an 8 sample wide
-moving average smoothing filter is applied to match the noise level present in
+moving average smoothing filter was applied to match the noise level present in
 the redundant turbine RPM measurement from the motion controller. A similar
-approach is used for calculating tow carriage speed $U_\infty$ from carriage
+approach was used for calculating tow carriage speed $U_\infty$ from carriage
 position measurements. Power and drag coefficients are calculated as
 instantaneous quantities from the carriage speed as
 
@@ -562,16 +562,16 @@ reanalysis of the measurements presented here.
 \subsection*{Performance}
 
 Mean rotor power coefficients for multiple Reynolds numbers are plotted versus
-tip speed ratio in Fig.~\ref{fig:cp-curves}. $C_P$ is shown to increase in
-general with $Re$, along with a reduction in the optimal tip speed ratio, due to
-the tendency of foils to stall at higher angles of attack at higher $Re$, and
-the higher angle of attack ranges seen by the blades at lower $\lambda$. These
-effects diminish with increasing $Re$, which is expected as the blade boundary
-layers transition to turbulence closer to the leading edge \cite{Lissaman1983,
+tip speed ratio in Fig.~\ref{fig:cp-curves}. In general, $C_P$ increases with
+$Re$, along with a reduction in the optimal tip speed ratio, due to the tendency
+of foils to stall at higher angles of attack at higher $Re$, and the higher
+angle of attack ranges seen by the blades at lower $\lambda$. These effects
+diminish with increasing $Re$, which is expected as the blade boundary layers
+transition to turbulence closer to the leading edge \cite{Lissaman1983,
     McMasters1980, Bachant2015-RVAT-Re-dep}, which helps flow remain attached longer
 as it moves against the adverse pressure gradient on the suction side of the
 foil. Note how at lower tip speed ratios and Reynolds numbers, $C_P$ becomes
-significantly negative, which is possible thanks to the speed control of the
+significantly negative, which was possible thanks to the speed control of the
 experimental setup's servo motor applying negative torque to the rotor.
 
 \begin{figure}[h]
@@ -665,15 +665,15 @@ given the inverse correlation between solidity and $\lambda_0$
     \label{fig:no-blades}
 \end{figure}
 
-Strut drag losses do not change much for the streamlined NACA 0021 struts in the
-towed versus stationary configuration, which helps explain why overall rotor
-drag coefficients remain relatively constant even at low Reynolds number, were
-$C_P$ is dramatically reduced, or even negative. For the cylindrical struts,
-losses increase significantly when towed and operating in the mid range of tip
-speed ratios. Though a real turbine would never use such high drag struts, with
-respect to numerical modeling, these measurements will allow support struts to
-be simulated without blades, to isolate and evaluate the ability to predict
-these losses independent of the blade loading.
+Strut drag losses did not change much for the streamlined NACA 0021 struts in
+the towed versus stationary configuration, which helps explain why overall rotor
+drag coefficients remained relatively constant even at low Reynolds number,
+where $C_P$ was dramatically reduced, or even negative. For the cylindrical
+struts, losses increased significantly when towed and operating in the mid range
+of tip speed ratios. Though a real turbine would never use such high drag
+struts, with respect to numerical modeling, these measurements will allow
+support struts to be simulated without blades, to isolate and evaluate the
+ability to predict these losses independent of the blade loading.
 
 
 \subsection*{Near-wake characteristics}
@@ -764,9 +764,9 @@ Derivatives were computed with a second order central difference scheme for
 interior points, and a second order inward-facing scheme for the edges,
 identical to \cite{Bachant2015-JoT}. Weighted averages for these computation are
 shown in Fig.~\ref{fig:Ktransport}. Due to the weaker blade vortex shedding,
-transport due to vertical advection at this point in the wake is approximately 3
-times lower than the higher solidity UNH-RVAT. Note that direct comparison is
-somewhat invalid, since the total measurement plane area is about 5\% lower for
+transport due to vertical advection at this point in the wake was approximately
+3 times lower than the higher solidity UNH-RVAT. Note that direct comparison is
+somewhat invalid, since the total measurement plane area was about 5\% lower for
 this experiment. However, the differences observed are beyond this discrepancy.
 We also see relatively lower levels of cross-stream turbulent transport due to
 the lack of blade stall vortex shedding. These results may have interesting
@@ -803,9 +803,10 @@ lacked the evidence of strong blade stall, which once again differentiates this
 turbine from the UNH-RVAT. Terms from the mean kinetic energy transport equation
 were also computed in this $y$--$z$ plane, showing the relative importance of
 the vertical advection compared with turbulent transport terms at this location.
-It is interesting to note that though the turbine is a more effective energy
+It is interesting to note that though the RM2 is a more effective energy
 converter than the UNH-RVAT, its wake recovery may in fact be slower due to
-weaker blade tip vortex shedding.
+weaker blade tip vortex shedding and lower levels of turbulence in the
+near-wake.
 
 The effects of parasitic drag from blade support struts on turbine performance
 were measured by rotating the turbine without blades while stationary and while
@@ -816,7 +817,8 @@ ratio of 5. These measurements were repeated with a set of high-drag cylindrical
 struts, which as expected, prevented the turbine from producing any mechanical
 power at any tip speed ratio. Nevertheless these measurements provide important
 validation data for both high and low fidelity numerical performance prediction
-models, allowing researchers to test models without blade effects.
+models, allowing researchers and engineers to test predictions without blade
+effects.
 
 This data, along with the code for processing and visualization, is provided
 openly via a Creative Commons license (MIT license for code), and is available
