@@ -8,9 +8,15 @@ them in a very matter-of-fact way, and submit to PLOS ONE. Note that according
 to their [guidelines](http://www.plosone.org/static/latexGuidelines), figures
 should be in EPS or TIFF format, and should not be included as part of the
 submitted PDF. References also need to be contained in `paper.tex` rather than
-as a separate *.bib or *.bbl file. 
+as a separate *.bib or *.bbl file.
+
 
 ## TIFF figure sizing
 
-* Maximum: 7.5 in (19.05 cm) W x 8.75 in (22.23 cm) H 
+* Maximum: 7.5 in (19.05 cm) W x 8.75 in (22.23 cm) H
 * Minimum: 2.63 in (6.68 cm) W
+
+
+## Converting PDF to EPS
+
+Open in [Inkscape](http://inkscape.org) and save as EPS.
