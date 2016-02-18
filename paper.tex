@@ -324,10 +324,10 @@ measured by Penna \cite{Penna2008}, the exact geometry for which is unknown.
     \begin{tabular}{c|c|c|c|c|c}
         Name & Rotor type & $N_\mathrm{b}$ & $c/R$ & $Re_D$ & Used in \\ 
         \hline
-        Sandia 2 m \cite{Blackwell1976} &  Darrieus  & 2--3 & 0.06--0.09 & $\sim 10^6$ & \cite{Roh2013} \\ 
-        Sandia 5 m \cite{Sheldahl1977} &  Darrieus  & 3 & 0.08 & $\sim 10^6$ & \cite{Antheaume2008} \\ 
-        Sandia 17 m \cite{Worstell1978} & Darrieus  & 2 & 0.06 & $\sim 10^7$ & \cite{Para1988,Orlandi2015} \\ 
-        Sandia 34 m \cite{Ashwill1992} & Darrieus  & 2 & 0.05 & $\sim 10^7$ & \cite{Liu1992,Murray2011}  \\ 
+        Sandia 2 m \cite{Blackwell1976} &  Darrieus  & 2--3 & 0.06--0.09 & $\sim 10^6$ & \cite{Roh2013,Bedon2014} \\ 
+        Sandia 5 m \cite{Sheldahl1977} &  Darrieus  & 3 & 0.08 & $\sim 10^6$ & \cite{Antheaume2008,Bedon2014} \\ 
+        Sandia 17 m \cite{Worstell1978} & Darrieus  & 2 & 0.06 & $\sim 10^7$ & \cite{Para1988,Orlandi2015,Bedon2014} \\ 
+        Sandia 34 m \cite{Ashwill1992} & Darrieus  & 2 & 0.05 & $\sim 10^7$ & \cite{Liu1992,Murray2011,Bedon2014}  \\ 
         Strickland \emph{et al.} \cite{Strickland1981} & H & 1--3 & 0.15 & $\sim 10^5$ & \cite{Ponta2001,Scheurich2011b} \\ 
         Laneville and Vitecoq \cite{Laneville1986} & H & 2 & 0.13 & $\sim 10^6$ & \cite{Amet2009} \\ 
         Howell \emph{et al.} \cite{Howell2010} & H & 2--3 & 0.33 & $\sim 10^5$ & \cite{Joo2015} \\ 
@@ -350,7 +350,16 @@ which makes them easier to model, since unsteady dynamic effects are less
 influential on the overall performance \cite{Strickland1981}. This is apparent
 when examining the effectiveness of numerical models that rely on static foil
 coefficient input data, e.g., streamtube and vortex models, which seem to be
-most applicable for $c/R \leq 0.1$.
+most applicable for $c/R \leq 0.1$. For example, Bedon \emph{et al.}
+\cite{Bedon2014} used a double multiple streamtube momentum model without
+dynamic stall corrections to evaluate the effectiveness of various foil
+coefficient databases against the Sandia Darrieus turbine experimental data.
+Despite using such a simple model, performance predictions were quite accurate
+in most conditions except at low tip speed ratio for the 2 m turbine, which had
+the highest $c/R$ of all the Sandia rotors, making the dynamic effects more
+important. This point highlights the need for more validation data for higher
+solidity rotors to ensure numerical models are robust enough to explore unique
+cross-flow turbine designs.
 
 
 \section*{Materials and Methods}
