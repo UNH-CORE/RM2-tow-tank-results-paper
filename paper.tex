@@ -309,6 +309,14 @@ a digital object identifier (DOI) \cite{Bachant2015-RM2-data}.
 
 A selection of measured performance data in the literature and its usage in
 numerical model validation is presented in Table~\ref{tab:validation-data}.
+Turbine diameter Reynolds numbers spanned from small laboratory scale ($Re_D
+\sim 10^5$) all the way to full scale ($Re_D \sim 10^7$). Individual blade
+forces were only measured in two of the experiments---Strickland \emph{et al.}
+\cite{Strickland1981} and Laneville and Vitecoq \cite{Laneville1986}. There has
+been nearly equal attention given to the eggbeater-shaped Darrieus rotor and the
+straight-bladed H-rotor. The two additional rotors studied were the large scale
+tapered H-rotor VAWT 850 \cite{Mays1990} and the helical Quiet Revolution QR5
+measured by Penna \cite{Penna2008}, the exact geometry for which is unknown.
 
 \begin{table}
     \centering
@@ -336,6 +344,13 @@ numerical model validation is presented in Table~\ref{tab:validation-data}.
 
     \label{tab:validation-data}
 \end{table}
+
+In general, there have been more experiments done with rotors of low $c/R$,
+which makes them easier to model, since unsteady dynamic effects are less
+influential on the overall performance \cite{Strickland1981}. This is apparent
+when examining the effectiveness of numerical models that rely on static foil
+coefficient input data, e.g., streamtube and vortex models, which seem to be
+most applicable for $c/R \leq 0.1$.
 
 
 \section*{Materials and Methods}
@@ -383,7 +398,11 @@ Shaft diameter (m) & 0.2540 \cite{Beam2011} or 0.4160 \cite{Hill2014} & 0.06350\
 The rotor was 1.075 m in diameter and 0.8067 m tall, with blade chords that
 taper from 0.04 m at the tips to 0.067 m at the roots, or half-span. Mean
 chord-to-radius ratio $c/R$ was 0.1, which is approximately at the threshold
-between high and low solidity \cite{Strickland1981,Fiedler2009}.
+between high and low solidity \cite{Strickland1981,Fiedler2009}. This rotor
+geometry presents a unique validation case not yet seen in the literature,
+similar in concept to the VAWT 850 \cite{Mays1990} with its tapered blades, but
+with a moderately high $c/R$ to more accurately represent typical MHK rotors,
+which presents a challenge for numerical modeling.
 
 For investigating the effects of support strut drag losses, a set of cylindrical
 covers were designed to slip over the struts, which provided a significant
