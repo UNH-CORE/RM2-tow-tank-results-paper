@@ -305,6 +305,39 @@ code) as a Git repository on GitHub
 a digital object identifier (DOI) \cite{Bachant2015-RM2-data}.
 
 
+\subsection*{Survey of Validation Data Usage}
+
+A selection of measured performance data in the literature and its usage in
+numerical model validation is presented in Table~\ref{tab:validation-data}.
+
+\begin{table}
+    \centering
+    
+    \begin{tabular}{c|c|c|c|c|c}
+        Name & Rotor type & $N_\mathrm{b}$ & $c/R$ & $Re_D$ & Used in \\ 
+        \hline
+        Sandia 2 m \cite{Blackwell1976} &  Darrieus  & 2--3 & 0.06--0.09 & $\sim 10^6$ & \cite{Roh2013} \\ 
+        Sandia 5 m \cite{Sheldahl1977} &  Darrieus  & 3 & 0.08 & $\sim 10^6$ & \cite{Antheaume2008} \\ 
+        Sandia 17 m \cite{Worstell1978} & Darrieus  & 2 & 0.06 & $\sim 10^7$ & \cite{Para1988,Orlandi2015} \\ 
+        Sandia 34 m \cite{Ashwill1992} & Darrieus  & 2 & 0.05 & $\sim 10^7$ & \cite{Liu1992,Murray2011}  \\ 
+        Strickland \emph{et al.} \cite{Strickland1981} & H & 1--3 & 0.15 & $\sim 10^5$ & \cite{Ponta2001,Scheurich2011b} \\ 
+        Laneville and Vitecoq \cite{Laneville1986} & H & 2 & 0.13 & $\sim 10^6$ & \cite{Amet2009} \\ 
+        Howell \emph{et al.} \cite{Howell2010} & H & 2--3 & 0.33 & $\sim 10^5$ & \cite{Joo2015} \\ 
+        Penna QR5 \cite{Penna2008} & Helical & 3 & ? & $\sim 10^6$ & \cite{Scheurich2011} \\ 
+        Mertens \cite{Mertens2003} & H & 2 & 0.21 & $\sim 10^5$ & \cite{Orlandi2015} \\ 
+        VAWT 850 \cite{Mays1990} & Tapered H & 2 & 0.05 & $\sim 10^7$ & \cite{Murray2011} \\ 
+        UNH-RVAT \cite{Bachant2014-RVAT-baseline} & H & 3 & 0.28 & $\sim 10^6$ & \cite{Michelen2014}
+    \end{tabular}     
+
+    \caption{\textbf{Performance validation data.} Selected measured performance
+        data and its usage for numerical model validation. Note that individual
+        blade forces were measured in the Strickland \emph{et al.} and Laneville and
+        Vitecoq experiments.}
+
+    \label{tab:validation-data}
+\end{table}
+
+
 \section*{Materials and Methods}
 
 \subsection*{Turbine Model}
