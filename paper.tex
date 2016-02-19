@@ -323,7 +323,11 @@ forces were only measured in two of the experiments---Strickland \emph{et al.}
 been nearly equal attention given to the eggbeater-shaped Darrieus rotor and the
 straight-bladed H-rotor. The two additional rotors studied were the large scale
 tapered H-rotor VAWT 850 \cite{Mays1990} and the helical Quiet Revolution QR5
-measured by Penna \cite{Penna2008}, the exact geometry for which is unknown.
+measured by Penna \cite{Penna2008}, the exact geometrical details for which are
+not available.
+
+\todo[inline]{Remove QR5 data, since without geometry, no one else can use the
+    data for validation?}
 
 \begin{table}
     \centering
@@ -356,17 +360,17 @@ In general, there have been more experiments done with rotors of low $c/R$,
 which makes them easier to model, since unsteady dynamic effects are less
 influential on the overall performance \cite{Strickland1981}. This is apparent
 when examining the effectiveness of numerical models that rely on static foil
-coefficient input data, e.g., streamtube and vortex models, which seem to be
-most applicable for $c/R \leq 0.1$. For example, Bedon \emph{et al.}
-\cite{Bedon2014} used a double multiple streamtube momentum model without
-dynamic stall corrections to evaluate the effectiveness of various foil
-coefficient databases against the Sandia Darrieus turbine experimental data.
-Despite using such a simple model, performance predictions were quite accurate
-in most conditions except at low tip speed ratio for the 2 m turbine, which had
-the highest $c/R$ of all the Sandia rotors, making the dynamic effects more
-important. This point highlights the need for more validation data for higher
-solidity rotors to ensure numerical models are robust enough to explore unique
-cross-flow turbine designs.
+coefficient input data, e.g., streamtube and vortex models, which are most
+applicable for $c/R \leq 0.1$. For example, Bedon \emph{et al.}~\cite{Bedon2014}
+used a double multiple streamtube momentum model without dynamic stall
+corrections to evaluate the effectiveness of various foil coefficient databases
+against the Sandia Darrieus turbine experimental data. Despite using such a
+simple model, performance predictions were quite accurate in most conditions
+except at low tip speed ratio for the 2 m turbine, which had the highest $c/R$
+of all the Sandia rotors, making the dynamic effects more important. This point
+highlights the need for more validation data for higher solidity rotors to
+ensure numerical models are robust enough to explore unique cross-flow turbine
+designs, especially as the MHK concepts mature.
 
 
 \section*{Materials and Methods}
