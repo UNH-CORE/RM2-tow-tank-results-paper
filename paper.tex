@@ -662,9 +662,11 @@ diminish with increasing $Re$, which is expected as the blade boundary layers
 transition to turbulence closer to the leading edge \cite{Lissaman1983,
     McMasters1980, Bachant2016-RVAT-Re-dep}, which helps flow remain attached longer
 as it moves against the adverse pressure gradient on the suction side of the
-foil. Note how at lower tip speed ratios and Reynolds numbers, $C_P$ becomes
-significantly negative, which was possible thanks to the speed control of the
-experimental setup's servo motor applying negative torque to the rotor.
+foil. For the experiment reported here, a maximum power coefficient $C_P=0.37$
+was reached at $Re_D=1.3 \times 10^6$. Note how at lower tip speed ratios and
+Reynolds numbers, $C_P$ becomes significantly negative, which was possible
+thanks to the speed control of the experimental setup's servo motor applying
+negative torque to the rotor.
 
 \begin{figure}
     \includegraphics[width=0.9\textwidth]{figures/cp_curves.eps}
@@ -676,12 +678,14 @@ experimental setup's servo motor applying negative torque to the rotor.
 \end{figure}
 
 Mean rotor drag coefficients are plotted versus tip speed ratio in
-Fig.~\ref{fig:cd-curves}. These $C_D$ curves show fewer differences compared to
+Fig.~\ref{fig:cd-curves}. These $C_D$ curves show little difference compared to
 the power coefficient curves, which is most noticeable at low $\lambda$ and low
 $Re$. The relative similarity could be attributed to the effects of stall, where
 the lift-to-drag ratio on the blades may drop, decreasing rotor torque, though
 the total resultant force due to high blade drag retains a similar component in
-the streamwise direction.
+the streamwise direction. When operating at maximum power coefficient,
+$\lambda_0=3.1$, and $Re_D=1.3 \times 10^6$, a rotor drag coefficient $C_D=0.84$
+was measured.
 
 \begin{figure}
     \includegraphics[width=0.9\textwidth]{figures/cd_curves.eps}
@@ -700,26 +704,27 @@ drive belt. However, in contrast to the power coefficient data, the rotor drag
 coefficient curves nearly collapse onto each other for $Re_D \ge 0.6 \times
 10^6$.
 
-The behavior of the power and drag coefficients at $\lambda=3.1$ are plotted in
-Fig.~\ref{fig:perf-re-dep}, where we can see a Reynolds number independent value
-of $C_D$ was observed. The power coefficient of the turbine increases
-dramatically below $Re_D = 1 \times 10^6$ or $Re_c \equiv \lambda U_\infty c /
-\nu \approx 2 \times 10^5$, beyond which there appears to be a small, linear,
-positive trend. At the lowest Reynolds number, mean power coefficient even drops
-below zero, which is consistent with the low performance of the 1:15 scale RM2
-physical model study~\cite{Hill2014}. However, the blades of the 1:15 scale RM2
-were mounted at approximately 58\% of the chord from the leading edge, versus
-50\% for the present model, which helps explain the 1:15 scale model's positive
-power output at $\lambda=2.2$ and $Re_D \sim 10^5$, since moving the blade mount
-point further back is equivalent to a ``toe-out'' preset pitch
+The effects of Reynolds number on the power and drag coefficients at
+$\lambda=3.1$ are shown in Fig.~\ref{fig:perf-re-dep}. The rotor drag
+coefficient $C_D$ became more or less Reynolds number independent for $Re_D \ge
+0.6 \times 10^6$. The power coefficient of the turbine increased dramatically
+below $Re_D = 1 \times 10^6$ or $Re_c \equiv \lambda U_\infty c / \nu \approx 2
+\times 10^5$, beyond which there appears to be a small, linear, positive trend.
+At the lowest Reynolds number, mean power coefficient even dropped below zero,
+which is consistent with the low performance of the 1:15 scale RM2 physical
+model study~\cite{Hill2014}. However, the blades of the 1:15 scale RM2 were
+mounted at approximately 58\% of the chord from the leading edge, versus 50\%
+for the present model, which helps explain the 1:15 scale model's positive power
+output at $\lambda=2.2$ and $Re_D \sim 10^5$, since moving the blade mount point
+further back is equivalent to a ``toe-out'' preset pitch
 condition~\cite{Fiedler2009}.
 
-The tendency of $C_P$ to continue increasing slightly could be
-an effect of flow curvature---caused by the finite $c/R$---which imparts a
-``virtual camber'' \cite{Migliore1980}, or can be thought of as producing a
-``lead'' in angle of attack since cambered airfoils have non-zero lift at zero
-angle of attack \cite{Goude2012}. The weaker $Re$-independence of the RM2
-compared to that of the higher $c/R$ UNH-RVAT could be due to this virtual
+The tendency of $C_P$ to continue increasing slightly could be an effect of flow
+curvature---caused by the finite $c/R$---which imparts a ``virtual camber''
+\cite{Migliore1980}, or can be thought of as producing a ``lead'' in angle of
+attack since cambered airfoils have non-zero lift at zero angle of attack
+\cite{Goude2012}. The residual weak $Re$-dependence of the RM2 compared to the
+$Re$-independence of the higher $c/R$ UNH-RVAT could be due to this virtual
 camber effect, since camber has been shown to cause earlier $Re$-convergence of
 the CFT's geometric torque coefficient when calculated from static foil
 coefficients given by a viscous panel method, whereas characteristics like
@@ -740,10 +745,13 @@ lift-to-drag ratio do not converge as strongly \cite{Bachant2016-RVAT-Re-dep}.
 
 Performance curves for the rotor with both NACA 0021 and cylindrical struts are
 shown in Fig.~\ref{fig:perf-covers}. As expected, the high drag cylindrical
-struts reduce performance dramatically, which is more pronounced as $\lambda$
-increases. This is in accordance with the measurements of Rawlings
-\cite{Rawlings2008}, though the strut losses in this case are larger due to the
-very high drag profile.
+struts reduce performance dramatically, producing an entirely negative $C_P$
+curve. The detrimental effects of the strut drag were more pronounced at higher
+$\lambda$. This is in accordance with the measurements of Rawlings
+\cite{Rawlings2008}, though the strut losses in this case were larger due to the
+very high drag circular profile. In contrast to the dramatic effect strut drag
+had on $C_P$, overall rotor drag measurements were relatively similar for both
+the cylindrical and NACA 0021 strut cases.
 
 \begin{figure}
     \includegraphics[width=\textwidth]{figures/perf_covers.eps}
@@ -757,10 +765,10 @@ very high drag profile.
 Measurements for the power coefficient contributions of the strut drag losses
 are presented in Fig.~\ref{fig:no-blades} for NACA 0021 and cylindrical
 struts---both in towed and stationary conditions. These are computed in the same
-fashion as the curves in Fig.~\ref{fig:cp-curves}, but with the blades removed.
-We see that strut drag losses increase with tip speed ratio to the power 2--3,
-which makes streamlined struts much more important for low solidity turbines,
-given the inverse correlation between solidity and $\lambda_0$
+fashion as the curves in Fig.~\ref{fig:cp-curves}, but with the rotor blades
+removed. We see that strut drag losses increase with tip speed ratio to the
+power 2--3, which makes streamlined struts much more important for low solidity
+turbines, given the inverse correlation between solidity and $\lambda_0$
 \cite{Templin1974}.
 
 \begin{figure}
@@ -774,25 +782,29 @@ given the inverse correlation between solidity and $\lambda_0$
 
 Strut drag losses did not change much for the streamlined NACA 0021 struts in
 the towed versus stationary configuration, which helps explain why overall rotor
-drag coefficients remained relatively constant even at low Reynolds number,
+drag coefficients remained of comparable magnitude even at low Reynolds number,
 where $C_P$ was dramatically reduced, or even negative. For the cylindrical
 struts, losses increased significantly when towed and operating in the mid range
-of tip speed ratios. Though a real turbine would never use such high drag
-struts, with respect to numerical modeling, these measurements will allow
-support struts to be simulated without blades, to isolate and evaluate the
-ability to predict these losses independent of the blade loading.
+of tip speed ratios.
+
+Though a real turbine would never use such high drag struts, with respect to
+numerical modeling, these measurements provide some interesting validation
+cases. Modelers can isolate and evaluate the ability to predict these losses
+independent of the blade loading by modeling combinations of the rotor with the
+high/low drag struts and with/without blades.
 
 
 \subsection*{Near-wake characteristics}
 
 The mean velocity field at the chosen optimal tip speed ratio $\lambda_0=3.1$, 1
-m downstream ($x/D=0.93$) is plotted in Fig.~\ref{fig:meancontquiv}. The mean
-streamwise velocity deficit is markedly more symmetric than that of the
-UNH-RVAT, shown in Fig.~\ref{fig:rvat-meancontquiv}, with the RM2 inducing lower
-acceleration around the turbine due to the lower rotor drag coefficient and a
-slightly lower blockage ratio \cite{Bachant2015-JoT}. Tip vortex shedding is
-relatively weaker, which is likely an effect of the RM2's smaller blade chord
-length and tapered blades.
+m downstream ($x/D=0.93$) from the rotor axis is plotted in
+Fig.~\ref{fig:meancontquiv}. The mean streamwise velocity deficit is markedly
+more symmetric than that of the higher solidity UNH-RVAT, shown in
+Fig.~\ref{fig:rvat-meancontquiv}, with the RM2 inducing lower acceleration
+around the turbine due to the lower rotor drag coefficient and a slightly lower
+blockage ratio \cite{Bachant2015-JoT}. Tip vortex shedding is relatively weaker,
+which is likely an effect of the RM2's smaller blade chord length and tapered
+blades.
 
 \begin{figure}
     \includegraphics[width=\textwidth]{figures/RVAT-Re-dep-meancontquiv_10.eps}
@@ -853,7 +865,7 @@ vertical advection was the largest contributor to streamwise recovery
 over axial-flow rotors in arrays \cite{Kinzel2012}. A similar analysis was
 undertaken for the RM2, starting with the transport equation for mean kinetic
 energy, rearranged to isolate the streamwise partial derivative (indices follow
-the Einsteinian convention):
+the Einstein summation convention):
 \begin{equation}
     \begin{split}
         \frac{\p K}{\p x}
@@ -895,19 +907,19 @@ dissipation due to the mean velocity gradient (Mean diss.).
 
 Derivatives were computed with a second order central difference scheme for
 interior points, and a second order inward-facing scheme for the edges,
-identical to \cite{Bachant2015-JoT}. Weighted averages for these computation are
-shown in Fig.~\ref{fig:Ktransport}. Due to the weaker blade vortex shedding,
-transport due to vertical advection at this point in the wake was approximately
-3 times lower than the higher solidity UNH-RVAT. Note that direct comparison is
-somewhat invalid, since the total measurement plane area was about 5\% lower for
-this experiment. However, the differences observed are beyond this discrepancy.
-We also see relatively lower levels of cross-stream turbulent transport due to
-the lack of blade stall vortex shedding. These results may have interesting
-implications regarding the application of turbines with lower power coefficient
-to possibly improve overall array performance through enhanced transport of
-kinetic energy from the free stream, though evaluating these trade-offs will
-require a detailed analysis of the downstream evolution and turbine--wake
-interaction.
+following the methodology in \cite{Bachant2015-JoT}. Weighted averages for these
+calculations are shown in Fig.~\ref{fig:Ktransport}. Due to the weaker blade
+vortex shedding, transport due to vertical advection at this point in the wake
+was approximately 3 times lower than the higher solidity UNH-RVAT. Note that
+direct comparison is somewhat invalid, since the total measurement plane area
+was about 5\% lower for this experiment. However, the differences observed are
+larger than the area ratio between the two experiments. We also see relatively
+lower levels of cross-stream turbulent transport due to the lack of blade stall
+vortex shedding. These results may have interesting implications regarding the
+application of turbines with lower power coefficient to possibly improve overall
+array performance through enhanced transport of kinetic energy from the free
+stream, though evaluating these trade-offs will require a detailed analysis of
+the downstream evolution and turbine--wake interaction.
 
 \begin{figure}
     \includegraphics[width=0.9\textwidth]{figures/K_trans_bar_graph.eps}
