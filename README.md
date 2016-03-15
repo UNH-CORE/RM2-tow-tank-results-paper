@@ -20,3 +20,10 @@ as a separate *.bib or *.bbl file.
 ## Converting PDF to EPS
 
 Open in [Inkscape](http://inkscape.org) and save as EPS.
+
+
+## Cover letter
+
+Uses https://github.com/aaronwolen/pandoc-letter template. To build:
+
+   pandoc --template=template-letter.tex cover-letter.md -o cover-letter.pdf
