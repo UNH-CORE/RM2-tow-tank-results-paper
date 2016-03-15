@@ -233,12 +233,12 @@ reduced dynamic stall.
 
 \section*{Introduction}
 
-The Reference Model Project (RMP), sponsored by the US Department of Energy,
-produced six marine hydrokinetic (MHK) technology point designs as reference
-models (RMs) to serve as non-proprietary test articles for open research
-development, and to benchmark performance and costs for technology developers
-\cite{Neary2014, Neary2014a}. Open-source RMP products, along with supporting
-documentation, are available at the RMP website
+The Reference Model Project (RMP), sponsored by the US Department of Energy
+(DOE), produced six marine hydrokinetic (MHK) technology point designs as
+reference models (RMs) to serve as non-proprietary test articles for open
+research development, and to benchmark performance and costs for technology
+developers \cite{Neary2014, Neary2014a}. Open-source RMP products, along with
+supporting documentation, are available at the RMP website
 \url{http://energy.sandia.gov/rmp} to facilitate their use in future R\&D
 studies by industry, academia, and national laboratories. These products
 include: Technical specifications and computer-aided design (CAD) files for each
@@ -247,41 +247,45 @@ studies; resource site information used to design each RM device; and references
 to physical modeling data sets that can be used to validate numerical modeling
 design and analysis tools.
 
-Reference Model 2 (RM2) is a dual-rotor, vertical-axis cross-flow river turbine
-that was designed to operate in a reach of the lower Mississippi River near
-Baton Rouge, Louisiana \cite{Barone2011, Neary2011}. The rotor has three tapered
-blades and a relatively low solidity $Nc/(\pi D)$ or chord-to-radius ratio $c/R
-\approx 0.1$. A preliminary analysis with Sandia's CACTUS vortex line numerical
-model \cite{Murray2011} predicted an individual rotor's full-scale performance
-coefficient to be 47\% at 1 m/s flow speed and a tip speed ratio $\lambda \equiv
-\frac{\omega R}{U_\infty} = 3.15$ \cite{Barone2011}, where $\omega$ and $R$ are
-the rotor's angular velocity and radius, respectively. Note that the RM2 rotor
-solidity would be considered moderate to high for a wind turbine, but MHK rotors
-are typically higher solidity since they must withstand approximately an order
-of magnitude higher torque in typical flows, necessitating relatively larger
-blades to meet strength and fatigue life requirements.
+Reference Model 2 (RM2) is a dual-rotor, vertical-axis cross-flow hydrokinetic
+(river) turbine that was designed to operate in a reach of the lower Mississippi
+River near Baton Rouge, Louisiana \cite{Barone2011, Neary2011}. The rotor has
+three tapered blades and a relatively low solidity $Nc/(\pi D)$ or
+chord-to-radius ratio $c/R \approx 0.1$. A preliminary analysis with Sandia's
+CACTUS vortex line numerical model \cite{Murray2011} predicted an individual
+rotor's full-scale performance coefficient to be $C_P=0.47$ at 1 m/s flow speed
+and a tip speed ratio $\lambda \equiv \frac{\omega R}{U_\infty} = 3.15$
+\cite{Barone2011}, where $\omega$ and $R$ are the rotor's angular velocity and
+radius, respectively. Note that the RM2 rotor solidity would be considered
+moderate to high for a wind turbine, whose $c/R$ values typically range from
+0.05 to 0.09, but MHK rotors are typically higher solidity since they must
+withstand approximately an order of magnitude higher torque in typical flows,
+necessitating relatively larger blades to meet strength and fatigue life
+requirements.
 
 An initial experimental measurement campaign with a 1:15 scale RM2 rotor
 conducted at the Saint Anthony Falls Laboratory (SAFL) at the University of
 Minnesota resulted in maximum power coefficient of approximately 5\% at $\lambda
-= 2.2$. This discrepancy between numerical and physical model performance
-prompted the experimental measurements presented here, namely due to the low
-Reynolds number---$Re_D = U_\infty D / \nu$, where $U_\infty$ is the free stream
-velocity, $D$ is the rotor diameter, and $\nu$ is the fluid kinematic
-viscosity---of the 1:15 scale tests, which were performed at $Re_D \sim 10^5$
-\cite{Hill2014}.
+= 2.2$ \cite{Hill2014}. This discrepancy between numerical and physical model
+performance prompted the experimental measurements presented here, namely due to
+the low Reynolds number---$Re_D = U_\infty D / \nu$, where $U_\infty$ is the
+free stream velocity, $D$ is the rotor diameter, and $\nu$ is the fluid
+kinematic viscosity---of the 1:15 scale tests, which were performed at $Re_D
+\sim 10^5$.
 
 The effect of Reynolds number on average power output was shown to be
 significant on the 2 m Sandia Research Darrieus turbine in wind tunnel testing
 \cite{Blackwell1976}: The maximum power coefficient, $C_{P_{\max}}$, increased
-with Reynolds number, $Re_c$ (based on blade chord rather than diameter, though
-these are approximately proportional), along with a shift of the location of
-$C_{P_{\max}}$ toward lower tip speed ratios due to delayed blade stall. The
-effects of Reynolds number were quite dramatic over a relatively small range of
-$Re_c \approx 1.1 \times 10^5$--$2.9 \times 10^5$. More recently, Bachant and
-Wosnik \cite{Bachant2014, Bachant2016-RVAT-Re-dep} showed that performance and
-near-wake characteristics of a high solidity cross-flow turbine become Reynolds
-number independent at $Re_D \approx 10^6$ or $Re_c \approx 2 \times 10^5$.
+with Reynolds number, $Re_c=\lambda U_\infty c / \nu$ (based on blade chord
+rather than diameter, though these are approximately proportional since optimal
+tip speed ratio correlates inversely with solitidy and therefore chord length),
+along with a shift of the location of $C_{P_{\max}}$ toward lower tip speed
+ratios due to delayed blade stall. The effects of Reynolds number were quite
+dramatic over a relatively small range of $Re_c \approx 1.1 \times 10^5$--$2.9
+\times 10^5$. More recently, Bachant and Wosnik \cite{Bachant2014,
+    Bachant2016-RVAT-Re-dep} showed that performance and near-wake characteristics
+of a high solidity cross-flow turbine become Reynolds number independent at
+$Re_D \approx 10^6$ or $Re_c \approx 2 \times 10^5$.
 
 As part of the engineering process it is generally less expensive to assess
 designs via numerical rather than physical models. However, it is
@@ -296,8 +300,8 @@ model test has become Reynolds number independent, so validation efforts are
 relevant at full-scale, which was the strategy employed here.
 
 The main objective of the present study was to acquire a new experimental
-dataset for the RM2 turbine at sufficient Reynolds numbers to be relevant to
-full-scale physical and numerical modeling. It was hypothesized that the
+dataset for the RM2 turbine at sufficiently high Reynolds numbers to be relevant
+to full-scale physical and numerical modeling. It was hypothesized that the
 parasitic losses from rotor blade support struts could play an important role in
 overall turbine performance, especially for a lower solidity turbine that
 operates at higher tip speed ratios. Thus, the parasitic torque from strut drag
@@ -341,7 +345,8 @@ blades, the VAWT 850 \cite{Mays1990}, has also been measured.
         Howell \emph{et al.} \cite{Howell2010} & H & 2--3 & 0.33 & $\sim 10^5$ & \cite{Joo2015} \\ 
         Mertens \cite{Mertens2003} & H & 2 & 0.21 & $\sim 10^5$ & \cite{Orlandi2015} \\ 
         VAWT 850 \cite{Mays1990} & Tapered H & 2 & 0.05 & $\sim 10^7$ & \cite{Murray2011} \\ 
-        UNH-RVAT \cite{Bachant2014-RVAT-baseline} & H & 3 & 0.28 & $\sim 10^6$ & \cite{Michelen2014}
+        UNH-RVAT \cite{Bachant2014-RVAT-baseline} & H & 3 & 0.28 & $\sim 10^6$ & \cite{Michelen2014} \\
+        RM2 (present) & Tapered H & 3 & 0.07--0.12 & $\sim 10^6$ & 
     \end{tabular}     
 
     \caption{\textbf{Performance validation data.} Selected measured performance
@@ -352,10 +357,10 @@ blades, the VAWT 850 \cite{Mays1990}, has also been measured.
     \label{tab:validation-data}
 \end{table}
 
-In general, there have been more experiments done with rotors of low $c/R$,
-which makes them easier to model, since unsteady dynamic effects are less
-influential on the overall performance \cite{Strickland1981}. This is apparent
-when examining the effectiveness of numerical models that rely on static foil
+In general, there have been more experiments done with low $c/R$ rotors. These
+rotors are easier to model, since unsteady dynamic effects are less influential
+on the overall performance \cite{Strickland1981}. This is apparent when
+examining the effectiveness of numerical models that rely on static foil
 coefficient input data, e.g., streamtube and vortex models, which are most
 applicable for $c/R \leq 0.1$. For example, Bedon \emph{et al.}~\cite{Bedon2014}
 used a double multiple streamtube momentum model without dynamic stall
@@ -363,7 +368,7 @@ corrections to evaluate the effectiveness of various foil coefficient databases
 against the Sandia Darrieus turbine experimental data. Despite using such a
 simple model, performance predictions were quite accurate in most conditions
 except at low tip speed ratio for the 2 m turbine, which had the highest $c/R$
-of all the Sandia rotors, making the dynamic effects more important. This point
+of all the Sandia rotors, making the dynamic effects more important. This
 highlights the need for more validation data for higher solidity rotors to
 ensure numerical models are robust enough to explore unique cross-flow turbine
 designs, especially as the MHK concepts mature.
@@ -373,8 +378,8 @@ dependence of was investigated using the same experimental setup as the study
 here \cite{Bachant2015-JoT, Bachant2016-Energies}, was an H-rotor of 1 m height
 and 1 m diameter. The UNH-RVAT experimental datasets are also openly available
 \cite{Bachant2014-RVAT-baseline, Bachant2016-RVAT-Re-dep}, and provide an
-interesting comparison for the near-wake dynamics of a rotor similar in scale to
-the 1:6 RM2, but with non-tapered blades and a high solidity $c/R = 0.28$.
+interesting comparison for the near-wake dynamics of a rotor similar in size to
+the 1:6 scale RM2, but with non-tapered blades and a high solidity $c/R = 0.28$.
 
 
 \section*{Materials and Methods}
