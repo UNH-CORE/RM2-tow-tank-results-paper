@@ -425,19 +425,20 @@ Shaft diameter (m) & 0.2540 \cite{Beam2011} or 0.4160 \cite{Hill2014} & 0.06350\
 \end{figure}
 
 The rotor was 1.075 m in diameter and 0.8067 m tall, with blade chords that
-taper from 0.04 m at the tips to 0.067 m at the roots, or half-span, varying the
-chord-to-radius ratio $c/R$ from 0.07 to 0.12 (0.1 average). The rotor was
+taper from 0.067 m at the roots, or half-span, to 0.04 m at the tips, varying
+the chord-to-radius ratio $c/R$ from 0.12 to 0.07 (0.1 average). The rotor was
 therefore approximately at the threshold between high and low solidity
 \cite{Strickland1981,Fiedler2009}, which presents a unique validation case not
-yet seen in the literature, similar in concept to the VAWT 850 \cite{Mays1990}
-with its tapered blades, but with a moderately high $c/R$ to more accurately
-represent typical MHK rotors, which presents a challenge for numerical modeling.
+yet seen in the literature. The RM2 is conceptually similar to the VAWT 850
+\cite{Mays1990} which also had tapered blades, but the RM2 has a moderately high
+$c/R$ to more accurately represent typical MHK rotors, which presents a
+challenge for numerical modeling.
 
 For investigating the effects of support strut drag losses, a set of cylindrical
-covers were designed to slip over the struts, which provided a significant
-increase in strut drag. Endcaps were also fabricated to allow the high drag
-strut cover configuration to be operated without blades. A drawing of the strut
-covers is shown in Fig.~\ref{fig:covers}.
+covers were designed to slip over the struts, which provided a deliberate and
+significant increase in strut drag. Endcaps were also fabricated to allow the
+high drag strut cover configuration to be operated without blades. A drawing of
+the strut covers is shown in Fig.~\ref{fig:covers}.
 
 \begin{figure}
     \includegraphics[width=0.95\textwidth]{figures/strut_covers.eps}
@@ -502,12 +503,12 @@ Fig.~\ref{fig:exp-setup-photo} and Fig.~\ref{fig:exp-setup}, respectively.
 \paragraph{Synchronization.} The three data acquisition instrumentation
 subsystems---motion controller, NI DAQ (performance measurements), and Vectrino+
 (wake velocity measurements)---started sampling at precisely the same time each
-tow, after being triggered by a digital signal edge from the motion controller.
-This strategy retained synchronization for all performance signal samples (tow
-speed, torque, drag, angular velocity), ensuring precise calculation of, e.g.,
-power coefficient. Since there was also synchronization of the initial sample
-from each of the three subsystems, correlation of events in the performance and
-wake signals is also possible.
+tow, after being triggered by a digital signal edge sent from the motion
+controller. This strategy retained synchronization for all performance signal
+samples (tow speed, torque, drag, angular velocity), ensuring precise
+calculation of, e.g., power coefficient. Since there was also synchronization of
+the initial sample from each of the three subsystems, correlation of events in
+the performance and wake signals is also possible.
 
 \paragraph{Tare drag and torque compensation.} To best estimate the hydrodynamic
 loads on the turbine rotor alone, tare torque and drag runs were performed to
@@ -554,7 +555,8 @@ tip, root, and mid-span, corresponding to various tow speeds at $\lambda=3.1$.}
 
 Wake measurements were all performed at 1 m downstream, which corresponds to
 $x/D = 0.93$. The cross-stream and vertical coordinates are shown in
-Fig.~\ref{fig:coordinates}.
+Fig.~\ref{fig:coordinates}. Altogether 750 tows were performed and included in
+the experimental database.
 
 \begin{figure}
     \includegraphics[width=\textwidth]{figures/turbine_coordinate_system.eps}
@@ -613,15 +615,15 @@ to be 0.25.
 \subsection*{Data Processing}
 
 For each tow speed, a relevant quasi-steady duration was selected by manually
-inspecting a plot of the $C_P$ time series, and then truncated to include a
-whole number of blade passages. Over this duration relevant statistics were
-calculated. 
+inspecting a plot of the $C_P$ time series. This interval was then truncated to
+include a whole number of blade passages. Relevant statistics were then
+calculated over this duration.
 
 Since the blockage ratio was relatively low (10\%), and a definitive blockage
 correction for cross-flow turbines has not been established \cite{Cavagnaro2014}
 blockage effects were not corrected for. Furthermore, most numerical modeling
-efforts can easily incorporate finite domains, meaning blockage corrections
-could complicate validation efforts.
+efforts can easily incorporate finite domains. Therefore, applying blockage
+corrections to experimental data could actually complicate validation efforts.
 
 To calculate turbine RPM from shaft angle, the encoder signal was differentiated
 using a second order central difference scheme, after which an 8 sample wide
@@ -638,8 +640,8 @@ and
 \begin{equation}
     C_D = \frac{F_\mathrm{drag}}{\frac{1}{2} \rho A U_\infty^2},
 \end{equation}
-where $\rho$ is the fluid density (1000 kg/m\textsuperscript{3}) and $A$ is
-the turbine frontal area $DH$.
+where $\rho$ is the fluid density (assumed to be a nominal 1000
+kg/m\textsuperscript{3}) and $A$ is the turbine frontal area $DH$.
 
 All data processing and plotting code, along with the reduced dataset, are
 available from \cite{Bachant2015-RM2-data}. Note that this code will
