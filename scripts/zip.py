@@ -10,7 +10,7 @@ version = check_output(["git", "describe"]).strip().decode()
 
 figures = ["figures/" + f for f in os.listdir("figures") if f.endswith(".eps")]
 
-files = ["paper.tex", "PLOS-Submission.eps", "plos2015.bst"]
+files = ["paper.pdf", "paper.tex", "PLOS-Submission.eps", "plos2015.bst"]
 
 with ZipFile("archive/paper-{}.zip".format(version), "w") as f:
     for fig in figures:
