@@ -8,7 +8,8 @@ import os
 # Describe version via git
 version = check_output(["git", "describe"]).strip().decode()
 
-figures = ["figures/" + f for f in os.listdir("figures") if f.endswith(".eps")]
+figures = ["figures/" + f for f in os.listdir("figures") \
+           if f.endswith(".eps") or f.endswith(".tif")]
 
 files = ["paper.pdf", "paper.tex", "PLOS-Submission.eps", "plos2015.bst"]
 
