@@ -14,7 +14,8 @@
 
 >4. Virtual camber of blades is discussed in the results section, where it is suggested it plays a role in Re-convergence. Reference 9 is used here, which links to a data repository. The claims using this reference are therefore hard to verity. Is there an additional source to back this up?
 
-
+Thanks for catching this, as it was an incorrect reference. The text has been
+modified to reference the correct study.
 
 >5. Figure 10 shows power losses due to strut drag, both plotted as function of tip-speed ratio. Have you confirmed these losses collapse with TSR? i.e., for equal TSR but different combinations of U and $\omega$, do you get the same result? Similarly, how is TSR defined for a ‘stationary’ test?
 
