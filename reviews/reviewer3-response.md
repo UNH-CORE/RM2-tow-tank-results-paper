@@ -6,7 +6,10 @@ We have changed the title accordingly.
 
 >2. Consider adding sample time histories of torque and drag force for extreme cases (high and low lambda).
 
-
+This is possible, though we do not think it would add much value to the
+discussion. However, the data and code to plot these values is freely available
+if readers are curious, or would like to perform a more detailed validation of,
+e.g., their performance predictions.
 
 >3. In Figure 10 Cp is plotted versus lambda for a stationary case. If U is zero how does Cp or even Lambda is defined?
 
