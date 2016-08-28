@@ -26,12 +26,10 @@ This cross-reference has been fixed.
 This cross-reference has been added to the text.
 
 >7. In line 314, refer to Fig. 11 before Fig. 12.
-
-
-
 >8. In line 320, refer to Fig. 13 before Fig. 14.
 
-
+The figure order has been corrected in the manuscript such that they are
+referred to sequentially.
 
 >9. In line 360, it must be “…likely due to…” instead of “…likely to due…”.
 
