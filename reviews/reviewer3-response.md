@@ -10,7 +10,8 @@
 
 >3. In Figure 10 Cp is plotted versus lambda for a stationary case. If U is zero how does Cp or even Lambda is defined?
 
-
+We computed $C_P$ and TSR using the same reference velocity as for the towed
+case (1 m/s). This detail has been added to the text.
 
 >4. In line 123, it should be “… dependence were…” instead of “… dependence of was…”
 
