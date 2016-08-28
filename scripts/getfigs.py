@@ -34,7 +34,7 @@ if __name__ == "__main__":
 
     # Get RVAT-Re-dep figs
     figdir = os.path.join("RVAT-Re-dep", "Figures")
-    figlist = ["meancontquiv_10.eps", "k_contours_10.eps"]
+    figlist = ["meancontquiv_10.eps", "k_contours_10.eps", "perf_re_dep.eps"]
 
     for fig in figlist:
         fix_eps(os.path.join(figdir, fig))

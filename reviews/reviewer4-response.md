@@ -11,7 +11,8 @@ The UNH-RVAT parameters have been added to Table 2.
 
 >3. It would be helpful to see Figure 8 with the UNH-RVAT results on the same axes or as additional plots, as they are referred to in the results section and in the conclusions.
 
-
+We have added the figure from the UNH-RVAT Reynolds number dependence paper for
+reference.
 
 >4. Virtual camber of blades is discussed in the results section, where it is suggested it plays a role in Re-convergence. Reference 9 is used here, which links to a data repository. The claims using this reference are therefore hard to verity. Is there an additional source to back this up?
 
