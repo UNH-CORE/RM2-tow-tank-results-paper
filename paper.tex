@@ -184,8 +184,8 @@ singlelinecheck=off]{caption}
 % and articles.
 \begin{flushleft}
 
-{\Large \textbf\newline{Experimental Study of a Reference Model Vertical-Axis
-        Cross-Flow Turbine}} \newline % Insert author names,
+{\Large \textbf\newline{Experimental Study of a Reference Model
+        Cross-Flow Hydrokinetic Turbine}} \newline % Insert author names,
 % affiliations
 % and corresponding author email (do not
 % include
@@ -250,18 +250,21 @@ design and analysis tools.
 Reference Model 2 (RM2) is a dual-rotor, vertical-axis cross-flow hydrokinetic
 (river) turbine that was designed to operate in a reach of the lower Mississippi
 River near Baton Rouge, Louisiana \cite{Barone2011, Neary2011}. The rotor has
-three tapered blades and a relatively low solidity $Nc/(\pi D)$ or
+three tapered blades and a relatively low solidity $Nc/(\pi D)$, where $N$ is
+the number of blades, $c$ is the chord length, and $D$ is the rotor diameter, or
 chord-to-radius ratio $c/R \approx 0.1$. A preliminary analysis with Sandia's
 CACTUS vortex line numerical model \cite{Murray2011} predicted an individual
-rotor's full-scale performance coefficient to be $C_P=0.47$ at 1 m/s flow speed
-and a tip speed ratio $\lambda \equiv \frac{\omega R}{U_\infty} = 3.15$
-\cite{Barone2011}, where $\omega$ and $R$ are the rotor's angular velocity and
-radius, respectively. Note that the RM2 rotor solidity would be considered
-moderate to high for a wind turbine, whose $c/R$ values typically range from
-0.05 to 0.09, but MHK rotors are typically higher solidity since they must
-withstand approximately an order of magnitude higher torque in typical flows,
-necessitating relatively larger blades to meet strength and fatigue life
-requirements.
+rotor's full-scale performance coefficient to be $C_P \equiv P / \left(
+\frac{1}{2} \rho A U_\infty^3 \right) = 0.47$---where $P$ is the mechanical
+power output, $\rho$ is the fluid density, $A$ is the rotor frontal area, and
+$U_\infty$ is the free stream velocity---at 1 m/s flow speed and a tip speed
+ratio $\lambda \equiv \frac{\omega R}{U_\infty} = 3.15$ \cite{Barone2011}, where
+$\omega$ and $R$ are the rotor's angular velocity and radius, respectively. Note
+that the RM2 rotor solidity would be considered moderate to high for a wind
+turbine, whose $c/R$ values typically range from 0.05 to 0.09, but MHK rotors
+are typically higher solidity since they must withstand approximately an order
+of magnitude higher torque in typical flows, necessitating relatively larger
+blades to meet strength and fatigue life requirements.
 
 An initial experimental measurement campaign with a 1:15 scale RM2 rotor
 conducted at the Saint Anthony Falls Laboratory (SAFL) at the University of
@@ -374,7 +377,7 @@ ensure numerical models are robust enough to explore unique cross-flow turbine
 designs, especially as the MHK concepts mature.
 
 The UNH-RVAT, for which the performance, near-wake, and Reynolds number
-dependence of was investigated using the same experimental setup as the study
+dependence were investigated using the same experimental setup as the study
 here \cite{Bachant2015-JoT, Bachant2016-Energies}, was an H-rotor of 1 m height
 and 1 m diameter. The UNH-RVAT experimental datasets are also openly available
 \cite{Bachant2014-RVAT-baseline, Bachant2016-RVAT-Re-dep}, and provide an
@@ -398,28 +401,30 @@ class 2 specifications. CAD models of the turbine are available from
 
 \begin{table}[ht]
 \centering
-\begin{tabular}{l|l|l}
-   & Full-scale & Model (1:6) \\
+\begin{tabular}{l|l|l|l}
+   & Full-scale RM2 & 1:6 scale RM2 & UNH-RVAT \\
 \hline
-Diameter (m)   & 6.450 & 1.075 \\
-Height (m)     & 4.840 & 0.8067 \\
-Blade root chord (m) & 0.4000 & 0.06667 \\
-Blade tip chord (m)  & 0.2400 & 0.04000 \\
-Blade profile & NACA 0021 & NACA 0021 \\
-Blade mount & 1/2 chord & 1/2 chord \\
-Blade pitch (deg.) & 0.0 & 0.0 \\
-Strut profile & NACA 0021 & NACA 0021 \\
-Strut chord (m) & 0.3600 & 0.06000 \\
-Shaft diameter (m) & 0.2540 \cite{Beam2011} or 0.4160 \cite{Hill2014} & 0.06350\\
+Diameter (m)   & 6.450 & 1.075 & 1.0 \\
+Height (m)     & 4.840 & 0.8067 & 1.0 \\
+Blade root chord (m) & 0.4000 & 0.06667 & 0.14 \\
+Blade tip chord (m)  & 0.2400 & 0.04000 & 0.14 \\
+Blade profile & NACA 0021 & NACA 0021 & NACA 0020 \\
+Blade mount & 1/2 chord & 1/2 chord & 1/2 chord \\
+Blade pitch (deg.) & 0.0 & 0.0 & 0.0 \\
+Strut profile & NACA 0021 & NACA 0021 & NACA 0020 \\
+Strut chord (m) & 0.3600 & 0.06000 & 0.14 \\
+Shaft diameter (m) & 0.2540 \cite{Beam2011} or 0.4160 \cite{Hill2014} & 0.06350 & 0.095 \\
 \end{tabular}
-\caption{\textbf{RM2 turbine geometric parameters.}}
+\caption{\textbf{Turbine geometric parameters for both the full-scale and 1:6
+scale model RM2 (tested here), along with the UNH-RVAT for comparison.}}
 \label{tab:turb-geom}
 \end{table}
 
 \begin{figure}[h]
     \includegraphics[width=0.65\textwidth]{figures/turbine.eps}
 
-    \caption{{\bf Turbine Model.} A drawing of the turbine model.}
+    \caption{{\bf Turbine Model.} A drawing of the RM2 turbine model. All
+    dimensions are in meters}
 
     \label{fig:turbine-drawing}
 \end{figure}
@@ -453,13 +458,13 @@ the strut covers is shown in Fig.~\ref{fig:covers}.
 \subsection*{Facility and instrumentation}
 
 Measurements were conducted in the UNH tow/wave tank, pictured in
-Fig.~\ref{fig:exp-setup}, a 36 m long facility with a 3.66 m wide by 2.44 m deep
-cross-section, capable of tow speeds up to 3 m/s. The blockage ratio based on
-the rotor frontal and tank cross-sectional area was 10\%. The turbine was
-mounted in a frame built from NACA 0020 struts, attached to the tow carriage by
-four linear bearings, which transfer all streamwise force to a pair of 500 lbf
-capacity Sentran ZB3 S-beam load cells \cite{SentranZB}. The turbine shaft RPM
-was controlled by a servo motor system, which allowed precise control of the
+Fig.~\ref{fig:exp-setup-photo}, a 36 m long facility with a 3.66 m wide by 2.44
+m deep cross-section, capable of tow speeds up to 3 m/s. The blockage ratio
+based on the rotor frontal and tank cross-sectional area was 10\%. The turbine
+was mounted in a frame built from NACA 0020 struts, attached to the tow carriage
+by four linear bearings, which transfer all streamwise force to a pair of 500
+lbf capacity Sentran ZB3 S-beam load cells \cite{SentranZB}. The turbine shaft
+RPM was controlled by a servo motor system, which allowed precise control of the
 turbine tip speed ratio. The load torque was measured by an Interface T8 200 Nm
 capacity inline rotary torque transducer \cite{InterfaceT8}. An additional
 Sentran ZB3 load cell mounted at a fixed distance from the servo motor via a
@@ -723,20 +728,32 @@ curvature---caused by the finite $c/R$---which imparts a ``virtual camber''
 \cite{Migliore1980}, or can be thought of as producing a ``lead'' in angle of
 attack since cambered airfoils have non-zero lift at zero angle of attack
 \cite{Goude2012}. The residual weak $Re$-dependence of the RM2 compared to the
-$Re$-independence of the higher $c/R$ UNH-RVAT could be due to this virtual
-camber effect, since camber has been shown to cause earlier $Re$-convergence of
-the CFT's geometric torque coefficient when calculated from static foil
-coefficients given by a viscous panel method, whereas characteristics like
-lift-to-drag ratio do not converge as strongly \cite{Bachant2016-RVAT-Re-dep}.
+$Re$-independence of the higher $c/R$ UNH-RVAT, shown in
+Fig.~\ref{fig:rvat-perf-re-dep}, could be due to this virtual camber effect,
+since camber has been shown to cause earlier $Re$-convergence of the CFT's
+geometric torque coefficient when calculated from static foil coefficients given
+by a viscous panel method, whereas characteristics like lift-to-drag ratio do
+not converge as strongly \cite{Bachant2016-Energies}.
 
 \begin{figure}
     \includegraphics[width=\textwidth]{figures/perf_re_dep.eps}
 
-    \caption{{\bf Reynolds Number effects on performance.} Power and drag
-    coefficient at $\lambda=3.1$ plotted versus turbine diameter and approximate
-    average blade root chord Reynolds number.}
+    \caption{{\bf RM2 Reynolds Number effects on performance.} Power (left) and
+    drag (right) coefficient at $\lambda=3.1$ plotted versus turbine diameter
+    and approximate average blade root chord Reynolds number.}
 
     \label{fig:perf-re-dep}
+\end{figure}
+
+\begin{figure}
+    % \includegraphics[width=\textwidth]{figures/RVAT-Re-dep-perf_re_dep.eps}
+
+    \caption{{\bf UNH-RVAT Reynolds Number effects on performance.} Power (left)
+    and drag (right) coefficient at $\lambda=1.9$ plotted versus turbine
+    diameter and approximate average blade chord Reynolds number. Taken from
+    \cite{Bachant2016-Energies}.}
+
+    \label{fig:rvat-perf-re-dep}
 \end{figure}
 
 
@@ -763,10 +780,12 @@ the cylindrical and NACA 0021 strut cases.
 
 Measurements for the power coefficient contributions of the strut drag losses
 are presented in Fig.~\ref{fig:no-blades} for NACA 0021 and cylindrical
-struts---both in towed and stationary conditions. These are computed in the same
-fashion as the curves in Fig.~\ref{fig:cp-curves}, but with the rotor blades
-removed. We see that strut drag losses increase with tip speed ratio to the
-power 2--3, which makes streamlined struts much more important for low solidity
+struts---both in towed (at $U_\infty=1$ m/s) and stationary conditions. These
+are computed in the same fashion as the curves in Fig.~\ref{fig:cp-curves}, but
+with the rotor blades removed. For the stationary case, tip speed ratio and
+power coefficient were computed using the same reference velocity $U_\infty=1$
+m/s. We see that strut drag losses increase with tip speed ratio to the power
+2--3, which makes streamlined struts much more important for low solidity
 turbines, given the inverse correlation between solidity and $\lambda_0$
 \cite{Templin1974}.
 
@@ -774,17 +793,19 @@ turbines, given the inverse correlation between solidity and $\lambda_0$
     \includegraphics[width=\textwidth]{figures/no_blades_all.eps}
 
     \caption{{\bf Strut drag losses.} Measurements of the strut drag losses for
-        (a) NACA 0021 and (b) cylindrical struts, both stationary and towed.}
+    (a) NACA 0021 and (b) cylindrical struts, both stationary and towed at 1
+    m/s. Note that stationary calculations for tip speed ratio and power
+    coefficient also assumed $U_\infty = 1$ m/s.}
 
     \label{fig:no-blades}
 \end{figure}
 
 Strut drag losses did not change much for the streamlined NACA 0021 struts in
 the towed versus stationary configuration, which helps explain why overall rotor
-drag coefficients remained of comparable magnitude even at low Reynolds number,
-where $C_P$ was dramatically reduced, or even negative. For the cylindrical
-struts, losses increased significantly when towed and operating in the mid range
-of tip speed ratios.
+drag coefficients shown in Fig.~\ref{fig:perf-covers} remained of comparable
+magnitude even at low Reynolds number, where $C_P$ was dramatically reduced, or
+even negative. For the cylindrical struts, losses increased significantly when
+towed and operating in the mid range of tip speed ratios.
 
 Though a real turbine would never use such high drag struts, with respect to
 numerical modeling, these measurements provide some interesting validation
@@ -806,17 +827,6 @@ which is likely an effect of the RM2's smaller blade chord length and tapered
 blades.
 
 \begin{figure}
-    \includegraphics[width=\textwidth]{figures/RVAT-Re-dep-meancontquiv_10.eps}
-
-    \caption{{\bf UNH-RVAT Near-Wake Mean Velocity.} UNH-RVAT near-wake mean
-        velocity field (looking upstream) at 1 m downstream ($x/D=1.0$),
-        $U_\infty=1.0$ m/s, and $\lambda=1.9$, from \cite{Bachant2016-Energies}.
-        Solid dark gray lines indicate turbine frontal area.}
-
-    \label{fig:rvat-meancontquiv}
-\end{figure}
-
-\begin{figure}
     \includegraphics[width=\textwidth]{figures/meancontquiv.eps}
 
     \caption{{\bf RM2 Near-Wake Mean Velocity.} RM2 near-wake mean velocity
@@ -825,6 +835,17 @@ blades.
         orientation. Solid dark gray lines indicate turbine frontal area.}
 
     \label{fig:meancontquiv}
+\end{figure}
+
+\begin{figure}
+    \includegraphics[width=\textwidth]{figures/RVAT-Re-dep-meancontquiv_10.eps}
+
+    \caption{{\bf UNH-RVAT Near-Wake Mean Velocity.} UNH-RVAT near-wake mean
+        velocity field (looking upstream) at 1 m downstream ($x/D=1.0$),
+        $U_\infty=1.0$ m/s, and $\lambda=1.9$, from \cite{Bachant2016-Energies}.
+        Solid dark gray lines indicate turbine frontal area.}
+
+    \label{fig:rvat-meancontquiv}
 \end{figure}
 
 Fig.~\ref{fig:kcont} shows the turbulence kinetic energy in the turbine wake. We
@@ -836,6 +857,17 @@ operating further from stall---consistent with its higher optimal tip speed
 ratio.
 
 \begin{figure}
+    \includegraphics[width=\textwidth]{figures/k_contours.eps}
+
+    \caption{{\bf RM2 Near-Wake Turbulence Kinetic Energy.} Turbulence kinetic
+        energy in the RM2's near-wake (looking upstream) at 1 m downstream
+        ($x/D=0.93$), $U_\infty=1.0$ m/s, and $\lambda=3.1$. Solid black lines
+        indicate turbine frontal area.}
+
+    \label{fig:kcont}
+\end{figure}
+
+\begin{figure}
     \includegraphics[width=\textwidth]{figures/RVAT-Re-dep-k_contours_10.eps}
 
     \caption{{\bf UNH-RVAT Near-Wake Turbulence Kinetic Energy.} Turbulence
@@ -845,17 +877,6 @@ ratio.
         area.}
 
     \label{fig:rvat-kcont}
-\end{figure}
-
-\begin{figure}
-    \includegraphics[width=\textwidth]{figures/k_contours.eps}
-
-    \caption{{\bf RM2 Near-Wake Turbulence Kinetic Energy.} Turbulence kinetic
-        energy in the RM2's near-wake (looking upstream) at 1 m downstream
-        ($x/D=0.93$), $U_\infty=1.0$ m/s, and $\lambda=3.1$. Solid black lines
-        indicate turbine frontal area.}
-
-    \label{fig:kcont}
 \end{figure}
 
 Analysis of the near-wake of the higher solidity UNH-RVAT turbine revealed that
@@ -943,7 +964,7 @@ to a weakly $Re$-dependent linear regime at approximately $Re_D \approx 1 \times
 10^6$ or $Re_{c,\mathrm{ave}} \approx 2 \times 10^5$. Comparison was made
 between this turbine and the higher solidity UNH-RVAT, tested in nearly
 identical conditions, which showed similar Reynolds number thresholds but a
-flatter linear regime, likely to due virtual camber of the higher
+flatter linear regime, likely due to virtual camber caused by the higher
 chord-to-radius ratio of the UNH-RVAT blades. Nevertheless, these results
 indicate an important transitional scale threshold beyond which data should be
 taken for numerical model validation, in order to stay relevant to full scale
