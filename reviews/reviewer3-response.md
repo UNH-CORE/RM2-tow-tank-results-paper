@@ -2,7 +2,7 @@
 
 >1. In the title, please use “Hydrokinetic turbine” instead of only “turbine”
 
-
+We have changed the title accordingly.
 
 >2. Consider adding sample time histories of torque and drag force for extreme cases (high and low lambda).
 
