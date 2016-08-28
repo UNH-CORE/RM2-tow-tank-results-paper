@@ -6,7 +6,7 @@
 
 >2. Results are presented and discussed with those from a previous study of a similar turbine. For ease of comparison, please add the UNH-RVAT parameters to Table 2.
 
-
+The UNH-RVAT parameters have been added to Table 2.
 
 >3. It would be helpful to see Figure 8 with the UNH-RVAT results on the same axes or as additional plots, as they are referred to in the results section and in the conclusions.
 
