@@ -2,7 +2,8 @@
 
 >1. Several key quantities and symbols such as Cp and U are used in the introduction prior to their definitions later in the manuscript. Please define quantities and symbols near first instance of use.
 
-
+Definitions for these symbols have been added near where they are first used in
+the text.
 
 >2. Results are presented and discussed with those from a previous study of a similar turbine. For ease of comparison, please add the UNH-RVAT parameters to Table 2.
 

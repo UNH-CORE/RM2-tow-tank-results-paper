@@ -250,18 +250,21 @@ design and analysis tools.
 Reference Model 2 (RM2) is a dual-rotor, vertical-axis cross-flow hydrokinetic
 (river) turbine that was designed to operate in a reach of the lower Mississippi
 River near Baton Rouge, Louisiana \cite{Barone2011, Neary2011}. The rotor has
-three tapered blades and a relatively low solidity $Nc/(\pi D)$ or
+three tapered blades and a relatively low solidity $Nc/(\pi D)$, where $N$ is
+the number of blades, $c$ is the chord length, and $D$ is the rotor diameter, or
 chord-to-radius ratio $c/R \approx 0.1$. A preliminary analysis with Sandia's
 CACTUS vortex line numerical model \cite{Murray2011} predicted an individual
-rotor's full-scale performance coefficient to be $C_P=0.47$ at 1 m/s flow speed
-and a tip speed ratio $\lambda \equiv \frac{\omega R}{U_\infty} = 3.15$
-\cite{Barone2011}, where $\omega$ and $R$ are the rotor's angular velocity and
-radius, respectively. Note that the RM2 rotor solidity would be considered
-moderate to high for a wind turbine, whose $c/R$ values typically range from
-0.05 to 0.09, but MHK rotors are typically higher solidity since they must
-withstand approximately an order of magnitude higher torque in typical flows,
-necessitating relatively larger blades to meet strength and fatigue life
-requirements.
+rotor's full-scale performance coefficient to be $C_P \equiv P / \left(
+\frac{1}{2} \rho A U_\infty^3 \right) = 0.47$---where $P$ is the mechanical
+power output, $\rho$ is the fluid density, $A$ is the rotor frontal area, and
+$U_\infty$ is the free stream velocity---at 1 m/s flow speed and a tip speed
+ratio $\lambda \equiv \frac{\omega R}{U_\infty} = 3.15$ \cite{Barone2011}, where
+$\omega$ and $R$ are the rotor's angular velocity and radius, respectively. Note
+that the RM2 rotor solidity would be considered moderate to high for a wind
+turbine, whose $c/R$ values typically range from 0.05 to 0.09, but MHK rotors
+are typically higher solidity since they must withstand approximately an order
+of magnitude higher torque in typical flows, necessitating relatively larger
+blades to meet strength and fatigue life requirements.
 
 An initial experimental measurement campaign with a 1:15 scale RM2 rotor
 conducted at the Saint Anthony Falls Laboratory (SAFL) at the University of
