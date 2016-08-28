@@ -19,7 +19,7 @@ Thank you. The text has been corrected.
 
 >5. In line 151, Fig. 4 should be Fig. 3.
 
-
+This cross-reference has been fixed.
 
 >6. In lines 303 and 304 refer to Fig. 9 again to help the reader follow the discussion easier.
 
