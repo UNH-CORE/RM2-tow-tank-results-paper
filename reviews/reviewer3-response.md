@@ -36,3 +36,5 @@ referred to sequentially.
 Thank you. This has been corrected in the manuscript.
 
 >10. In Fig. 1, show c and R in the plot.
+
+We have added these dimension labels to the turbine drawing.
