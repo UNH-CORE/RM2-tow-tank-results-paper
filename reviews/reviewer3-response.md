@@ -23,7 +23,7 @@ This cross-reference has been fixed.
 
 >6. In lines 303 and 304 refer to Fig. 9 again to help the reader follow the discussion easier.
 
-
+This cross-reference has been added to the text.
 
 >7. In line 314, refer to Fig. 11 before Fig. 12.
 
