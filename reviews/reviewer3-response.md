@@ -15,7 +15,7 @@ case (1 m/s). This detail has been added to the text.
 
 >4. In line 123, it should be “… dependence were…” instead of “… dependence of was…”
 
-
+Thank you. The text has been corrected.
 
 >5. In line 151, Fig. 4 should be Fig. 3.
 
