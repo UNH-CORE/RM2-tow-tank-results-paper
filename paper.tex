@@ -184,8 +184,8 @@ singlelinecheck=off]{caption}
 % and articles.
 \begin{flushleft}
 
-{\Large \textbf\newline{Experimental Study of a Reference Model
-        Cross-Flow Hydrokinetic Turbine}} \newline % Insert author names,
+{\Large \textbf\newline{Experimental Study of a Reference Model Vertical-Axis
+        Cross-Flow Turbine}} \newline % Insert author names,
 % affiliations
 % and corresponding author email (do not
 % include
@@ -206,7 +206,7 @@ P.O. Box 5800, Albuquerque, New Mexico 87185-MS1124, USA \\ \bigskip
 \section*{Abstract}
 
 The mechanical power, total rotor drag, and near-wake velocity of a 1:6 scale
-(1.075 m diameter) DOE/Sandia National Labs Reference Model 2 (RM2)
+model (1.075 m diameter) of the US Department of Energy's Reference Model
 vertical-axis cross-flow turbine were measured experimentally in a towing tank,
 to provide a comprehensive open dataset for validating numerical models.
 Performance was measured for a range of tip speed ratios and at multiple
@@ -228,7 +228,9 @@ levels of streamwise wake recovery were calculated for the RM2 case---a
 consequence of both the relatively low solidity and tapered blades reducing
 blade tip vortex shedding---responsible for mean vertical advection---and lower
 levels of turbulence caused by higher operating tip speed ratio and therefore
-reduced dynamic stall.
+reduced dynamic stall. Datasets, code for processing and visualization, and a
+CAD model of the turbine have been made publicly available
+\cite{Bachant2016-RM2-data,Bachant2015-RM2-CAD}.
 
 
 \section*{Introduction}
@@ -249,22 +251,23 @@ design and analysis tools.
 
 Reference Model 2 (RM2) is a dual-rotor, vertical-axis cross-flow hydrokinetic
 (river) turbine that was designed to operate in a reach of the lower Mississippi
-River near Baton Rouge, Louisiana \cite{Barone2011, Neary2011}. The rotor has
-three tapered blades and a relatively low solidity $Nc/(\pi D)$, where $N$ is
-the number of blades, $c$ is the chord length, and $D$ is the rotor diameter, or
-chord-to-radius ratio $c/R \approx 0.1$. A preliminary analysis with Sandia's
-CACTUS vortex line numerical model \cite{Murray2011} predicted an individual
-rotor's full-scale performance coefficient to be $C_P \equiv P / \left(
-\frac{1}{2} \rho A U_\infty^3 \right) = 0.47$---where $P$ is the mechanical
-power output, $\rho$ is the fluid density, $A$ is the rotor frontal area, and
-$U_\infty$ is the free stream velocity---at 1 m/s flow speed and a tip speed
-ratio $\lambda \equiv \frac{\omega R}{U_\infty} = 3.15$ \cite{Barone2011}, where
-$\omega$ and $R$ are the rotor's angular velocity and radius, respectively. Note
-that the RM2 rotor solidity would be considered moderate to high for a wind
-turbine, whose $c/R$ values typically range from 0.05 to 0.09, but MHK rotors
-are typically higher solidity since they must withstand approximately an order
-of magnitude higher torque in typical flows, necessitating relatively larger
-blades to meet strength and fatigue life requirements.
+River near Baton Rouge, Louisiana \cite{Barone2011, Neary2011}, but could also
+be deployed in a tidal environment. The rotor has three tapered blades and a
+relatively low solidity $Nc/(\pi D)$, where $N$ is the number of blades, $c$ is
+the chord length, and $D$ is the rotor diameter, or chord-to-radius ratio $c/R
+\approx 0.1$. A preliminary analysis with Sandia's CACTUS vortex line numerical
+model \cite{Murray2011} predicted an individual rotor's full-scale performance
+coefficient to be $C_P \equiv P / \left( \frac{1}{2} \rho A U_\infty^3 \right) =
+0.47$---where $P$ is the mechanical power output, $\rho$ is the fluid density,
+$A$ is the rotor frontal area, and $U_\infty$ is the free stream velocity---at 1
+m/s flow speed and a tip speed ratio $\lambda \equiv \frac{\omega R}{U_\infty} =
+3.15$ \cite{Barone2011}, where $\omega$ and $R$ are the rotor's angular velocity
+and radius, respectively. Note that the RM2 rotor solidity would be considered
+moderate to high for a wind turbine, whose $c/R$ values typically range from
+0.05 to 0.09, but MHK rotors are typically higher solidity since they must
+withstand approximately an order of magnitude higher torque in typical flows,
+necessitating relatively larger blades to meet strength and fatigue life
+requirements.
 
 An initial experimental measurement campaign with a 1:15 scale RM2 rotor
 conducted at the Saint Anthony Falls Laboratory (SAFL) at the University of
@@ -281,26 +284,26 @@ significant on the 2 m Sandia Research Darrieus turbine in wind tunnel testing
 \cite{Blackwell1976}: The maximum power coefficient, $C_{P_{\max}}$, increased
 with Reynolds number, $Re_c=\lambda U_\infty c / \nu$ (based on blade chord
 rather than diameter, though these are approximately proportional since optimal
-tip speed ratio correlates inversely with solitidy and therefore chord length),
+tip speed ratio correlates inversely with solidity and therefore chord length),
 along with a shift of the location of $C_{P_{\max}}$ toward lower tip speed
 ratios due to delayed blade stall. The effects of Reynolds number were quite
 dramatic over a relatively small range of $Re_c \approx 1.1 \times 10^5$--$2.9
 \times 10^5$. More recently, Bachant and Wosnik \cite{Bachant2014,
     Bachant2016-RVAT-Re-dep} showed that performance and near-wake characteristics
-of a high solidity cross-flow turbine become Reynolds number independent at
+of a high solidity cross-flow turbine became Reynolds number independent at
 $Re_D \approx 10^6$ or $Re_c \approx 2 \times 10^5$.
 
 As part of the engineering process it is generally less expensive to assess
 designs via numerical rather than physical models. However, it is
-important---especially when dealing with fluid dynamics where the ``exact''
-physics cannot be resolved with even the most advanced computers---that
-numerical models be validated against experimental data. It is uncertain whether
-numerical models validated with physical model data obtained at low Reynolds
-numbers should be considered validated at all, since the scale at which the
-model will be applied for real world design problems is orders of magnitude
-larger. One way to overcome this uncertainty is to show that the scaled physical
-model test has become Reynolds number independent, so validation efforts are
-relevant at full-scale, which was the strategy employed here.
+important---especially when dealing with high Reynolds number fluid dynamics
+where the ``exact'' physics cannot be resolved with even the most advanced
+computers---that numerical models be validated against experimental data. It is
+uncertain whether numerical models validated with physical model data obtained
+at low Reynolds numbers should be considered validated at all, since the scale
+at which the model will be applied for real world design problems is orders of
+magnitude larger. One way to overcome this uncertainty is to show that the
+scaled physical model test has become Reynolds number independent, so validation
+efforts are relevant at full-scale, which was the strategy employed here.
 
 The main objective of the present study was to acquire a new experimental
 dataset for the RM2 turbine at sufficiently high Reynolds numbers to be relevant
@@ -308,17 +311,14 @@ to full-scale physical and numerical modeling. It was hypothesized that the
 parasitic losses from rotor blade support struts could play an important role in
 overall turbine performance, especially for a lower solidity turbine that
 operates at higher tip speed ratios. Thus, the parasitic torque from strut drag
-was measured without blades, then deliberately and significantly increased in
-the physical model to provide data to investigate its importance. The velocity
-field in the near-wake of the turbine was then measured to compare with
-measurements from a higher solidity rotor in the same experimental setup
+was measured without blades, then deliberately and dramatically increased in the
+physical model to provide data to investigate its importance. The velocity field
+in the near-wake of the turbine was then measured to compare with measurements
+from a higher solidity rotor in the same experimental setup
 \cite{Bachant2015-JoT}, and to provide validation data for numerical models that
 predict wake flows, which determine turbine--turbine interaction and optimal
 spacing for turbine arrays. This dataset, along with the code for processing and
-visualization, has been made publicly available (licensed via Creative Commons
-CC-BY for data and MIT license for code) as a Git repository on GitHub
-(\url{https://github.com/UNH-CORE/RM2-tow-tank}) and as a citable archive with a
-digital object identifier (DOI) \cite{Bachant2016-RM2-data}.
+visualization, has been made publicly available \cite{Bachant2016-RM2-data}.
 
 
 \subsection*{Survey of Validation Data and Usage}
@@ -378,11 +378,12 @@ designs, especially as the MHK concepts mature.
 
 The UNH-RVAT, for which the performance, near-wake, and Reynolds number
 dependence were investigated using the same experimental setup as the study
-here \cite{Bachant2015-JoT, Bachant2016-Energies}, was an H-rotor of 1 m height
-and 1 m diameter. The UNH-RVAT experimental datasets are also openly available
-\cite{Bachant2014-RVAT-baseline, Bachant2016-RVAT-Re-dep}, and provide an
-interesting comparison for the near-wake dynamics of a rotor similar in size to
-the 1:6 scale RM2, but with non-tapered blades and a high solidity $c/R = 0.28$.
+reported here \cite{Bachant2015-JoT, Bachant2016-Energies}, was an H-rotor of 1
+m height and 1 m diameter. The UNH-RVAT experimental datasets are also openly
+available \cite{Bachant2014-RVAT-baseline, Bachant2016-RVAT-Re-dep}, and provide
+an interesting comparison for the near-wake dynamics of a rotor similar in size
+to the 1:6 scale RM2, but with non-tapered blades and a high solidity $c/R =
+0.28$.
 
 
 \section*{Materials and Methods}
@@ -441,9 +442,9 @@ challenge for numerical modeling.
 
 For investigating the effects of support strut drag losses, a set of cylindrical
 covers were designed to slip over the struts, which provided a deliberate and
-significant increase in strut drag. Endcaps were also fabricated to allow the
-high drag strut cover configuration to be operated without blades. A drawing of
-the strut covers is shown in Fig.~\ref{fig:covers}.
+dramatic increase in strut drag. Endcaps were also fabricated to allow the high
+drag strut cover configuration to be operated without blades. A drawing of the
+strut covers is shown in Fig.~\ref{fig:covers}.
 
 \begin{figure}
     \includegraphics[width=0.95\textwidth]{figures/strut_covers.eps}
@@ -510,9 +511,10 @@ subsystems---motion controller, NI DAQ (performance measurements), and Vectrino+
 tow, after being triggered by a digital signal edge sent from the motion
 controller. This strategy retained synchronization for all performance signal
 samples (tow speed, torque, drag, angular velocity), ensuring precise
-calculation of, e.g., power coefficient. Since there was also synchronization of
-the initial sample from each of the three subsystems, correlation of events in
-the performance and wake signals is also possible.
+calculation of turbine performance parameters, e.g., power coefficient. Since
+there was also synchronization of the initial sample from each of the three
+subsystems, correlation of events in the performance and wake signals is also
+possible.
 
 \paragraph{Tare drag and torque compensation.} To best estimate the hydrodynamic
 loads on the turbine rotor alone, tare torque and drag runs were performed to
@@ -624,10 +626,11 @@ include a whole number of blade passages. Relevant statistics were then
 calculated over this duration.
 
 Since the blockage ratio was relatively low (10\%), and a definitive blockage
-correction for cross-flow turbines has not been established \cite{Cavagnaro2014}
-blockage effects were not corrected for. Furthermore, most numerical modeling
-efforts can easily incorporate finite domains. Therefore, applying blockage
-corrections to experimental data could actually complicate validation efforts.
+correction method for cross-flow turbines has not been established
+\cite{Cavagnaro2014} blockage effects were not corrected for. Furthermore, most
+numerical modeling efforts can easily model finite domains, i.e., incorporate
+tow tank walls. Therefore, applying blockage corrections to experimental data
+could actually complicate validation efforts.
 
 To calculate turbine RPM from shaft angle, the encoder signal was differentiated
 using a second order central difference scheme, after which an 8 sample wide
@@ -668,9 +671,9 @@ transition to turbulence closer to the leading edge \cite{Lissaman1983,
 as it moves against the adverse pressure gradient on the suction side of the
 foil. For the experiment reported here, a maximum power coefficient $C_P=0.37$
 was reached at $Re_D=1.3 \times 10^6$. Note how at lower tip speed ratios and
-Reynolds numbers, $C_P$ becomes significantly negative, which was possible
-thanks to the speed control of the experimental setup's servo motor applying
-negative torque to the rotor.
+Reynolds numbers, $C_P$ becomes significantly negative, which was possible with
+the speed control of the experimental setup's servo motor applying negative
+torque to the rotor.
 
 \begin{figure}
     \includegraphics[width=0.9\textwidth]{figures/cp_curves.eps}
@@ -681,15 +684,15 @@ negative torque to the rotor.
     \label{fig:cp-curves}
 \end{figure}
 
-Mean rotor drag coefficients are plotted versus tip speed ratio in
+Mean rotor drag (or thrust) coefficients are plotted versus tip speed ratio in
 Fig.~\ref{fig:cd-curves}. These $C_D$ curves show little difference compared to
-the power coefficient curves, which is most noticeable at low $\lambda$ and low
-$Re$. The relative similarity could be attributed to the effects of stall, where
-the lift-to-drag ratio on the blades may drop, decreasing rotor torque, though
-the total resultant force due to high blade drag retains a similar component in
-the streamwise direction. When operating at maximum power coefficient,
-$\lambda_0=3.1$, and $Re_D=1.3 \times 10^6$, a rotor drag coefficient $C_D=0.84$
-was measured.
+the power coefficient curves; differences are most noticeable at low $\lambda$
+and low $Re$. The relative similarity could be attributed to the effects of
+stall, where the lift-to-drag ratio on the blades may drop, decreasing rotor
+torque, though the total resultant force due to high blade drag retains a
+similar component in the streamwise direction. When operating at maximum power
+coefficient, $\lambda_0=3.1$, and $Re_D=1.3 \times 10^6$, a rotor drag
+coefficient $C_D=0.84$ was measured.
 
 \begin{figure}
     \includegraphics[width=0.9\textwidth]{figures/cd_curves.eps}
@@ -933,7 +936,7 @@ vortex shedding, transport due to vertical advection at this point in the wake
 was approximately 3 times lower than the higher solidity UNH-RVAT. Note that
 direct comparison is somewhat invalid, since the total measurement plane area
 was about 5\% lower for this experiment. However, the differences observed are
-larger than the area ratio between the two experiments. We also see relatively
+larger than the differences in measurement plane area. We also see relatively
 lower levels of cross-stream turbulent transport due to the lack of blade stall
 vortex shedding. These results may have interesting implications regarding the
 application of turbines with lower power coefficient to possibly improve overall
@@ -952,7 +955,7 @@ the downstream evolution and turbine--wake interaction.
 \end{figure}
 
 
-\subsection*{Conclusions}
+\section*{Conclusions}
 
 The performance and near-wake velocity of a 1:6 scale DOE Reference Model 2
 cross-flow turbine were measured in a towing tank. A maximum power coefficient
@@ -992,12 +995,18 @@ data. However, lower wake recovery totals were calculated. This indicates that
 although the RM2 is a more effective energy converter than the UNH-RVAT, its
 wake recovery may in fact be delayed due to weaker blade tip vortex shedding and
 lower levels of turbulence in the near-wake, which may present a trade-off when
-considering optimal array layouts.
+considering optimal array layouts for maximizing power output per unit footprint
+area.
 
-This dataset, along with the code for processing and visualization, is provided
-openly via a Creative Commons license (MIT license for code), and is available
-as a Git repository from \url{http://github.com/UNH-CORE/RM2-tow-tank} or a
-citable archive \cite{Bachant2016-RM2-data}.
+
+\section*{Data Availability}
+
+The data reported in this publication, along with code for processing and
+visualization have been made publicly available (licensed via Creative Commons
+CC-BY for data and MIT license for code) as a Git repository on GitHub
+(\url{https://github.com/UNH-CORE/RM2-tow-tank}) and as a citable archive with a
+digital object identifier (DOI). A CAD model of the turbine (also licensed
+CC-BY) is available from \cite{Bachant2015-RM2-CAD}.
 
 
 \section*{Acknowledgments}
