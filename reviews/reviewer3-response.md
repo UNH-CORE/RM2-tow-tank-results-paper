@@ -2,7 +2,13 @@
 
 >1. In the title, please use “Hydrokinetic turbine” instead of only “turbine”
 
-
+We would prefer to leave the word “hydrokinetic” out of the title to attract
+more readers from the wind energy community. The results presented here are
+equally applicable to cross-flow wind turbines, and it is clear from the
+abstract and the description of the RM2 turbine that model study was performed
+with a hydrokinetic turbine in water. If the referee insists, we can add the
+word “hydrokinetic” to the title. However, we believe that this would reduce
+readership.
 
 >2. Consider adding sample time histories of torque and drag force for extreme cases (high and low lambda).
 
