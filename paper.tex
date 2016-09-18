@@ -229,8 +229,7 @@ consequence of both the relatively low solidity and tapered blades reducing
 blade tip vortex shedding---responsible for mean vertical advection---and lower
 levels of turbulence caused by higher operating tip speed ratio and therefore
 reduced dynamic stall. Datasets, code for processing and visualization, and a
-CAD model of the turbine have been made publicly available
-\cite{Bachant2016-RM2-data,Bachant2015-RM2-CAD}.
+CAD model of the turbine have been made publicly available.
 
 
 \section*{Introduction}
@@ -337,7 +336,7 @@ blades, the VAWT 850 \cite{Mays1990}, has also been measured.
     \centering
 
     \begin{tabular}{c|c|c|c|c|c}
-        Name & Rotor type & $N_\mathrm{b}$ & $c/R$ & $Re_D$ & Used in \\
+        Name & Rotor type & $N$ & $c/R$ & $Re_D$ & Used in \\
         \hline
         Sandia 2 m \cite{Blackwell1976} &  Darrieus  & 2--3 & 0.06--0.09 & $\sim 10^6$ & \cite{Roh2013,Bedon2014} \\
         Sandia 5 m \cite{Sheldahl1977} &  Darrieus  & 3 & 0.08 & $\sim 10^6$ & \cite{Antheaume2008,Bedon2014} \\
@@ -393,8 +392,8 @@ to the 1:6 scale RM2, but with non-tapered blades and a high solidity $c/R =
 Geometric parameters for the 1:6 scale RM2 rotor were taken from the RM2 design
 report \cite{Barone2011}, with the exception of the shaft diameter, which was
 scaled from the SAFL RM2 model \cite{Hill2014}. Values for both the 1:6 and
-full-scale designs are presented in Tab.~\ref{tab:turb-geom} and a drawing of
-the turbine is shown in Fig.~\ref{fig:turbine-drawing}. The rotor
+full-scale designs are presented in Table~\ref{tab:turb-geom} and a drawing of
+the turbine is shown in Fig~\ref{fig:turbine-drawing}. The rotor
 components---blades, struts, shaft, and center hub sections---were fabricated
 from 6061-T6 aluminum, which was hardcoat anodized per MIL-8625-A, type III,
 class 2 specifications. CAD models of the turbine are available from
@@ -444,7 +443,7 @@ For investigating the effects of support strut drag losses, a set of cylindrical
 covers were designed to slip over the struts, which provided a deliberate and
 dramatic increase in strut drag. Endcaps were also fabricated to allow the high
 drag strut cover configuration to be operated without blades. A drawing of the
-strut covers is shown in Fig.~\ref{fig:covers}.
+strut covers is shown in Fig~\ref{fig:covers}.
 
 \begin{figure}
     \includegraphics[width=0.95\textwidth]{figures/strut_covers.eps}
@@ -459,7 +458,7 @@ strut covers is shown in Fig.~\ref{fig:covers}.
 \subsection*{Facility and instrumentation}
 
 Measurements were conducted in the UNH tow/wave tank, pictured in
-Fig.~\ref{fig:exp-setup-photo}, a 36 m long facility with a 3.66 m wide by 2.44
+Fig~\ref{fig:exp-setup-photo}, a 36 m long facility with a 3.66 m wide by 2.44
 m deep cross-section, capable of tow speeds up to 3 m/s. The blockage ratio
 based on the rotor frontal and tank cross-sectional area was 10\%. The turbine
 was mounted in a frame built from NACA 0020 struts, attached to the tow carriage
@@ -481,7 +480,7 @@ the carriage speed turbine angular velocity sampled at 1 kHz. Turbine wake
 measurements at 1 meter downstream were measured with a Nortek Vectrino+
 acoustic Doppler velocimeter \cite{NortekVectrino}, sampling at 200 Hz. A photo
 and drawing of the experimental setup are shown in
-Fig.~\ref{fig:exp-setup-photo} and Fig.~\ref{fig:exp-setup}, respectively.
+Figs~\ref{fig:exp-setup-photo}~and~\ref{fig:exp-setup}, respectively.
 
 \begin{figure}
     \centering
@@ -537,8 +536,8 @@ position---were held constant. These runs were grouped into logical test matrix
 ``sections,'' in which typically a single independent variable was varied. Test
 matrix section names and descriptions are provided in the \texttt{README.md}
 file of the experimental data and code repository \cite{Bachant2016-RM2-data}.
-Tow speed and their corresponding turbine diameter and blade chord Reynolds
-numbers are presented in Tab.~\ref{tab:re}.
+Tow speeds and their corresponding turbine diameter and blade chord Reynolds
+numbers are presented in Table~\ref{tab:re}.
 
 \begin{table}
 \centering
@@ -561,7 +560,7 @@ tip, root, and mid-span, corresponding to various tow speeds at $\lambda=3.1$.}
 
 Wake measurements were all performed at 1 m downstream, which corresponds to
 $x/D = 0.93$. The cross-stream and vertical coordinates are shown in
-Fig.~\ref{fig:coordinates}. Altogether 750 tows were performed and included in
+Fig~\ref{fig:coordinates}. Altogether 750 tows were performed and included in
 the experimental database.
 
 \begin{figure}
@@ -661,7 +660,7 @@ reanalysis of the measurements presented here.
 \subsection*{Performance}
 
 Mean rotor power coefficients for multiple Reynolds numbers are plotted versus
-tip speed ratio in Fig.~\ref{fig:cp-curves}. In general, $C_P$ increases with
+tip speed ratio in Fig~\ref{fig:cp-curves}. In general, $C_P$ increases with
 $Re$, along with a reduction in the optimal tip speed ratio, due to the tendency
 of foils to stall at higher angles of attack at higher $Re$, and the higher
 angle of attack ranges seen by the blades at lower $\lambda$. These effects
@@ -685,7 +684,7 @@ torque to the rotor.
 \end{figure}
 
 Mean rotor drag (or thrust) coefficients are plotted versus tip speed ratio in
-Fig.~\ref{fig:cd-curves}. These $C_D$ curves show little difference compared to
+Fig~\ref{fig:cd-curves}. These $C_D$ curves show little difference compared to
 the power coefficient curves; differences are most noticeable at low $\lambda$
 and low $Re$. The relative similarity could be attributed to the effects of
 stall, where the lift-to-drag ratio on the blades may drop, decreasing rotor
@@ -712,7 +711,7 @@ coefficient curves nearly collapse onto each other for $Re_D \ge 0.6 \times
 10^6$.
 
 The effects of Reynolds number on the power and drag coefficients at
-$\lambda=3.1$ are shown in Fig.~\ref{fig:perf-re-dep}. The rotor drag
+$\lambda=3.1$ are shown in Fig~\ref{fig:perf-re-dep}. The rotor drag
 coefficient $C_D$ became more or less Reynolds number independent for $Re_D \ge
 0.6 \times 10^6$. The power coefficient of the turbine increased dramatically
 below $Re_D = 1 \times 10^6$ or $Re_c \equiv \lambda U_\infty c / \nu \approx 2
@@ -732,7 +731,7 @@ curvature---caused by the finite $c/R$---which imparts a ``virtual camber''
 attack since cambered airfoils have non-zero lift at zero angle of attack
 \cite{Goude2012}. The residual weak $Re$-dependence of the RM2 compared to the
 $Re$-independence of the higher $c/R$ UNH-RVAT, shown in
-Fig.~\ref{fig:rvat-perf-re-dep}, could be due to this virtual camber effect,
+Fig~\ref{fig:rvat-perf-re-dep}, could be due to this virtual camber effect,
 since camber has been shown to cause earlier $Re$-convergence of the CFT's
 geometric torque coefficient when calculated from static foil coefficients given
 by a viscous panel method, whereas characteristics like lift-to-drag ratio do
@@ -763,7 +762,7 @@ not converge as strongly \cite{Bachant2016-Energies}.
 \subsection*{Strut drag losses}
 
 Performance curves for the rotor with both NACA 0021 and cylindrical struts are
-shown in Fig.~\ref{fig:perf-covers}. As expected, the high drag cylindrical
+shown in Fig~\ref{fig:perf-covers}. As expected, the high drag cylindrical
 struts reduce performance dramatically, producing an entirely negative $C_P$
 curve. The detrimental effects of the strut drag were more pronounced at higher
 $\lambda$. This is in accordance with the measurements of Rawlings
@@ -782,9 +781,9 @@ the cylindrical and NACA 0021 strut cases.
 \end{figure}
 
 Measurements for the power coefficient contributions of the strut drag losses
-are presented in Fig.~\ref{fig:no-blades} for NACA 0021 and cylindrical
+are presented in Fig~\ref{fig:no-blades} for NACA 0021 and cylindrical
 struts---both in towed (at $U_\infty=1$ m/s) and stationary conditions. These
-are computed in the same fashion as the curves in Fig.~\ref{fig:cp-curves}, but
+are computed in the same fashion as the curves in Fig~\ref{fig:cp-curves}, but
 with the rotor blades removed. For the stationary case, tip speed ratio and
 power coefficient were computed using the same reference velocity $U_\infty=1$
 m/s. We see that strut drag losses increase with tip speed ratio to the power
@@ -805,7 +804,7 @@ turbines, given the inverse correlation between solidity and $\lambda_0$
 
 Strut drag losses did not change much for the streamlined NACA 0021 struts in
 the towed versus stationary configuration, which helps explain why overall rotor
-drag coefficients shown in Fig.~\ref{fig:perf-covers} remained of comparable
+drag coefficients shown in Fig~\ref{fig:perf-covers} remained of comparable
 magnitude even at low Reynolds number, where $C_P$ was dramatically reduced, or
 even negative. For the cylindrical struts, losses increased significantly when
 towed and operating in the mid range of tip speed ratios.
@@ -821,9 +820,9 @@ high/low drag struts and with/without blades.
 
 The mean velocity field at the chosen optimal tip speed ratio $\lambda_0=3.1$, 1
 m downstream ($x/D=0.93$) from the rotor axis is plotted in
-Fig.~\ref{fig:meancontquiv}. The mean streamwise velocity deficit is markedly
+Fig~\ref{fig:meancontquiv}. The mean streamwise velocity deficit is markedly
 more symmetric than that of the higher solidity UNH-RVAT, shown in
-Fig.~\ref{fig:rvat-meancontquiv}, with the RM2 inducing lower acceleration
+Fig~\ref{fig:rvat-meancontquiv}, with the RM2 inducing lower acceleration
 around the turbine due to the lower rotor drag coefficient and a slightly lower
 blockage ratio \cite{Bachant2015-JoT}. Tip vortex shedding is relatively weaker,
 which is likely an effect of the RM2's smaller blade chord length and tapered
@@ -834,7 +833,7 @@ blades.
 
     \caption{{\bf RM2 Near-Wake Mean Velocity.} RM2 near-wake mean velocity
         field (looking upstream) at 1 m downstream ($x/D=0.93$), $U_\infty=1.0$ m/s,
-        and $\lambda=3.1$. Refer to Fig.~\ref{fig:coordinates} for turbine axis
+        and $\lambda=3.1$. Refer to Fig~\ref{fig:coordinates} for turbine axis
         orientation. Solid dark gray lines indicate turbine frontal area.}
 
     \label{fig:meancontquiv}
@@ -851,10 +850,10 @@ blades.
     \label{fig:rvat-meancontquiv}
 \end{figure}
 
-Fig.~\ref{fig:kcont} shows the turbulence kinetic energy in the turbine wake. We
+Fig~\ref{fig:kcont} shows the turbulence kinetic energy in the turbine wake. We
 mainly see unsteadiness in the flow generated by the blade tip vortex shedding
 (the horizontal band around $z/H=0.5$). Compared with the UNH-RVAT, shown in
-Fig.~\ref{fig:rvat-kcont}, turbulence generation is lower overall, without the
+Fig~\ref{fig:rvat-kcont}, turbulence generation is lower overall, without the
 intense vertical band around $y/R=-1$, which indicates that the RM2 blades are
 operating further from stall---consistent with its higher optimal tip speed
 ratio.
@@ -931,7 +930,7 @@ dissipation due to the mean velocity gradient (Mean diss.).
 Derivatives were computed with a second order central difference scheme for
 interior points, and a second order inward-facing scheme for the edges,
 following the methodology in \cite{Bachant2015-JoT}. Weighted averages for these
-calculations are shown in Fig.~\ref{fig:Ktransport}. Due to the weaker blade
+calculations are shown in Fig~\ref{fig:Ktransport}. Due to the weaker blade
 vortex shedding, transport due to vertical advection at this point in the wake
 was approximately 3 times lower than the higher solidity UNH-RVAT. Note that
 direct comparison is somewhat invalid, since the total measurement plane area
@@ -1027,22 +1026,23 @@ DE-AC04-94AL85000.
 % here.
 %
 \bibliographystyle{plos2015}
-%\bibliography{library}
+% \bibliography{library}
+
 \begin{thebibliography}{10}
 
     \bibitem{Neary2014}
     Neary VS, Previsic M, Jepsen RA, Lawson MJ, Yu YH, Copping AE, et~al.
     \newblock Methodology for Design and Economic Analysis of Marine Energy
-    Conversion ({MEC}) Technologies.
+      Conversion ({MEC}) Technologies.
     \newblock Albuquerque, NM, USA: Sandia National Laboratories; 2014.
-    SAND2014-9040.
+      SAND2014-9040.
 
     \bibitem{Neary2014a}
     Neary VS, Lawson M, Previsic M, Copping A, Hallett KC, A L, et~al.
     \newblock Methodology for design and economic analysis of marine energy
-    conversion (MEC) technologies.
+      conversion (MEC) technologies.
     \newblock In: Proceedings of the Marine Energy Technology Symposium (METS2014).
-    Seattle, WA; 2014. .
+      Seattle, WA; 2014.
 
     \bibitem{Barone2011}
     Barone M, Griffith T, Berg J.
@@ -1052,82 +1052,84 @@ DE-AC04-94AL85000.
     \bibitem{Neary2011}
     Neary VS.
     \newblock Reference inflow characterization for river resource reference model
-    (RM2).
+      (RM2).
     \newblock Oak Ridge National Laboratory; 2011. ORNL/TM-2011/360.
     \newblock Available from:
-    \url{http://info.ornl.gov/sites/publications/files/Pub32455.pdf}.
+      \url{http://info.ornl.gov/sites/publications/files/Pub32455.pdf}.
 
     \bibitem{Murray2011}
     Murray J, Barone M.
     \newblock The Development of CACTUS, a Wind and Marine Turbine Performance
-    Simulation Code.
+      Simulation Code.
     \newblock In: Proceedings of the 49th AIAA Aerospace Sciences Meeting including
-    the New Horizons Forum and Aerospace Exposition; 2011. .
+      the New Horizons Forum and Aerospace Exposition; 2011.
 
     \bibitem{Hill2014}
-    Hill C, Neary V, Gunawan B, Guala M, Sotiropoulos F.
+    Hill C, Neary VS, Gunawan B, Guala M, Sotiropoulos F.
     \newblock {U.S.} {D}epartment of {E}nergy {R}eference {M}odel {P}rogram {RM2}:
-    Experimental Results.
+      Experimental Results.
     \newblock St. Anthony Falls Laboratory for Wind and Water Technologies Program,
-    Office of Energy Efficiency and Renewable Energy, U.S. Department of Energy;
-    2014.
+      Office of Energy Efficiency and Renewable Energy, U.S. Department of Energy;
+      2014.
 
     \bibitem{Blackwell1976}
     Blackwell B, Sheldahl R, Feltz L.
     \newblock Wind Tunnel Performance Data for the {Darrieus} Wind Turbine with
-    {NACA} 0012 Blades.
+      {NACA} 0012 Blades.
     \newblock Albuquerque, {NM}: Sandia National Laboratories; 1976. SAND76-0130.
 
     \bibitem{Bachant2014}
     Bachant P, Wosnik M.
     \newblock Reynolds Number Dependence of Cross-Flow Turbine Performance and
-    Near-Wake Characteristics.
+      Near-Wake Characteristics.
     \newblock In: Proceedings of the 2nd Marine Energy Technology Symposium
-    METS2014. Seattle, WA; 2014. Available from:
-    \url{http://hdl.handle.net/10919/49210}.
+      METS2014. Seattle, WA; 2014. Available from:
+      \url{http://hdl.handle.net/10919/49210}.
 
     \bibitem{Bachant2016-RVAT-Re-dep}
     Bachant P, Wosnik M. {UNH-RVAT} {R}eynolds number dependence experiment:
-    Reduced dataset and processing code; 2016.
+      Reduced dataset and processing code; 2016.
     \newblock fig\textbf{share}.
-    \url{http://dx.doi.org/10.6084/m9.figshare.1286960}.
+      \url{http://dx.doi.org/10.6084/m9.figshare.1286960}.
 
     \bibitem{Bachant2015-JoT}
     Bachant P, Wosnik M.
     \newblock Characterising the near-wake of a cross-flow turbine.
-    \newblock Journal of Turbulence. 2015 January;16(4):392--410.
+    \newblock Journal of Turbulence. 2015;16(4):392--410.
+    \newblock doi:{10.1080/14685248.2014.1001852}.
 
     \bibitem{Bachant2016-RM2-data}
-    Bachant P, Wosnik M, Gunawan B, Neary V. {UNH} {RM2} tow tank experiment:
-    Reduced dataset and processing code; 2016.
-    \newblock fig\textbf{share}. http://dx.doi.org/10.6084/m9.figshare.1373899.
+    Bachant P, Wosnik M, Gunawan B, Neary VS. {UNH} {RM2} tow tank experiment:
+      Reduced dataset and processing code; 2016.
+    \newblock fig\textbf{share}.
+      \url{http://dx.doi.org/10.6084/m9.figshare.1373899}.
 
     \bibitem{Strickland1981}
     Strickland J, Smith T, Sun K.
     \newblock A Vortex Model of the Darrieus Turbine: An Analytical and
-    Experimental Study.
+      Experimental Study.
     \newblock Lubbock, {TX}: Texas Tech University; 1981. SAND81-7017.
 
     \bibitem{Laneville1986}
     Laneville A, Vittecoq P.
     \newblock Dynamic Stall: The Case of the Vertical Axis Wind Turbine.
-    \newblock Journal of Solar Energy Engineering. 1986 May;108:140--145.
+    \newblock Journal of Solar Energy Engineering. 1986;108:140--145.
 
     \bibitem{Mays1990}
     Mays ID, Morgan CA, Anderson MB, Powles SJR.
     \newblock Experience with the {VAWT} 850 demonstration project.
-    \newblock In: Proceedings of European Community Wind Energy Conference; 1990. .
+    \newblock In: Proceedings of European Community Wind Energy Conference; 1990.
 
     \bibitem{Roh2013}
     Roh SC, Kang SH.
     \newblock Effects of a blade profile, the {R}eynolds number, and the solidity
-    on the performance of a straight bladed vertical axis wind turbine.
+      on the performance of a straight bladed vertical axis wind turbine.
     \newblock Journal of Mechanical Science and Technology. 2013;.
 
     \bibitem{Bedon2014}
     Bedon G, Antonini EGA, Betta SD, Castelli MR, Benini E.
     \newblock Evaluation of the different aerodynamic databases for vertical axis
-    wind turbine simulations.
+      wind turbine simulations.
     \newblock Renewable and Sustainable Energy Reviews. 2014;40.
 
     \bibitem{Sheldahl1977}
@@ -1136,39 +1138,39 @@ DE-AC04-94AL85000.
     \newblock Sandia Laboratories; 1977.
 
     \bibitem{Antheaume2008}
-    Antheaume S, Maıtre T, Achard JL.
-    \newblock Hydraulic Darrieus turbines efficiency for free fluid flow conditions
-    versus power farms conditions.
+    Antheaume S, Ma{\^\i}tre T, Achard JL.
+    \newblock Hydraulic {D}arrieus turbines efficiency for free fluid flow
+      conditions versus power farms conditions.
     \newblock Renewable Energy. 2008;33:2186--2198.
 
     \bibitem{Worstell1978}
     Worstell MH.
     \newblock Aerodynamic Performance of the 17 Meter Diameter {Darrieus} Wind
-    Turbine.
+      Turbine.
     \newblock Sandia National Laboratories; 1978. SAND78-1737.
 
     \bibitem{Para1988}
     Paraschivoiu I.
     \newblock Double-Multiple Streamtube Model for Studying Vertical-Axis Wind
-    Turbines.
+      Turbines.
     \newblock J Propulsion. 1988;4:370--377.
 
     \bibitem{Orlandi2015}
     Orlandi A, Collu M, Zanforlin S, Shires A.
     \newblock {3D} {URANS} analysis of a vertical axis wind turbine in skewed
-    flows.
+      flows.
     \newblock J Wind Eng Ind Aerodyn. 2015;147:77--84.
 
     \bibitem{Ashwill1992}
     Ashwill TD.
     \newblock Measured Data for the {S}andia 34-Meter Vertical Axis Wind Turbine.
     \newblock Albuquerque, NM 87185: Sandia National Laboratories; 1992.
-    SAND91-2228.
+      SAND91-2228.
 
     \bibitem{Liu1992}
     Liu WQ, Paraschivoiu I, Martinuzzi R.
     \newblock Calculation of Dynamic Stall on {S}andia 34-M {VAWT} Using an
-    Indicial Model.
+      Indicial Model.
     \newblock Wind Engineering. 1992;.
 
     \bibitem{Ponta2001}
@@ -1179,58 +1181,60 @@ DE-AC04-94AL85000.
     \bibitem{Scheurich2011b}
     Scheurich F, Fletcher TM, Brown RE.
     \newblock Simulating the aerodynamic performance and wake dynamics of a
-    vertical-axis wind turbine.
+      vertical-axis wind turbine.
     \newblock Wind Energ. 2011;14:159--177.
 
     \bibitem{Amet2009}
-    Amet E, Maitre T, Pellone C, Achard JL.
+    Amet E, Ma{\^\i}tre T, Pellone C, Achard JL.
     \newblock {2D} Numerical Simulations of Blade-Vortex Interaction in a
-    {D}arrieus Turbine.
-    \newblock Journal of Fluids Engineering. 2009 November;131.
+      {D}arrieus Turbine.
+    \newblock Journal of Fluids Engineering. 2009;131.
+    \newblock doi:{10.1115/1.4000258}.
 
     \bibitem{Howell2010}
     Howell R, Qin N, Edwards J, Durrani N.
     \newblock Wind tunnel and numerical study of a small vertical axis wind
-    turbine.
+      turbine.
     \newblock Renewable Energy. 2010;35:412--422.
 
     \bibitem{Joo2015}
     Joo S, Choi H, Lee J.
     \newblock Aerodynamic characteristics of two-bladed H-Darrieus at various
-    solidities and rotating speeds.
-    \newblock Energy. 2015;p. 1--13.
+      solidities and rotating speeds.
+    \newblock Energy. 2015; p. 1--13.
 
     \bibitem{Mertens2003}
     Mertens S, van Kuik G, van Bussel G.
     \newblock Performance of an {H}-{D}arrieus in the skewed flow on a roof.
     \newblock Journal of Solar Energy Engineering. 2003;125:443--440.
-    \newblock Available from:
-    \url{https://www.researchgate.net/profile/Gerard_Van_Bussel/publication/245367769_Performance_of_an_H-Darrieus_in_the_Skewed_Flow_on_a_Roof/links/0deec53bc12ee39ec4000000.pdf}.
+    \newblock doi:{10.1115/1.1629309}.
 
     \bibitem{Bachant2014-RVAT-baseline}
     Bachant P, Wosnik M. {UNH-RVAT} baseline performance and near-wake
-    measurements: Reduced dataset and processing code; 2014.
-    \newblock fig\textbf{share}. http://dx.doi.org/10.6084/m9.figshare.1080781.
-    \newblock Available from: \url{http://dx.doi.org/10.6084/m9.figshare.1080781}.
+      measurements: Reduced dataset and processing code; 2014.
+    \newblock fig\textbf{share}.
+    \newblock
+      \url{http://dx.doi.org/10.6084/m9.figshare.1080781}.
 
     \bibitem{Michelen2014}
     Michelen C, Neary VS, Murray JC, Barone M.
     \newblock {CACTUS} open source code for hydrokinetic turbine design and
-    analysis: model performance evaluation and public dissemination as open
-    source design tool.
+      analysis: model performance evaluation and public dissemination as open
+      source design tool.
     \newblock In: Proceedings of the 2nd Marine Energy Technology Symposium; 2014.
-    .
 
     \bibitem{Bachant2016-Energies}
     Bachant P, Wosnik M.
     \newblock Effects of Reynolds Number on the Energy Conversion and Near-Wake
-    Dynamics of a High Solidity Vertical-Axis Cross-Flow Turbine.
+      Dynamics of a High Solidity Vertical-Axis Cross-Flow Turbine.
     \newblock Energies. 2016;9(73).
+    \newblock doi:{10.3390/en9020073}.
 
     \bibitem{Bachant2015-RM2-CAD}
-    Bachant P, Wosnik M, Gunawan B, Neary V. 1:6 scale {RM2} cross-flow turbine
-    {CAD} package; 2015.
-    \newblock fig\textbf{share}. http://dx.doi.org/10.6084/m9.figshare.1373870.
+    Bachant P, Wosnik M, Gunawan B, Neary VS. 1:6 scale {RM2} cross-flow turbine
+      {CAD} package; 2015.
+    \newblock fig\textbf{share}.
+      \url{http://dx.doi.org/10.6084/m9.figshare.1373870}.
 
     \bibitem{Beam2011}
     Beam MJ, Elbing BR, Fetterolf TK, Kline BL, Kerstetter DF, Mickey JA, et~al.
@@ -1240,42 +1244,33 @@ DE-AC04-94AL85000.
     \bibitem{Fiedler2009}
     Fiedler AJ, Tullis S.
     \newblock Blade Offset and Pitch Effects on a High Solidity Vertical Axis Wind
-    Turbine.
+      Turbine.
     \newblock Wind Engineering. 2009;33:237--246.
 
     \bibitem{SentranZB}
     Sentran. {ZB} {S} Beam Load Cell Datasheet; 2014.
-    \newblock \url{http://www.sentranllc.com/pdfs/zb1.pdf}.
     \newblock Available from: \url{http://www.sentranllc.com/pdfs/zb1.pdf}.
 
     \bibitem{InterfaceT8}
     {Interface Inc }. T8 General Purpose Rotary Torque Transducer Specifications;
-    2014.
-    \newblock
-    \url{http://www.interfaceforce.com/index.php?T8-General-Purpose-Rotary-Torque-Transducer&mod=product&show=65}.
+      2014.
     \newblock Available from:
-    \url{http://www.interfaceforce.com/index.php?T8-General-Purpose-Rotary-Torque-Transducer&mod=product&show=65}.
+      \url{http://www.interfaceforce.com/index.php?T8-General-Purpose-Rotary-Torque-Transducer&mod=product&show=65}.
 
     \bibitem{KollmorgenAKD}
     Kollmorgen. {AKD} user guide; 2014.
-    \newblock
-    \url{http://www.kollmorgen.com/en-us/products/drives/servo/akd/_manuals/kollmorgen-akd-user-guide-en-rev-m/}.
     \newblock Available from:
-    \url{http://www.kollmorgen.com/en-us/products/drives/servo/akd/_manuals/kollmorgen-akd-user-guide-en-rev-m/}.
+      \url{http://www.kollmorgen.com/en-us/products/drives/servo/akd/_manuals/kollmorgen-akd-user-guide-en-rev-m/}.
 
     \bibitem{RenishawLM15}
     Renishaw. {LM}15 linear encoder datasheet; 2014.
-    \newblock
-    \url{http://resources.renishaw.com/download.aspx?lang=en&data=49238&btn=1}.
     \newblock Available from:
-    \url{http://resources.renishaw.com/download.aspx?lang=en&data=49238&btn=1}.
+      \url{http://resources.renishaw.com/download.aspx?lang=en&data=49238&btn=1}.
 
     \bibitem{NortekVectrino}
     Nortek-{AS}. Vectrino 3{D} water velocity sensor lab probe datasheet; 2014.
-    \newblock
-    \url{http://www.nortekusa.com/lib/data-sheets/datasheet-vectrino-lab}.
     \newblock Available from:
-    \url{http://www.nortekusa.com/lib/data-sheets/datasheet-vectrino-lab}.
+      \url{http://www.nortekusa.com/lib/data-sheets/datasheet-vectrino-lab}.
 
     \bibitem{ColemanSteele}
     Coleman HW, Steele WG.
@@ -1285,9 +1280,9 @@ DE-AC04-94AL85000.
     \bibitem{Cavagnaro2014}
     Cavagnaro R, Polagye B.
     \newblock An Evaluation of Blockage Corrections for a Helical Cross-Flow
-    Turbine.
+      Turbine.
     \newblock In: Proceedings of the 3rd Oxford Tidal Energy Workshop. Oxford, UK;
-    2014. .
+      2014.
 
     \bibitem{Lissaman1983}
     Lissaman PBS.
@@ -1307,28 +1302,28 @@ DE-AC04-94AL85000.
     \bibitem{Goude2012}
     Goude A.
     \newblock Fluid Mechanics of Vertical Axis Turbines, Simulations and Model
-    Development.
+      Development.
     \newblock Uppsala University; 2012.
 
     \bibitem{Rawlings2008}
     Rawlings GW.
     \newblock Parametric characterization of an experimental vertical axis hydro
-    turbine.
+      turbine.
     \newblock University of British Columbia; 2008.
 
     \bibitem{Templin1974}
     Templin RJ.
     \newblock Aerodynamic performance theory for the NRC vertical axis wind
-    turbine.
+      turbine.
     \newblock Ottawa, Canada: National Research Council Canada; 1974. LTR-LA-160.
 
     \bibitem{Kinzel2012}
     Kinzel M, Mulligan Q, Dabiri JO.
     \newblock Energy exchange in an array of vertical-axis wind turbines.
     \newblock Journal of Turbulence. 2012;13:1--13.
+    \newblock doi:{10.1080/14685248.2012.712698}.
 
 \end{thebibliography}
-
 
 
 \end{document}

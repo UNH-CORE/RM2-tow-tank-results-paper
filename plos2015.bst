@@ -100,15 +100,12 @@ ENTRY
   { label }
 %% Declaration of integer variables
 INTEGERS { output.state before.all mid.sentence after.sentence after.block }
-STRINGS { urlintro eprinturl eprintprefix doiprefix doiurl } % urlbst...
+STRINGS { urlintro doiprefix } % urlbst...
 INTEGERS { hrefform addeprints adddoiresolver }
 % Following constants may be adjusted by hand, if desired
 FUNCTION {init.config.constants}
 {
   "Available from: " 'urlintro := % prefix before URL
-  "http://arxiv.org/abs/" 'eprinturl := % prefix to make URL from eprint ref
-  "arXiv:" 'eprintprefix := % text prefix printed before eprint ref
-  "http://dx.doi.org/" 'doiurl := % prefix to make URL from DOI
   "doi:" 'doiprefix := % text prefix printed before DOI ref
   #0 'addeprints := % 0=no eprints; 1=include eprints
   #0 'adddoiresolver := % 0=no DOI resolver; 1=include it
@@ -597,10 +594,10 @@ FUNCTION {bbl.in}
 { "in" }
 
 FUNCTION {bbl.pages}
-{ "p." }
+{ " p." }
 
 FUNCTION {bbl.page}
-{ "p." }
+{ " p." }
 
 FUNCTION {bbl.chapter}
 { "chap." }
@@ -926,6 +923,7 @@ FUNCTION {format.type}
   if$
 }
 
+
 FUNCTION {output.bibitem}
 { outside.brackets 'bracket.state := % urlbst
    newline$
@@ -970,7 +968,7 @@ FUNCTION {word.in}
 
 FUNCTION {format.journal.date}
 {
-  month "month" bibinfo.check
+  ""
   duplicate$ empty$
   year  "year"  bibinfo.check duplicate$ empty$
     {
@@ -1397,17 +1395,20 @@ FUNCTION {format.url}
   if$
 }
 
-FUNCTION {format.eprint}
-{ eprint empty$
-    { "" }
-    { eprintprefix eprint * eprinturl eprint * make.href }
-  if$
-}
+%FUNCTION {format.eprint}
+%{ eprint empty$
+%    { "" }
+%    { eprintprefix eprint * eprinturl eprint * make.href }
+%  if$
+%}
 
 FUNCTION {format.doi}
 { doi empty$
     { "" }
-    { doiprefix doi * doiurl doi * make.href }
+    {
+      new.block
+      "doi:{" doi * "}" *
+    }
   if$
 }
 
@@ -1419,25 +1420,25 @@ FUNCTION {format.doi}
 FUNCTION {output.url}
 { url empty$
     'skip$ 
-    { new.block 
+      { new.block 
       format.url output
       format.lastchecked output 
-    }
+      }
   if$
 }
 
-FUNCTION {output.web.refs}
-{
-  new.block
-  output.url
-  addeprints eprint empty$ not and
-    { format.eprint output.nonnull }
-    'skip$
-  if$
-  adddoiresolver doi empty$ not and
-    { format.doi output.nonnull }
-    'skip$
-  if$
+%FUNCTION {output.web.refs}
+%{
+%  new.block
+%  output.url
+%  addeprints eprint empty$ not and
+%    { format.eprint output.nonnull }
+%    'skip$
+%  if$
+%  adddoiresolver doi empty$ not and
+%    { format.doi output.nonnull }
+%    'skip$
+%  if$
 %  addeprints
 %    { eprint empty$
 %        'skip$
@@ -1446,7 +1447,9 @@ FUNCTION {output.web.refs}
 %    }
 %    'skip$
 %  if$
-}
+%}
+
+
 
 % Webpage entry type.
 % Title and url fields required;
@@ -1474,7 +1477,7 @@ FUNCTION {webpage}
   format.title "title" output.check
   journal empty$
     {
-      format.type "type" output.check
+      format.type "type"
       publisher empty$
         'skip$
         { format.publisher.address output }
@@ -1502,7 +1505,7 @@ FUNCTION {webpage}
       remove.dots
       "journal" bibinfo.check
       "journal" output.check
-      format.type "type" output.check
+      format.type "type"
       format.journal.date "year" output.check
       lastchecked empty$
         'skip$
@@ -1530,22 +1533,22 @@ FUNCTION {webpage}
 FUNCTION {misc}
 { output.bibitem
   format.authors "author" output.check
-  format.editors "author and editor" output.check
+%  format.editors "author and editor" output.check
   format.title "title" output.check
   type missing$
     { skip$ }
-    { format.type "type" output.check }
+    { format.type "type" }
     %%{ inbrackets type output }
   if$
   new.block
-  format.publisher.address output
+%  format.publisher.address output
   format.date "year" output.check
   new.block
-  format.note output
+%  format.note output
   new.block
   howpublished new.block.checka
   howpublished "howpublished" bibinfo.check output
-  output.web.refs  % urlbst
+  output.url % urlbst
   fin.entry
   empty.misc.check
 }
@@ -1569,10 +1572,6 @@ FUNCTION {article}
   if$
   new.block
   format.title "title" output.check
-  type missing$
-    { skip$ }
-    { format.type "type" output.check }
-  if$
   new.block
   journal
   remove.dots
@@ -1582,8 +1581,10 @@ FUNCTION {article}
   add.semicolon
   format.vol.num.pages output
   new.block
-  format.note output
-  output.web.refs  % urlbst
+  format.doi output
+  new.block
+%  format.note output
+%  output.url  % urlbst
   fin.entry
 }
 
@@ -1615,8 +1616,8 @@ FUNCTION {book}
   format.publisher.address output
   format.date "year" output.check
   new.block
-  format.note output
-  output.web.refs  % urlbst
+%  format.note output
+  output.url  % urlbst
   fin.entry
 }
 
@@ -1634,11 +1635,11 @@ FUNCTION {dictionary}
   format.date "year" output.check
   format.btitle "title" output.check
   add.semicolon
-  add.blank
+%  add.blank
   format.pages "pages" output.check
   new.block
-  format.note output
-  output.web.refs  % urlbst
+%  format.note output
+  output.url  % urlbst
   fin.entry
 }
 
@@ -1656,11 +1657,11 @@ FUNCTION {inbook}
   format.publisher.address output
   format.date "year" output.check
   date.block
-  add.blank
+%  add.blank
   format.pages "pages" output.check
   new.block
-  format.note output
-  output.web.refs  % urlbst
+%  format.note output
+  output.url  % urlbst
   fin.entry
 }
 
@@ -1678,11 +1679,11 @@ FUNCTION {incollection}
   format.publisher.address output
   format.date "year" output.check
   date.block
-  add.blank
+%  add.blank
   format.pages "pages" output.check
   new.block
-  format.note output
-  output.web.refs  % urlbst
+%  format.note output
+  output.url  % urlbst
   fin.entry
 }
 
@@ -1704,11 +1705,11 @@ FUNCTION {inproceedings}
   if$
   format.date "year" output.check
   date.block
-  add.blank
+%  add.blank
   format.pages "pages" output.check
   new.block
-  format.note output
-  output.web.refs  % urlbst
+%  format.note output
+  output.url  % urlbst
   fin.entry
 }
 
@@ -1724,14 +1725,14 @@ FUNCTION {phdthesis}
   new.block
   format.btitle
   "title" output.check
-  format.type "type" output.check
+  format.type "type" bibinfo.check output
   new.block
   school "school" bibinfo.warn output
   address "address" bibinfo.check output
   format.date "year" output.check
   new.block
-  format.note output
-  output.web.refs  % urlbst
+%  format.note output
+  output.url  % urlbst
   fin.entry
 }
 
@@ -1772,8 +1773,8 @@ FUNCTION {proceedings}
   if$
       format.date "year" output.check
   new.block
-  format.note output
-  output.web.refs  % urlbst
+%  format.note output
+  output.url  % urlbst
   fin.entry
 }
 
@@ -1788,8 +1789,8 @@ FUNCTION {techreport}
   format.date "year" output.check
   format.tr.number output.nonnull
   new.block
-  format.note output
-  output.web.refs  % urlbst
+%  format.note output
+  output.url  % urlbst
   fin.entry
 }
 
@@ -1799,13 +1800,13 @@ FUNCTION {map}
   new.block
   format.title
   "title" output.check
-  format.type "type" output.check
+  format.type "type"
   new.block
   format.publisher.address output
   format.date "year" output.check
   new.block
-  format.note output
-  output.web.refs  % urlbst
+%  format.note output
+  output.url  % urlbst
   fin.entry
 }
 
@@ -1822,8 +1823,8 @@ FUNCTION {patent}
   format.tr.number output.nonnull
   format.date "year" output.check
   new.block
-  format.note output
-  output.web.refs  % urlbst
+%  format.note output
+  output.url  % urlbst
   fin.entry
 }
 
@@ -1834,8 +1835,8 @@ FUNCTION {unpublished}
   format.title "title" output.check
   format.date output
   new.block
-  format.note "note" output.check
-  output.web.refs  % urlbst
+%  format.note "note" output.check
+  output.url  % urlbst
   fin.entry
 }
 
