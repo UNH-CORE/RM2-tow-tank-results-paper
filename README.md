@@ -1,7 +1,8 @@
 # RM2 tow tank results paper
 
 This repository is for the first paper describing the results from the 1:6
-scale RM2 tow tank experiment at UNH.
+scale RM2 tow tank experiment at UNH. The paper has been published in PLOS ONE,
+and is available open-access from http://dx.doi.org/10.1371/journal.pone.0163799.
 
 The current plan is to write only about the experimental results, describing
 them in a very matter-of-fact way, and submit to PLOS ONE. Note that according
